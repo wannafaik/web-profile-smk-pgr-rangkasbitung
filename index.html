@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Resmi Profil Sekolah - Informasi Pendaftaran, Program & Fasilitas">
+    <title>SMA Nusantara - Website Profil Sekolah</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Social Media Bar (Left Side) -->
+    <aside class="social-sidebar">
+        <a href="https://wa.me/" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="social-icon tiktok" title="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+    </aside>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo Sekolah Netral (Buku & Bintang Pendidikan) -->
+            <a href="#" class="logo-group">
+                <svg class="school-emblem" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Shield -->
+                    <path d="M30 2L5 12V32C5 50 30 65 30 65C30 65 55 50 55 32V12L30 2Z" fill="#1E3A8A" stroke="#F59E0B"
+                        stroke-width="3" />
+                    <!-- Star of Excellence -->
+                    <path d="M30 14L33 20L40 21L35 26L36 33L30 29L24 33L25 26L20 21L27 20L30 14Z" fill="#F59E0B" />
+                    <!-- Open Book -->
+                    <path d="M16 40C22 37 30 40 30 40C30 40 38 37 44 40V49C38 46 30 49 30 49C30 49 22 46 16 49V40Z"
+                        fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.5" />
+                </svg>
+                <div class="logo-text">
+                    <span class="sub-text">YAYASAN PENDIDIKAN NUSANTARA</span>
+                    <span class="main-text">SMA NUSANTARA</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero">Sekolah</a></li>
+                    <li><a href="#spmb">SPMB</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#fasilitas">Fasilitas</a></li>
+                    <li class="dropdown">
+                        <a href="#media" class="dropdown-toggle">Media <i
+                                class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#berita">Berita & Kegiatan</a></li>
+                            <li><a href="#galeri">Galeri Foto</a></li>
+                            <li><a href="#pengumuman">Pengumuman</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#publikasi">Publikasi</a></li>
+                    <li><a href="#karir">Karir</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="nav-action">
+                <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Watermark Netral (Topi Toga & Buku) -->
+            <div class="watermark-emblem">
+                <svg viewBox="0 0 100 100" class="watermark-svg">
+                    <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none" />
+                    <path d="M50 25 L80 40 L50 55 L20 40 Z" fill="none" stroke="rgba(255,255,255,0.2)"
+                        stroke-width="2" />
+                    <path d="M35 48 V65 C35 65 50 72 65 65 V48" fill="none" stroke="rgba(255,255,255,0.2)"
+                        stroke-width="2" />
+                </svg>
+            </div>
+
+            <h3 class="hero-subtitle">Selamat datang di</h3>
+            <h1 class="hero-title">SMA NUSANTARA</h1>
+
+            <div class="hero-cta-group">
+                <a href="#spmb" class="btn-cta btn-yellow">Daftar Sekarang</a>
+
+                <div class="cta-divider">
+                    <span class="line"></span>
+                    <p class="text">atau</p>
+                    <span class="line"></span>
+                </div>
+
+                <a href="#profile" class="btn-cta btn-navy-outline">Lihat Sekolah</a>
+            </div>
+
+            <div class="scroll-indicator" id="scrollTrigger">
+                <span class="scroll-text">SCROLL</span>
+                <i class="fa-solid fa-arrow-down scroll-arrow"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROFILE & SAMBUTAN KEPALA SEKOLAH -->
+    <section class="profile-section" id="profile">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">PROFIL</span> <span class="light">Sekolah</span>
+                </h2>
+            </div>
+
+            <!-- Video Player Card Container -->
+            <div class="video-card" id="videoCard">
+                <img src="assets/video_thumb.jpg" alt="Company Profile Sekolah" class="video-thumbnail">
+                <div class="video-overlay">
+                    <div class="video-header-bar">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="video-info">
+                            <h4>COMPANY PROFILE SMA NUSANTARA</h4>
+                            <p>Official School Channel</p>
+                        </div>
+                    </div>
+                    <div class="play-btn-wrapper">
+                        <button class="play-btn" id="playBtn" aria-label="Putar Video">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sambutan Kepala Sekolah Netral -->
+            <div class="principal-welcome-box">
+                <div class="principal-img-col">
+                    <img src="assets/principal.jpg" alt="Kepala Sekolah SMA Nusantara" class="principal-img">
+                </div>
+                <div class="principal-text-col">
+                    <span class="badge-tag">SAMBUTAN KEPALA SEKOLAH</span>
+                    <h3>Mencetak Generasi Unggul, Cerdas & Berkarakter</h3>
+                    <p>"Selamat datang di website resmi SMA Nusantara. Kami berkomitmen menyediakan lingkungan belajar
+                        yang kondusif, inspiratif, dan siap membentuk karakter peserta didik menjadi calon pemimpin masa
+                        depan yang berakhlak mulia dan berwawasan global."</p>
+                    <div class="principal-info">
+                        <strong>Dr. H. Bambang Sujipto, M.Pd.</strong>
+                        <span>Kepala Sekolah SMA Nusantara</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECTION SPMB (PENDAFTARAN SISWA BARU) -->
+    <section class="section-block spmb-section" id="spmb">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">SPMB</span> <span class="light">Penerimaan Siswa Baru</span>
+                </h2>
+                <p class="section-subtitle">Informasi gelombang pendaftaran dan alur seleksi siswa baru TA 2026/2027.
+                </p>
+            </div>
+
+            <!-- Gelombang Card Grid -->
+            <div class="grid-3-col">
+                <div class="card-item spmb-card">
+                    <div class="card-badge gold">GELOMBANG 1</div>
+                    <h4>Early Bird Special</h4>
+                    <p class="spmb-date"><i class="fa-regular fa-calendar-check"></i> 1 Sept - 30 Nov 2026</p>
+                    <ul class="spmb-benefit-list">
+                        <li><i class="fa-solid fa-check"></i> Potongan Uang Pangkal 20%</li>
+                        <li><i class="fa-solid fa-check"></i> Gratis Seragam Lengkap</li>
+                        <li><i class="fa-solid fa-check"></i> Bebas Biaya Tes Seleksi</li>
+                    </ul>
+                    <a href="#btnHubungi" class="btn-card-action">Daftar Gelombang 1</a>
+                </div>
+
+                <div class="card-item spmb-card featured">
+                    <div class="card-badge blue">GELOMBANG 2 (REGULER)</div>
+                    <h4>Jalur Reguler</h4>
+                    <p class="spmb-date"><i class="fa-regular fa-calendar-check"></i> 1 Des 2026 - 28 Feb 2027</p>
+                    <ul class="spmb-benefit-list">
+                        <li><i class="fa-solid fa-check"></i> Potongan Uang Pangkal 10%</li>
+                        <li><i class="fa-solid fa-check"></i> Bantuan Beasiswa Prestasi</li>
+                        <li><i class="fa-solid fa-check"></i> Ujian Seleksi Online / Offline</li>
+                    </ul>
+                    <a href="#btnHubungi" class="btn-card-action btn-blue-filled">Daftar Gelombang 2</a>
+                </div>
+
+                <div class="card-item spmb-card">
+                    <div class="card-badge gray">GELOMBANG 3</div>
+                    <h4>Jalur Khusus & Akhir</h4>
+                    <p class="spmb-date"><i class="fa-regular fa-calendar-check"></i> 1 Mar - 30 Jun 2027</p>
+                    <ul class="spmb-benefit-list">
+                        <li><i class="fa-solid fa-check"></i> Kuota Terbatas</li>
+                        <li><i class="fa-solid fa-check"></i> Seleksi Berkas Lengkap</li>
+                        <li><i class="fa-solid fa-check"></i> Wawancara Orang Tua</li>
+                    </ul>
+                    <a href="#btnHubungi" class="btn-card-action">Daftar Gelombang 3</a>
+                </div>
+            </div>
+
+            <!-- Alur Pendaftaran Steps -->
+            <div class="spmb-steps-box">
+                <h3 class="steps-title">Alur Pendaftaran (4 Langkah Mudah)</h3>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>Isi Formulir</h5>
+                        <p>Daftar secara online atau isi formulir di sekretariat sekolah.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>Verifikasi Berkas</h5>
+                        <p>Unggah/bawa dokumen pendukung (Akta, KK, Rapor).</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>Tes Seleksi</h5>
+                        <p>Mengikuti tes potensi akademik & pemetaan minat bakat.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>Daftar Ulang</h5>
+                        <p>Konfirmasi kelulusan dan pemesanan perlengkapan sekolah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION PROGRAM UNGGULAN -->
+    <section class="section-block program-section" id="program">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">PROGRAM</span> <span class="light">Unggulan</span>
+                </h2>
+                <p class="section-subtitle">Program kurikulum terpadu untuk mengembangkan potensi akademik dan
+                    non-akademik.</p>
+            </div>
+
+            <div class="grid-4-col">
+                <div class="program-card">
+                    <div class="program-icon-box navy">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h4>STEM & Sains Riset</h4>
+                    <p>Pembelajaran Sains, Teknologi, Teknik, dan Matematika berbasis proyek terapan & kejuaraan
+                        olimpiade.</p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon-box gold">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h4>Program Bahasa & Literasi</h4>
+                    <p>Penguatan komunikasi bahasa Indonesia dan bahasa Inggris aktif untuk kesiapan era global.</p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon-box green">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h4>Karakter & Kepemimpinan</h4>
+                    <p>Pembentukan nilai-nilai etika, integritas, kedisiplinan, serta jiwa kepemimpinan positif.</p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon-box red">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4>Seni, Budaya & Olahraga</h4>
+                    <p>Wadah pengembangan bakat siswa dalam basket, futsal, seni musik, tari, dan jurnalistik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION FASILITAS KAMPUS -->
+    <section class="section-block fasilitas-section" id="fasilitas">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">FASILITAS</span> <span class="light">Kampus</span>
+                </h2>
+                <p class="section-subtitle">Sarana dan prasarana modern pendukung kegiatan belajar mengajar.</p>
+            </div>
+
+            <div class="grid-3-col">
+                <div class="facility-card">
+                    <img src="assets/school_lab.jpg" alt="Laboratorium Komputer & STEM" class="facility-img">
+                    <div class="facility-body">
+                        <h5>Laboratorium Komputer & STEM</h5>
+                        <p>Perangkat komputer spesifikasi tinggi, jaringan internet cepat, dan alat sains modern.</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <img src="assets/campus_hero.jpg" alt="Perpustakaan Digital" class="facility-img">
+                    <div class="facility-body">
+                        <h5>Perpustakaan & Media Center</h5>
+                        <p>Koleksi ribuan buku fisik dan e-book pendukung riset serta area baca yang nyaman.</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <img src="assets/hero_bg.jpg" alt="Lapangan Olahraga & Hall Indoor" class="facility-img">
+                    <div class="facility-body">
+                        <h5>Lapangan Olahraga & Hall Indoor</h5>
+                        <p>Lapangan basket, futsal, badminton, dan ruang aula serbaguna berkapasitas besar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION MEDIA & BERITA -->
+    <section class="section-block media-section" id="media">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">MEDIA</span> <span class="light">& Informasi</span>
+                </h2>
+                <p class="section-subtitle">Kabar berita terbaru, pengumuman resmi, dan dokumentasi kegiatan sekolah.
+                </p>
+            </div>
+
+            <div class="media-tabs-wrapper">
+                <div class="grid-3-col">
+                    <div class="media-card" id="berita">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 24 September 2026</div>
+                        <h4>Siswa SMA Nusantara Meraih Juara 1 Olimpiade Sains Nasional</h4>
+                        <p>Prestasi membanggakan kembali diukir oleh tim sains sekolah pada ajang kompetisi tingkat
+                            nasional...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="media-card" id="pengumuman">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 18 September 2026</div>
+                        <h4>Pengumuman Pelaksanaan Jam Belajar Semester Ganjil</h4>
+                        <p>Diberitahukan kepada seluruh siswa dan orang tua murid mengenai jadwal terbaru jam belajar...
+                        </p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="media-card" id="galeri">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 10 September 2026</div>
+                        <h4>Dokumentasi Kegiatan Pentas Seni & Pameran Karya Siswa</h4>
+                        <p>Keseruan dan kreativitas para murid ditampilkan dalam acara tahunan pameran seni dan
+                            budaya...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION TESTIMONI -->
+    <section class="section-block testimoni-section" id="testimoni">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">TESTIMONI</span> <span class="light">Alumni & Orang Tua</span>
+                </h2>
+                <p class="section-subtitle">Pengalaman dan kesan dari keluarga besar sekolah kami.</p>
+            </div>
+
+            <div class="grid-3-col">
+                <div class="testi-card">
+                    <div class="testi-quote">"Sekolah ini memberikan pendidikan akademis yang luar biasa sekaligus
+                        menanamkan kedisiplinan dan karakter unggul pada anak saya."</div>
+                    <div class="testi-user">
+                        <strong>Bpk. Ahmad Subagyo</strong>
+                        <span>Orang Tua Siswa Kelas XI</span>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-quote">"Berkat bimbingan para guru dan laboratorium sains yang lengkap, saya
+                        berhasil lolos masuk ke Universitas Negeri Favorit."</div>
+                    <div class="testi-user">
+                        <strong>Siti Nurhaliza</strong>
+                        <span>Alumni Angkatan 2025</span>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-quote">"Fasilitas lengkap, lingkungan bersih, dan guru-guru sangat ramah serta
+                        mendukung pengembangan potensi anak."</div>
+                    <div class="testi-user">
+                        <strong>Ibu Rina Wijaya</strong>
+                        <span>Orang Tua Siswa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECTION PUBLIKASI -->
+    <section class="section-block publikasi-section" id="publikasi">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">PUBLIKASI</span> <span class="light">& Dokumen</span>
+                </h2>
+                <p class="section-subtitle">Dokumen brosur digital, buletin sekolah, dan rekam jejak penghargaan.</p>
+            </div>
+
+            <div class="grid-2-col">
+                <div class="download-box">
+                    <i class="fa-solid fa-file-pdf pdf-icon"></i>
+                    <div>
+                        <h5>Brosur Digital SPMB TA 2026/2027</h5>
+                        <p>Unduh informasi lengkap mengenai rincian biaya, kurikulum, dan fasilitas.</p>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                </div>
+
+                <div class="download-box">
+                    <i class="fa-solid fa-book-open pdf-icon"></i>
+                    <div>
+                        <h5>Buletin Sekolah Edisi Terbaru</h5>
+                        <p>Kumpulan artikel karya siswa dan rangkuman kegiatan rutin bulanan.</p>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECTION KARIR -->
+    <section class="section-block karir-section" id="karir">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">KARIR</span> <span class="light">& Rekrutmen</span>
+                </h2>
+                <p class="section-subtitle">Bergabunglah menjadi bagian dari tenaga pendidik profesional sekolah kami.
+                </p>
+            </div>
+
+            <div class="grid-2-col">
+                <div class="job-card">
+                    <span class="job-status open">DIBUKA</span>
+                    <h4>Guru Bahasa Inggris (Full-Time)</h4>
+                    <p><i class="fa-solid fa-graduation-cap"></i> Kualifikasi: S1 Pendidikan Bahasa Inggris / Sastra
+                        Inggris</p>
+                    <p><i class="fa-solid fa-clock"></i> Batas Lamaran: 30 Oktober 2026</p>
+                    <a href="#btnHubungi" class="btn-job-apply">Kirim Lamaran</a>
+                </div>
+
+                <div class="job-card">
+                    <span class="job-status open">DIBUKA</span>
+                    <h4>Laboran Komputer & IT Support</h4>
+                    <p><i class="fa-solid fa-graduation-cap"></i> Kualifikasi: D3/S1 Teknik Informatika / Sistem
+                        Informasi</p>
+                    <p><i class="fa-solid fa-clock"></i> Batas Lamaran: 15 November 2026</p>
+                    <a href="#btnJobApply" class="btn-job-apply">Kirim Lamaran</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. SECTION TENTANG KAMI -->
+    <section class="section-block tentang-section" id="tentang">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">TENTANG</span> <span class="light">Kami</span>
+                </h2>
+                <p class="section-subtitle">Visi, misi, dan komitmen pelayanan pendidikan berkualitas.</p>
+            </div>
+
+            <div class="grid-2-col about-grid">
+                <div class="about-box">
+                    <h4><i class="fa-solid fa-eye"></i> Visi Kami</h4>
+                    <p>Menjadi lembaga pendidikan unggulan yang menghasilkan lulusan berakhlak mulia, cerdas,
+                        berkarakter kuat, dan siap bersaing di era global.</p>
+                </div>
+
+                <div class="about-box">
+                    <h4><i class="fa-solid fa-bullseye"></i> Misi Kami</h4>
+                    <ul>
+                        <li>1. Menyelenggarakan pembelajaran berkualitas berbasis kecakapan abad 21.</li>
+                        <li>2. Menanamkan nilai etika, moralitas, dan disiplin pada seluruh peserta didik.</li>
+                        <li>3. Menyediakan sarana dan lingkungan belajar berstandar modern.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LENGKAP & NETRAL -->
+    <footer class="footer-block">
+        <div class="container">
+            <div class="grid-3-col footer-grid">
+                <div class="footer-col">
+                    <h5>SMA NUSANTARA</h5>
+                    <p>Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak Pemimpin Masa Depan.</p>
+                    <p>&copy; 2026 SMA Nusantara. All Rights Reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Beranda</a></li>
+                        <li><a href="#spmb">Informasi SPMB</a></li>
+                        <li><a href="#program">Program Unggulan</a></li>
+                        <li><a href="#fasilitas">Fasilitas Kampus</a></li>
+                        <li><a href="#tentang">Visi & Misi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Kontak & Alamat</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara No. 123, Jakarta</p>
+                    <p><i class="fa-solid fa-phone"></i> (021) 1234 5678</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@smanusantara.sch.id</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Lightbox -->
+    <div class="modal-backdrop" id="videoModal">
+        <div class="modal-content video-modal-content">
+            <button class="modal-close" id="closeVideoModal">&times;</button>
+            <div class="iframe-container">
+                <iframe id="videoIframe" src="" title="Company Profile Sekolah" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hubungi Kami Modal -->
+    <div class="modal-backdrop" id="contactModal">
+        <div class="modal-content contact-modal-content">
+            <button class="modal-close" id="closeContactModal">&times;</button>
+            <h3>Hubungi Kami</h3>
+            <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+            <div class="contact-options">
+                <a href="https://wa.me/" class="contact-card wa">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp Official</strong>
+                        <span>Respon Cepat via Chat</span>
+                    </div>
+                </a>
+                <a href="tel:+622112345678" class="contact-card phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Call Center Sekolah</strong>
+                        <span>(021) 1234 5678</span>
+                    </div>
+                </a>
+                <a href="mailto:info@smanusantara.sch.id" class="contact-card email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email Layanan</strong>
+                        <span>info@smanusantara.sch.id</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
