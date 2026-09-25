@@ -247,10 +247,24 @@ body {
     font-weight: 600;
     transition: color 0.2s ease;
     white-space: nowrap;
+    position: relative;
+    padding: 6px 2px;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a.active {
     color: var(--primary-navy);
+}
+
+.nav-list a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
 }
 
 .dropdown {
@@ -505,6 +519,325 @@ body {
     60% {
         transform: translateY(4px);
     }
+}
+
+/* ==========================================================================
+   Home Portal Stats Counter Bar
+   ========================================================================== */
+.stats-bar-section {
+    background: #F1F5F9;
+    padding: 3rem 0;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.stats-container {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #E2E8F0;
+    padding: 2.2rem 2.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 1rem;
+    border-right: 1px solid #E2E8F0;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.stat-icon.gold {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.stat-icon.blue {
+    background: #DBEAFE;
+    color: #1E3A8A;
+}
+
+.stat-icon.green {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.stat-icon.purple {
+    background: #EDE9FE;
+    color: #7C3AED;
+}
+
+.stat-content h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    line-height: 1.1;
+    margin-bottom: 2px;
+}
+
+.stat-content p {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Home Section View All Header Link */
+.section-title-wrapper-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primary-navy);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #EEF2FF;
+    transition: all 0.3s ease;
+}
+
+.btn-view-all:hover {
+    background: var(--primary-navy);
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+.btn-view-all i {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-view-all:hover i {
+    transform: translateX(4px);
+}
+
+/* Home Quick Links Hub */
+.quick-hub-section {
+    padding: 4.5rem 0 3.5rem;
+    background: #F8FAFC;
+}
+
+.quick-hub-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quick-hub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+}
+
+.quick-hub-card .hub-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.quick-hub-card h4 {
+    color: var(--primary-navy);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.quick-hub-card p {
+    color: #64748B;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.quick-hub-card .hub-link-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.quick-hub-card:hover .hub-link-text {
+    color: var(--primary-navy);
+}
+
+/* Home Modern SPMB Banner */
+.spmb-cta-banner {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.25);
+    margin: 3.5rem 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.spmb-cta-banner::before {
+    content: '';
+    position: absolute;
+    right: -60px;
+    bottom: -60px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.spmb-banner-text h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.spmb-banner-text p {
+    color: #CBD5E1;
+    font-size: 1.05rem;
+    max-width: 600px;
+}
+
+.spmb-banner-action {
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Subpage Header Banner (For Multi-page Navigation)
+   ========================================================================== */
+.page-header {
+    position: relative;
+    padding-top: 135px;
+    padding-bottom: 60px;
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #172554 100%);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-badge {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    color: var(--accent-gold);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.page-header-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--white);
+    letter-spacing: -0.5px;
+}
+
+.page-header-desc {
+    color: #CBD5E1;
+    font-size: 1rem;
+    max-width: 680px;
+    margin: 0 auto 16px;
+}
+
+.page-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #94A3B8;
+}
+
+.page-breadcrumb a {
+    color: #E2E8F0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.page-breadcrumb a:hover {
+    color: var(--accent-gold);
+}
+
+.page-breadcrumb .separator {
+    color: #64748B;
+    font-size: 0.75rem;
+}
+
+.page-breadcrumb .current {
+    color: var(--accent-gold);
+    font-weight: 600;
 }
 
 /* ==========================================================================
@@ -1256,6 +1589,25 @@ body {
 
 /* Responsive Grid Adjustments */
 @media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .spmb-cta-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 2rem;
+    }
+
+    .spmb-banner-text p {
+        margin: 0 auto;
+    }
+
     .grid-4-col {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1280,6 +1632,33 @@ body {
 }
 
 @media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #E2E8F0;
+        padding-bottom: 1rem;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .section-title-wrapper-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .spmb-banner-action {
+        flex-direction: column;
+        width: 100%;
+    }
+
     .grid-2-col {
         grid-template-columns: 1fr;
     }
