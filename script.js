@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Smooth Scroll Indicator Trigger
     const scrollTrigger = document.getElementById('scrollTrigger');
-    const profileSection = document.getElementById('profile');
+    const statsSection = document.getElementById('statsSection') || document.getElementById('profile');
 
-    if (scrollTrigger && profileSection) {
+    if (scrollTrigger && statsSection) {
         scrollTrigger.addEventListener('click', () => {
-            profileSection.scrollIntoView({ behavior: 'smooth' });
+            statsSection.scrollIntoView({ behavior: 'smooth' });
         });
     }
 

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Media Informasi & Berita SMA Nusantara - Berita Terbaru, Pengumuman Resmi, dan Galeri Foto Kegiatan">
+    <title>Media & Informasi - SMA Nusantara</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Social Media Bar (Left Side) -->
+    <aside class="social-sidebar">
+        <a href="https://wa.me/" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="social-icon tiktok" title="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+    </aside>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-group">
+                <svg class="school-emblem" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 2L5 12V32C5 50 30 65 30 65C30 65 55 50 55 32V12L30 2Z" fill="#1E3A8A" stroke="#F59E0B"
+                        stroke-width="3" />
+                    <path d="M30 14L33 20L40 21L35 26L36 33L30 29L24 33L25 26L20 21L27 20L30 14Z" fill="#F59E0B" />
+                    <path d="M16 40C22 37 30 40 30 40C30 40 38 37 44 40V49C38 46 30 49 30 49C30 49 22 46 16 49V40Z"
+                        fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.5" />
+                </svg>
+                <div class="logo-text">
+                    <span class="sub-text">YAYASAN PENDIDIKAN NUSANTARA</span>
+                    <span class="main-text">SMA NUSANTARA</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Profil & Sambutan</a></li>
+                    <li><a href="spmb.html">SPMB</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li class="dropdown">
+                        <a href="media.html" class="dropdown-toggle active">Media <i
+                                class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="media.html#berita">Berita & Kegiatan</a></li>
+                            <li><a href="media.html#galeri">Galeri Foto</a></li>
+                            <li><a href="media.html#pengumuman">Pengumuman</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="publikasi.html">Publikasi</a></li>
+                    <li><a href="karir.html">Karir</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="nav-action">
+                <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="page-header">
+        <div class="container">
+            <span class="page-badge"><i class="fa-regular fa-newspaper"></i> Pusat Informasi</span>
+            <h1 class="page-header-title">Media & Dokumentasi</h1>
+            <p class="page-header-desc">Kabar berita prestasi terbaru, pengumuman jadwal akademik, serta dokumentasi kegiatan siswa SMA Nusantara.</p>
+            <div class="page-breadcrumb">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+                <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+                <span class="current">Media & Berita</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION MEDIA & BERITA -->
+    <section class="section-block media-section" id="media">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">BERITA</span> <span class="light">& Pengumuman</span>
+                </h2>
+                <p class="section-subtitle">Ikuti update informasi terkini dari keluarga besar SMA Nusantara.</p>
+            </div>
+
+            <div class="media-tabs-wrapper">
+                <div class="grid-3-col">
+                    <div class="media-card" id="berita">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 24 September 2026</div>
+                        <h4>Siswa SMA Nusantara Meraih Juara 1 Olimpiade Sains Nasional</h4>
+                        <p>Prestasi membanggakan kembali diukir oleh tim sains sekolah pada ajang kompetisi tingkat nasional bidang astronomi dan fisika terapan.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="media-card" id="pengumuman">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 18 September 2026</div>
+                        <h4>Pengumuman Pelaksanaan Jam Belajar Semester Ganjil</h4>
+                        <p>Diberitahukan kepada seluruh siswa dan orang tua murid mengenai jadwal terbaru jam masuk sekolah serta tata tertib kedisiplinan semester ganjil.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="media-card" id="galeri">
+                        <div class="media-date"><i class="fa-regular fa-calendar"></i> 10 September 2026</div>
+                        <h4>Dokumentasi Kegiatan Pentas Seni & Pameran Karya Siswa</h4>
+                        <p>Keseruan dan kreativitas para murid ditampilkan secara memukau dalam pagelaran tahunan seni rupa, teater musikal, dan inovasi karya ilmiah.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Foto Dokumentasi -->
+            <div style="margin-top: 5rem;">
+                <div class="section-title-wrapper">
+                    <div class="accent-line"></div>
+                    <h2 class="section-title">
+                        <span class="bold">GALERI</span> <span class="light">Kegiatan</span>
+                    </h2>
+                    <p class="section-subtitle">Momen berharga aktivitas belajar dan prestasi murid di kampus.</p>
+                </div>
+
+                <div class="grid-3-col">
+                    <div class="facility-card" style="cursor: pointer;">
+                        <img src="assets/campus_hero.jpg" alt="Kegiatan Upacara & Pembinaan" class="facility-img">
+                        <div class="facility-body">
+                            <h5>Upacara Hari Pendidikan & Penghargaan Prestasi</h5>
+                            <p style="font-size: 0.85rem; color: #64748B;">Apresiasi pimpinan sekolah kepada para peraih medali olimpiade.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card" style="cursor: pointer;">
+                        <img src="assets/school_lab.jpg" alt="Praktikum Laboratorium" class="facility-img">
+                        <div class="facility-body">
+                            <h5>Workshop Hands-on STEM & Robotika</h5>
+                            <p style="font-size: 0.85rem; color: #64748B;">Siswa bereksperimen langsung dengan perakitan sensor micro-controller.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card" style="cursor: pointer;">
+                        <img src="assets/hero_bg.jpg" alt="Turnamen Olahraga Antar Kelas" class="facility-img">
+                        <div class="facility-body">
+                            <h5>Class Meeting & Turnamen Futsal</h5>
+                            <p style="font-size: 0.85rem; color: #64748B;">Menumbuhkan semangat sportivitas dan keakraban antarangkatan siswa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-block">
+        <div class="container">
+            <div class="grid-3-col footer-grid">
+                <div class="footer-col">
+                    <h5>SMA NUSANTARA</h5>
+                    <p>Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak Pemimpin Masa Depan.</p>
+                    <p>&copy; 2026 SMA Nusantara. All Rights Reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Profil & Sambutan</a></li>
+                        <li><a href="spmb.html">Informasi SPMB</a></li>
+                        <li><a href="program.html">Program Unggulan</a></li>
+                        <li><a href="fasilitas.html">Fasilitas Kampus</a></li>
+                        <li><a href="media.html">Media & Berita</a></li>
+                        <li><a href="karir.html">Karir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Kontak & Alamat</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara No. 123, Jakarta</p>
+                    <p><i class="fa-solid fa-phone"></i> (021) 1234 5678</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@smanusantara.sch.id</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Lightbox -->
+    <div class="modal-backdrop" id="videoModal">
+        <div class="modal-content video-modal-content">
+            <button class="modal-close" id="closeVideoModal">&times;</button>
+            <div class="iframe-container">
+                <iframe id="videoIframe" src="" title="Company Profile Sekolah" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hubungi Kami Modal -->
+    <div class="modal-backdrop" id="contactModal">
+        <div class="modal-content contact-modal-content">
+            <button class="modal-close" id="closeContactModal">&times;</button>
+            <h3>Hubungi Kami</h3>
+            <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+            <div class="contact-options">
+                <a href="https://wa.me/" class="contact-card wa">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp Official</strong>
+                        <span>Respon Cepat via Chat</span>
+                    </div>
+                </a>
+                <a href="tel:+622112345678" class="contact-card phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Call Center Sekolah</strong>
+                        <span>(021) 1234 5678</span>
+                    </div>
+                </a>
+                <a href="mailto:info@smanusantara.sch.id" class="contact-card email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email Layanan</strong>
+                        <span>info@smanusantara.sch.id</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
