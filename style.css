@@ -214,14 +214,14 @@ body {
 }
 
 .logo-text .sub-text {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
     color: var(--primary-navy);
     letter-spacing: 0.5px;
 }
 
 .logo-text .main-text {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-weight: 800;
     color: var(--primary-navy);
     letter-spacing: 0.5px;
