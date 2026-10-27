@@ -1555,6 +1555,18 @@ body {
     background: #000;
 }
 
+.video-modal-content .modal-close {
+    color: #ffffff;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.video-modal-content .modal-close:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
 .iframe-container {
     position: relative;
     width: 100%;

@@ -115,7 +115,7 @@
             </div>
 
             <!-- Video Player Card Container -->
-            <div class="video-card" id="videoCard">
+            <div class="video-card" id="videoCard" data-video-url="https://www.youtube.com/watch?v=dnzXTbfvBUE" title="Klik untuk memutar Video Profil">
                 <img src="assets/video_thumb.jpg" alt="Company Profile Sekolah" class="video-thumbnail">
                 <div class="video-overlay">
                     <div class="video-header-bar">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="play-btn-wrapper">
-                        <button class="play-btn" id="playBtn" aria-label="Putar Video">
+                        <button class="play-btn" id="playBtn" type="button" aria-label="Putar Video Profil">
                             <i class="fa-solid fa-play"></i>
                         </button>
                     </div>
@@ -231,7 +231,7 @@
             <button class="modal-close" id="closeVideoModal">&times;</button>
             <div class="iframe-container">
                 <iframe id="videoIframe" src="" title="Company Profile Sekolah" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
         </div>

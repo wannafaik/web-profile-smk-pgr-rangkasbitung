@@ -54,29 +54,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Video Player Modal
+    // 4. Video Player Modal & YouTube Embed Handler
     const videoCard = document.getElementById('videoCard');
+    const playBtn = document.getElementById('playBtn');
     const videoModal = document.getElementById('videoModal');
     const closeVideoModal = document.getElementById('closeVideoModal');
     const videoIframe = document.getElementById('videoIframe');
 
-    const sampleVideoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+    // Helper untuk mengubah link YouTube (watch/youtu.be) menjadi embed link agar bisa diputar di iframe
+    function formatYouTubeEmbedUrl(url) {
+        if (!url) return '';
+        if (url.includes('/embed/')) {
+            return url.includes('autoplay=1') ? url : (url + (url.includes('?') ? '&autoplay=1' : '?autoplay=1'));
+        }
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        if (match && match[2] && match[2].length === 11) {
+            return `https://www.youtube.com/embed/${match[2]}?autoplay=1&rel=0`;
+        }
+        return url;
+    }
 
-    if (videoCard && videoModal && closeVideoModal && videoIframe) {
-        videoCard.addEventListener('click', () => {
-            videoIframe.src = sampleVideoUrl;
-            videoModal.classList.add('active');
-        });
+    const defaultProfileVideoUrl = "https://www.youtube.com/watch?v=dnzXTbfvBUE";
 
-        closeVideoModal.addEventListener('click', () => {
-            videoModal.classList.remove('active');
-            videoIframe.src = ""; // Reset video
-        });
+    const openVideoModal = () => {
+        const rawUrl = (videoCard && videoCard.dataset.videoUrl) || defaultProfileVideoUrl;
+        videoIframe.src = formatYouTubeEmbedUrl(rawUrl);
+        videoModal.classList.add('active');
+    };
+
+    const closeVideo = () => {
+        videoModal.classList.remove('active');
+        videoIframe.src = ""; // Menghentikan pemutaran video
+    };
+
+    if (videoModal && closeVideoModal && videoIframe) {
+        if (videoCard) {
+            videoCard.addEventListener('click', openVideoModal);
+        }
+
+        if (playBtn) {
+            playBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openVideoModal();
+            });
+        }
+
+        closeVideoModal.addEventListener('click', closeVideo);
 
         videoModal.addEventListener('click', (e) => {
             if (e.target === videoModal) {
-                videoModal.classList.remove('active');
-                videoIframe.src = "";
+                closeVideo();
+            }
+        });
+
+        // Tutup modal jika tombol ESC ditekan
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideo();
             }
         });
     }
