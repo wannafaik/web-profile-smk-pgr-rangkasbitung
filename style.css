@@ -353,6 +353,10 @@ body {
     cursor: pointer;
 }
 
+.nav-menu-action {
+    display: none;
+}
+
 /* ==========================================================================
    Hero Section
    ========================================================================== */
@@ -361,7 +365,7 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 720px;
-    background: url('assets/SOSIALISASI_5.JPG') center/cover no-repeat;
+    background: url('assets/hero_bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1650,64 +1654,387 @@ body {
     color: var(--text-muted);
 }
 
-/* Responsive Grid Adjustments */
-@media (max-width: 1024px) {
+/* ==========================================================================
+   Responsive Design & Media Queries (Tablet & Handphone)
+   ========================================================================== */
+
+/* Utility untuk lock scroll ketika menu drawer terbuka */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* 1. Large Screen / Laptop Kecil (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-list {
+        gap: 0.85rem;
+    }
+
+    .nav-list a {
+        font-size: 0.8rem;
+    }
+
+    .btn-hubungi {
+        padding: 8px 18px;
+        font-size: 0.82rem;
+    }
+
+    .grid-4-col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* 2. Tablet Mode (Landscape & Portrait, max-width: 992px) */
+@media (max-width: 992px) {
+    /* Sembunyikan floating sidebar di tablet & handphone agar tidak menutupi konten */
+    .social-sidebar {
+        display: none !important;
+    }
+
+    .navbar {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .mobile-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: #F1F5F9;
+        border-radius: 8px;
+        color: var(--primary-navy);
+        font-size: 1.35rem;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .mobile-toggle:hover {
+        background: #E2E8F0;
+    }
+
+    /* Mobile Drawer Menu */
+    .nav-menu {
+        position: fixed;
+        top: 68px;
+        left: -100%;
+        width: 320px;
+        max-width: 85vw;
+        height: calc(100vh - 68px);
+        background: #ffffff;
+        flex-direction: column;
+        padding: 1.5rem 1.25rem 2.5rem;
+        transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 10px 0 35px rgba(0, 0, 0, 0.15);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1000;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 14px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        color: #1E293B;
+        width: 100%;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-list a:hover,
+    .nav-list a.active {
+        background: #EEF2FF;
+        color: var(--primary-navy);
+        font-weight: 700;
+    }
+
+    .nav-list a.active::after {
+        display: none;
+    }
+
+    /* Mobile Dropdown Submenu */
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 8px;
+        background: #F8FAFC;
+        margin: 4px 0 6px 12px;
+        padding: 4px 0 4px 10px;
+        border-left: 3px solid var(--accent-gold);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: none;
+        transition: max-height 0.3s ease, opacity 0.25s ease;
+    }
+
+    .dropdown.open .dropdown-menu {
+        max-height: 250px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu a {
+        padding: 9px 12px;
+        font-size: 0.88rem;
+        color: #475569;
+    }
+
+    .dropdown-menu a:hover {
+        background: #EEF2FF;
+        color: var(--primary-navy);
+    }
+
+    /* Grid Layouts for Tablet */
+    .grid-4-col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .grid-3-col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Stats Grid */
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem 1rem;
+        gap: 1.75rem 1rem;
     }
 
     .stat-item:nth-child(2) {
         border-right: none;
     }
 
+    /* SPMB CTA Banner */
     .spmb-cta-banner {
         flex-direction: column;
         text-align: center;
-        padding: 2.5rem 2rem;
+        padding: 2.5rem 1.75rem;
+        gap: 1.5rem;
     }
 
     .spmb-banner-text p {
         margin: 0 auto;
     }
 
-    .grid-4-col {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid-3-col {
-        grid-template-columns: 1fr;
+    .spmb-banner-action {
+        justify-content: center;
     }
 
     .spmb-steps-box .steps-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
+    /* Sambutan Kepala Sekolah */
     .principal-welcome-box {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 1.75rem;
+        padding: 2rem 1.5rem;
     }
 
     .principal-img {
         max-width: 220px;
         margin: 0 auto;
     }
+
+    .principal-text-col p {
+        margin: 0 auto 1.25rem;
+        max-width: 650px;
+    }
+
+    /* Pindahkan Button Hubungi Kami dari Header ke Dalam Drawer Menu di Mode Mobile/Tablet */
+    .nav-action .btn-hubungi {
+        display: none !important;
+    }
+
+    .nav-menu-action {
+        display: block;
+        margin-top: auto;
+        padding-top: 1.25rem;
+        border-top: 1px solid #E2E8F0;
+        width: 100%;
+    }
+
+    .btn-menu-hubungi {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border-radius: 8px;
+        background: var(--primary-navy);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(30, 58, 95, 0.2);
+    }
+
+    .btn-menu-hubungi:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
 }
 
+/* 3. Handphone / Smartphone (max-width: 768px) */
 @media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 0 1.25rem;
     }
 
-    .stat-item {
-        border-right: none;
-        border-bottom: 1px solid #E2E8F0;
-        padding-bottom: 1rem;
+    .nav-container {
+        padding: 0.65rem 1.25rem;
     }
 
-    .stat-item:last-child {
-        border-bottom: none;
+    /* Hero Section - Pastikan full screen dengan Scroll Indicator tepat di bawah */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 100svh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 68px;
         padding-bottom: 0;
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem 5.5rem;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-logo-img {
+        width: 76px;
+        height: 76px;
+        padding: 5px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 2.15rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.75rem;
+        word-break: break-word;
+    }
+
+    .hero-cta-group {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .btn-cta {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Posisi animasi scroll indicator pas di batas bawah layar */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+    }
+
+    /* Inner Page Headers */
+    .page-header {
+        padding: 105px 1rem 2.75rem;
+    }
+
+    .page-header-title {
+        font-size: 1.9rem;
+        line-height: 1.25;
+    }
+
+    .page-header-desc {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    .page-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+    }
+
+    /* Section Spacing */
+    .section-block {
+        padding: 3.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .accent-line {
+        width: 90px;
+        height: 3px;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-title-wrapper {
+        margin-bottom: 2rem;
     }
 
     .section-title-wrapper-row {
@@ -1717,36 +2044,260 @@ body {
         text-align: center;
     }
 
-    .spmb-banner-action {
-        flex-direction: column;
-        width: 100%;
+    /* All Grids switch to 1 Column on Mobile */
+    .grid-4-col {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .grid-3-col {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .grid-2-col {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
-    .mobile-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: var(--white);
-        flex-direction: column;
-        padding: 2rem;
-        transition: left 0.3s ease;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .spmb-steps-box .steps-grid {
+    /* Stats Bar Mobile */
+    .stats-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #E2E8F0;
+        padding-bottom: 1.25rem;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* SPMB Mobile */
+    .spmb-steps-box {
+        padding: 1.75rem 1.25rem;
+        margin-top: 2.5rem;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .spmb-banner-action {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .spmb-banner-action .btn-banner-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Video Player Card Mobile */
+    .video-card {
+        min-height: 240px;
+        border-radius: 12px;
+    }
+
+    .video-overlay {
+        padding: 1rem;
+    }
+
+    .video-header-bar {
+        gap: 10px;
+    }
+
+    .badge-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .video-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .video-info p {
+        font-size: 0.75rem;
+    }
+
+    .play-btn {
+        width: 62px;
+        height: 62px;
+        font-size: 1.5rem;
+    }
+
+    .play-btn-wrapper {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Sambutan Mobile */
+    .principal-welcome-box {
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+        gap: 1.25rem;
+    }
+
+    .principal-img {
+        max-width: 170px;
+    }
+
+    .principal-text-col h3 {
+        font-size: 1.25rem;
+    }
+
+    .principal-text-col p {
+        font-size: 0.9rem;
+    }
+
+    /* Download Box Publikasi Mobile */
+    .download-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .btn-download {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .pdf-icon {
+        margin: 0 auto;
+    }
+
+    /* Footer Mobile */
+    .footer-block {
+        padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Modals Responsive */
+    .modal-backdrop {
+        padding: 0.75rem;
+    }
+
+    .modal-content {
+        border-radius: 12px;
+        max-height: 92vh;
+    }
+
+    .video-modal-content .modal-close {
+        top: -36px;
+        right: 2px;
+        font-size: 1.75rem;
+    }
+
+    .contact-modal-content {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contact-card {
+        padding: 12px 14px;
+    }
+}
+
+/* 4. Layar HP Ringkas / Compact Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        padding: 0.5rem 0.85rem;
+    }
+
+    .school-emblem {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-text .sub-text {
+        font-size: 0.52rem;
+    }
+
+    .logo-text .main-text {
+        font-size: 0.72rem;
+    }
+
+    .hero {
+        height: 100svh;
+        min-height: 540px;
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+
+    .hero-content {
+        padding: 1rem 0.5rem 5rem;
+    }
+
+    .scroll-indicator {
+        bottom: 16px;
+    }
+
+    .hero-title {
+        font-size: 1.65rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-logo-img {
+        width: 66px;
+        height: 66px;
+        padding: 4px;
+    }
+
+    .page-header {
+        padding: 95px 0.75rem 2.25rem;
+    }
+
+    .page-header-title {
+        font-size: 1.55rem;
+    }
+
+    .page-header-desc {
+        font-size: 0.85rem;
+    }
+
+    .page-breadcrumb {
+        font-size: 0.78rem;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+    .card-item,
+    .spmb-card,
+    .program-card,
+    .testi-card,
+    .job-card,
+    .about-box,
+    .media-card,
+    .facility-body {
+        padding: 1.25rem 1rem;
+        border-radius: 12px;
+    }
+
+    .card-badge {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+        left: 14px;
     }
 }

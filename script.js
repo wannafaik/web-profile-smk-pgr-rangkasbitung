@@ -15,32 +15,78 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-list a, .dropdown-menu a');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    const closeNavDrawer = () => {
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+            if (mobileToggle) {
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+    };
 
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.contains('active');
+            document.body.classList.toggle('no-scroll', isOpen);
+
             const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+            if (icon) {
+                if (isOpen) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
 
-        // Close mobile menu on link click
+        // Mobile dropdown accordion tap support (screen <= 992px)
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle('open');
+                    }
+                });
+            }
+        });
+
+        // Close mobile menu on link click (kecuali klik dropdown toggle di mode mobile)
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    const icon = mobileToggle.querySelector('i');
-                    if (icon) {
-                        icon.classList.remove('fa-xmark');
-                        icon.classList.add('fa-bars');
-                    }
+                if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 992) {
+                    return;
                 }
+                closeNavDrawer();
             });
+        });
+
+        // Close mobile menu jika klik di luar navMenu
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                closeNavDrawer();
+            }
+        });
+
+        // Reset state jika window di-resize ke desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                closeNavDrawer();
+                dropdowns.forEach(d => d.classList.remove('open'));
+            }
         });
     }
 
@@ -117,13 +163,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Contact Modal ("Hubungi Kami")
-    const btnHubungi = document.getElementById('btnHubungi');
+    const hubungiButtons = document.querySelectorAll('.btn-hubungi, .btn-menu-hubungi, #btnHubungi');
     const contactModal = document.getElementById('contactModal');
     const closeContactModal = document.getElementById('closeContactModal');
 
-    if (btnHubungi && contactModal && closeContactModal) {
-        btnHubungi.addEventListener('click', () => {
-            contactModal.classList.add('active');
+    if (contactModal && closeContactModal) {
+        hubungiButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeNavDrawer(); // Tutup drawer navigasi jika sedang terbuka di mobile
+                contactModal.classList.add('active');
+            });
         });
 
         closeContactModal.addEventListener('click', () => {
@@ -132,6 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         contactModal.addEventListener('click', (e) => {
             if (e.target === contactModal) {
+                contactModal.classList.remove('active');
+            }
+        });
+
+        // Tutup modal contact jika tombol ESC ditekan
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && contactModal.classList.contains('active')) {
                 contactModal.classList.remove('active');
             }
         });
