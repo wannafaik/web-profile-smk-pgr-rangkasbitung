@@ -931,7 +931,7 @@ body {
 .badge-icon {
     width: 42px;
     height: 42px;
-    background: var(--primary-navy);
+    background: #ffffff;
     border: 2px solid var(--accent-yellow);
     border-radius: 50%;
     display: flex;
@@ -939,6 +939,16 @@ body {
     justify-content: center;
     font-size: 1.1rem;
     color: var(--accent-yellow);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.badge-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
 }
 
 .video-info h4 {
@@ -982,14 +992,15 @@ body {
 
 .principal-welcome-box {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 240px 1fr;
     gap: 2.5rem;
     background: var(--white);
     border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: var(--shadow-md);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #E2E8F0;
     align-items: center;
-    max-width: 960px;
+    max-width: 820px;
     margin: 0 auto;
 }
 
@@ -1015,15 +1026,15 @@ body {
 
 .principal-text-col h3 {
     font-size: 1.5rem;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
 }
 
 .principal-text-col p {
-    font-style: italic;
     color: var(--text-muted);
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .principal-info strong {
@@ -1574,6 +1585,88 @@ body {
 
 .about-box li {
     margin-bottom: 0.75rem;
+}
+
+/* Visi & RUHAY Styling */
+.visi-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.visi-quote {
+    position: relative;
+    background: #F8FAFC;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 1.15rem 1.15rem 1.15rem 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.visi-quote .quote-icon {
+    position: absolute;
+    top: 1rem;
+    left: 0.85rem;
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+    opacity: 0.7;
+}
+
+.visi-main-text {
+    font-size: 1rem !important;
+    font-weight: 600;
+    color: var(--primary-navy) !important;
+    line-height: 1.55 !important;
+    margin: 0;
+}
+
+.visi-main-text strong {
+    color: #D97706;
+}
+
+.ruhay-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.ruhay-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 0.5rem 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.ruhay-item:hover {
+    background: #ffffff;
+    border-color: #CBD5E1;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.ruhay-letter {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--primary-navy);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ruhay-desc {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
 }
 
 /* Footer */
