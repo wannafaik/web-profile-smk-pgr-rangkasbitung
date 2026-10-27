@@ -1241,6 +1241,129 @@ body {
     color: var(--text-muted);
 }
 
+/* Ekstrakurikuler Showcase */
+.ekskul-showcase {
+    margin-top: 4.5rem;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #E2E8F0;
+}
+
+.ekskul-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+}
+
+.ekskul-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FEF3C7;
+    color: #B45309;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ekskul-header h3 {
+    font-size: 1.85rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.ekskul-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.ekskul-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.ekskul-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 1.35rem 1.15rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.ekskul-card:hover {
+    background: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(10, 37, 64, 0.08);
+    border-color: #CBD5E1;
+}
+
+.ekskul-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+.ekskul-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.ekskul-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: #EDF2F7;
+    color: #4A5568;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.ekskul-card h4 {
+    font-size: 1.05rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.ekskul-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Icon Palette Colors */
+.ekskul-icon.c-amber { background: #FEF3C7; color: #D97706; }
+.ekskul-icon.c-blue { background: #E0F2FE; color: #0284C7; }
+.ekskul-icon.c-red { background: #FEE2E2; color: #DC2626; }
+.ekskul-icon.c-green { background: #DCFCE7; color: #16A34A; }
+.ekskul-icon.c-emerald { background: #D1FAE5; color: #059669; }
+.ekskul-icon.c-teal { background: #CCFBF1; color: #0D9488; }
+.ekskul-icon.c-indigo { background: #E0E7FF; color: #4F46E5; }
+.ekskul-icon.c-purple { background: #F3E8FF; color: #9333EA; }
+.ekskul-icon.c-rose { background: #FFE4E6; color: #E11D48; }
+.ekskul-icon.c-orange { background: #FFEDD5; color: #EA580C; }
+.ekskul-icon.c-cyan { background: #CFFAFE; color: #0891B2; }
+.ekskul-icon.c-pink { background: #FCE7F3; color: #DB2777; }
+
+
 /* ==========================================================================
    4. Fasilitas Section
    ========================================================================== */
@@ -1877,6 +2000,17 @@ body.no-scroll {
         gap: 1.5rem;
     }
 
+    /* Ekskul Grid Tablet */
+    .ekskul-showcase {
+        padding: 2.25rem 1.75rem;
+        margin-top: 3.5rem;
+    }
+
+    .ekskul-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.15rem;
+    }
+
     /* Video Card Tablet */
     .video-card {
         max-width: 680px;
@@ -2113,6 +2247,16 @@ body.no-scroll {
         text-align: center;
     }
 
+    /* Ekskul Grid Mobile */
+    .ekskul-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .ekskul-header h3 {
+        font-size: 1.45rem;
+    }
+
     /* Video Player Card Mobile - Proporsional mengecil tanpa melebar */
     .video-card {
         width: 100%;
@@ -2289,6 +2433,30 @@ body.no-scroll {
         width: 42px;
         height: 42px;
         font-size: 1.05rem;
+    }
+
+    /* Ekskul Compact Mobile */
+    .ekskul-showcase {
+        padding: 1.75rem 1rem;
+        margin-top: 2.5rem;
+        border-radius: 14px;
+    }
+
+    .ekskul-header {
+        margin-bottom: 1.75rem;
+    }
+
+    .ekskul-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .ekskul-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .ekskul-card {
+        padding: 1.15rem 1rem;
     }
 
     .hero {
