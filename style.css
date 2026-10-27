@@ -626,7 +626,7 @@ body {
 }
 
 .stat-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--primary-navy);
     line-height: 1.1;
@@ -1366,18 +1366,65 @@ body {
 }
 
 /* Icon Palette Colors */
-.ekskul-icon.c-amber { background: #FEF3C7; color: #D97706; }
-.ekskul-icon.c-blue { background: #E0F2FE; color: #0284C7; }
-.ekskul-icon.c-red { background: #FEE2E2; color: #DC2626; }
-.ekskul-icon.c-green { background: #DCFCE7; color: #16A34A; }
-.ekskul-icon.c-emerald { background: #D1FAE5; color: #059669; }
-.ekskul-icon.c-teal { background: #CCFBF1; color: #0D9488; }
-.ekskul-icon.c-indigo { background: #E0E7FF; color: #4F46E5; }
-.ekskul-icon.c-purple { background: #F3E8FF; color: #9333EA; }
-.ekskul-icon.c-rose { background: #FFE4E6; color: #E11D48; }
-.ekskul-icon.c-orange { background: #FFEDD5; color: #EA580C; }
-.ekskul-icon.c-cyan { background: #CFFAFE; color: #0891B2; }
-.ekskul-icon.c-pink { background: #FCE7F3; color: #DB2777; }
+.ekskul-icon.c-amber {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.ekskul-icon.c-blue {
+    background: #E0F2FE;
+    color: #0284C7;
+}
+
+.ekskul-icon.c-red {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.ekskul-icon.c-green {
+    background: #DCFCE7;
+    color: #16A34A;
+}
+
+.ekskul-icon.c-emerald {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.ekskul-icon.c-teal {
+    background: #CCFBF1;
+    color: #0D9488;
+}
+
+.ekskul-icon.c-indigo {
+    background: #E0E7FF;
+    color: #4F46E5;
+}
+
+.ekskul-icon.c-purple {
+    background: #F3E8FF;
+    color: #9333EA;
+}
+
+.ekskul-icon.c-rose {
+    background: #FFE4E6;
+    color: #E11D48;
+}
+
+.ekskul-icon.c-orange {
+    background: #FFEDD5;
+    color: #EA580C;
+}
+
+.ekskul-icon.c-cyan {
+    background: #CFFAFE;
+    color: #0891B2;
+}
+
+.ekskul-icon.c-pink {
+    background: #FCE7F3;
+    color: #DB2777;
+}
 
 
 /* ==========================================================================
@@ -1963,6 +2010,7 @@ body.no-scroll {
 
 /* 2. Tablet Mode (Landscape & Portrait, max-width: 992px) */
 @media (max-width: 992px) {
+
     /* Sembunyikan floating sidebar di tablet & handphone agar tidak menutupi konten */
     .social-sidebar {
         display: none !important;
