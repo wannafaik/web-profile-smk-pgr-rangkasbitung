@@ -1975,6 +1975,633 @@ body {
 }
 
 /* ==========================================================================
+   Media Hub, Berita, Prestasi, and Galeri Components
+   ========================================================================== */
+
+/* Media Hub Portal 3 Cards */
+.media-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.media-hub-card {
+    background: var(--white);
+    border-radius: 18px;
+    border: 1px solid #E2E8F0;
+    padding: 2.2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.media-hub-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-navy), var(--accent-gold));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-hub-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(30, 58, 138, 0.12);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.media-hub-card:hover::before {
+    opacity: 1;
+}
+
+.media-hub-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.media-hub-card:hover .media-hub-icon {
+    transform: scale(1.1) rotate(4deg);
+}
+
+.media-hub-icon.blue {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.media-hub-icon.gold {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.media-hub-icon.green {
+    background: #ECFDF5;
+    color: #059669;
+}
+
+.media-hub-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin-bottom: 0.6rem;
+}
+
+.media-hub-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.media-hub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.media-hub-card:hover .media-hub-link {
+    color: var(--accent-gold);
+    gap: 12px;
+}
+
+/* Category Filter Pills */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    border: 1px solid #E2E8F0;
+    background: var(--white);
+    color: #475569;
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-navy);
+    color: var(--white);
+    border-color: var(--primary-navy);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    transform: translateY(-2px);
+}
+
+/* News Article Card */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    border-color: rgba(30, 58, 138, 0.2);
+}
+
+.news-thumb-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #0F172A;
+}
+
+.news-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-thumb {
+    transform: scale(1.06);
+}
+
+.news-category-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge-resmi {
+    background: rgba(30, 58, 138, 0.9);
+    color: #FFFFFF;
+}
+
+.badge-akademik {
+    background: rgba(16, 185, 129, 0.9);
+    color: #FFFFFF;
+}
+
+.badge-kegiatan {
+    background: rgba(245, 158, 11, 0.9);
+    color: #FFFFFF;
+}
+
+.news-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.8rem;
+    color: #94A3B8;
+    margin-bottom: 0.75rem;
+}
+
+.news-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.news-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.news-excerpt {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.news-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #F1F5F9;
+}
+
+.news-read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.news-read-btn:hover {
+    color: var(--accent-gold);
+    gap: 10px;
+}
+
+/* Prestasi Section Styling */
+.prestasi-stats-banner {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 100%);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    color: var(--white);
+    margin-bottom: 3.5rem;
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.2);
+}
+
+.prestasi-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.prestasi-stat-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 1rem;
+}
+
+.prestasi-stat-item:last-child {
+    border-right: none;
+}
+
+.prestasi-stat-num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.prestasi-stat-label {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prestasi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.prestasi-card {
+    background: var(--white);
+    border-radius: 18px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+.prestasi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.prestasi-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.prestasi-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.prestasi-card:hover .prestasi-img {
+    transform: scale(1.08);
+}
+
+.prestasi-trophy-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #FFFFFF;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+    border: 2px solid #FFFFFF;
+}
+
+.prestasi-level-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #FEF3C7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    text-transform: uppercase;
+}
+
+.prestasi-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.prestasi-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+}
+
+.prestasi-event {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #D97706;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.prestasi-desc {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.prestasi-winner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 1rem;
+    border-top: 1px solid #F1F5F9;
+    font-size: 0.82rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.prestasi-winner i {
+    color: var(--primary-navy);
+    font-size: 1rem;
+}
+
+/* Galeri Kegiatan Grid & Modal */
+.galeri-filter-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.galeri-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.galeri-item {
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.galeri-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-gold);
+}
+
+.galeri-item-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #0F172A;
+}
+
+.galeri-item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeri-item:hover .galeri-item-thumb img {
+    transform: scale(1.08);
+}
+
+.galeri-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeri-item-overlay i {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.galeri-item:hover .galeri-item-overlay {
+    opacity: 1;
+}
+
+.galeri-item-info {
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.galeri-item-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #D97706;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.galeri-item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    line-height: 1.35;
+}
+
+/* Lightbox Modal for Photo Preview */
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.photo-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: #0F172A;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+    background: #000000;
+}
+
+.lightbox-footer {
+    padding: 1.25rem 1.5rem;
+    background: #0F172A;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lightbox-footer h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.lightbox-footer p {
+    font-size: 0.85rem;
+    color: #94A3B8;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
+.lightbox-close:hover {
+    background: #EF4444;
+    transform: rotate(90deg);
+}
+
+/* ==========================================================================
    Responsive Design & Media Queries (Tablet & Handphone)
    ========================================================================== */
 
@@ -2268,6 +2895,23 @@ body.no-scroll {
         background: var(--primary-dark);
         transform: translateY(-2px);
     }
+
+    .media-hub-grid,
+    .news-grid,
+    .prestasi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .galeri-photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    .prestasi-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 /* 3. Handphone / Smartphone (max-width: 768px) */
@@ -2402,6 +3046,18 @@ body.no-scroll {
     .grid-2-col {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+    }
+
+    .media-hub-grid,
+    .news-grid,
+    .prestasi-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .galeri-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
     /* Stats Bar Mobile */
@@ -2721,5 +3377,15 @@ body.no-scroll {
         font-size: 0.65rem;
         padding: 3px 10px;
         left: 14px;
+    }
+
+    .galeri-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .prestasi-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }
