@@ -1412,6 +1412,56 @@ body {
     color: var(--text-muted);
 }
 
+/* Support Facility Cards */
+.support-facility-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.75rem 1.25rem;
+    border: 1px solid #E2E8F0;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(10, 37, 64, 0.08);
+    border-color: #CBD5E1;
+}
+
+.support-facility-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: transform 0.25s ease;
+}
+
+.support-facility-card:hover .support-facility-icon {
+    transform: scale(1.1);
+}
+
+.support-facility-card h4 {
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.support-facility-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
 /* ==========================================================================
    5. Media & Testimoni & Publikasi & Karir & Tentang
    ========================================================================== */
