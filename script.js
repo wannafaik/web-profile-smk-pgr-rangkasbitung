@@ -1,14 +1,24 @@
 // JavaScript Interaktif untuk Website Profil Sekolah
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Scroll Effect
+    // 1. Dynamic Navbar Height & Scroll Effect
     const navbar = document.getElementById('navbar');
+    const updateNavbarHeight = () => {
+        if (navbar) {
+            const h = navbar.offsetHeight;
+            document.documentElement.style.setProperty('--navbar-height', `${h}px`);
+        }
+    };
+    updateNavbarHeight();
+    window.addEventListener('resize', updateNavbarHeight);
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+        updateNavbarHeight();
     });
 
     // 2. Mobile Menu Toggle & Smooth Navigation
