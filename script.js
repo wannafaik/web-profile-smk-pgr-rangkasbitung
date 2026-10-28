@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (window.innerWidth <= 992) {
                         e.preventDefault();
                         e.stopPropagation();
+                        dropdowns.forEach(d => {
+                            if (d !== dropdown) d.classList.remove('open');
+                        });
                         dropdown.classList.toggle('open');
                     }
                 });

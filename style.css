@@ -3389,3 +3389,262 @@ body.no-scroll {
         gap: 1.25rem;
     }
 }
+/* ==========================================================================
+   Jurusan / Program Keahlian Styles
+   ========================================================================== */
+.jurusan-overview-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.jurusan-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.jurusan-img-wrapper img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.jurusan-img-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.jurusan-badge-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.jurusan-badge-overlay i {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+}
+
+.jurusan-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.jurusan-stat-item {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.jurusan-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.jurusan-stat-info h5 {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.jurusan-stat-info p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin: 0;
+}
+
+.competency-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.competency-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: #CBD5E1;
+}
+
+.competency-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+.competency-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.competency-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.career-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--accent-gold);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.career-card h4 {
+    color: var(--primary-navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.career-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.other-jurusan-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.other-jurusan-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.other-jurusan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-navy);
+}
+
+.other-jurusan-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.other-jurusan-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.other-jurusan-body h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 6px;
+}
+
+.other-jurusan-body p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.other-jurusan-link {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 992px) {
+    .jurusan-overview-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .jurusan-img-wrapper img {
+        height: 300px;
+    }
+    .other-jurusan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .jurusan-quick-stats {
+        grid-template-columns: 1fr;
+    }
+    .other-jurusan-grid {
+        grid-template-columns: 1fr;
+    }
+}
