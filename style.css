@@ -3389,6 +3389,7 @@ body.no-scroll {
         gap: 1.25rem;
     }
 }
+
 /* ==========================================================================
    Jurusan / Program Keahlian Styles
    ========================================================================== */
@@ -3632,9 +3633,11 @@ body.no-scroll {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
     .jurusan-img-wrapper img {
         height: 300px;
     }
+
     .other-jurusan-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -3644,6 +3647,7 @@ body.no-scroll {
     .jurusan-quick-stats {
         grid-template-columns: 1fr;
     }
+
     .other-jurusan-grid {
         grid-template-columns: 1fr;
     }
