@@ -433,7 +433,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -3332,7 +3332,7 @@ body.no-scroll {
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
     .hero-logo-img {
