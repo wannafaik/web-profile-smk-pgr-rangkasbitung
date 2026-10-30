@@ -1,571 +1,825 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Website Resmi SMKS PGRI Rangkasbitung - Lembaga Pendidikan Berkualitas, Berkarakter & Unggul">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website Resmi SMKS PGRI Rangkasbitung - Lembaga Pendidikan Berkualitas, Berkarakter & Unggul"
+    />
     <title>Beranda - SMKS PGRI Rangkasbitung</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG">
+    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Floating Social Media Bar (Left Side) -->
     <aside class="social-sidebar">
-        <a href="https://wa.me/" target="_blank" class="social-icon whatsapp" title="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        class="social-icon whatsapp"
+        title="WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="social-icon instagram"
+        title="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        href="https://youtube.com"
+        target="_blank"
+        class="social-icon youtube"
+        title="YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
     </aside>
 
     <!-- Header / Navbar -->
     <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo-group">
-                <img src="assets/LOGO_SMK.JPG" alt="Logo SMKS PGRI Rangkasbitung" class="school-emblem">
-                <div class="logo-text">
-                    <span class="sub-text">YAYASAN PENDIDIKAN</span>
-                    <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
-                </div>
-            </a>
+      <div class="nav-container">
+        <a href="index.html" class="logo-group">
+          <img
+            src="assets/LOGO_SMK.JPG"
+            alt="Logo SMKS PGRI Rangkasbitung"
+            class="school-emblem"
+          />
+          <div class="logo-text">
+            <span class="sub-text">YAYASAN PENDIDIKAN</span>
+            <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
+          </div>
+        </a>
 
-            <!-- Navigation Links -->
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="tentang.html">Profil & Sambutan</a></li>
-                    <li><a href="spmb.html">SPMB</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Jurusan
-                            <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="tkj.html"><i class="fa-solid fa-network-wired"></i> Teknik Komputer & Jaringan
-                                    (TKJ)</a></li>
-                            <li><a href="mplb.html"><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
-                                    (MPLB)</a></li>
-                            <li><a href="askep.html"><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
-                                    (Askep)</a></li>
-                            <li><a href="farmasi.html"><i class="fa-solid fa-prescription-bottle-medical"></i> Farmasi
-                                    Klinis</a></li>
-                            <li><a href="akl.html"><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan (AKL)</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="fasilitas.html">Fasilitas</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Media <i
-                                class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="berita.html"><i class="fa-regular fa-newspaper"></i> Berita & Informasi</a>
-                            </li>
-                            <li><a href="prestasi.html"><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a></li>
-                            <li><a href="galeri.html"><i class="fa-regular fa-images"></i> Galeri Foto</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="testimoni.html">Testimoni</a></li>
-                    <li><a href="publikasi.html">Publikasi</a></li>
-                </ul>
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="tentang.html">Profil & Sambutan</a></li>
+            <li><a href="spmb.html">SPMB</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle"
+                role="button"
+                aria-haspopup="true"
+                >Jurusan <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="tkj.html"
+                    ><i class="fa-solid fa-network-wired"></i> Teknik Komputer &
+                    Jaringan (TKJ)</a
+                  >
+                </li>
+                <li>
+                  <a href="mplb.html"
+                    ><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                    (MPLB)</a
+                  >
+                </li>
+                <li>
+                  <a href="askep.html"
+                    ><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                    (Askep)</a
+                  >
+                </li>
+                <li>
+                  <a href="farmasi.html"
+                    ><i class="fa-solid fa-prescription-bottle-medical"></i>
+                    Farmasi Klinis</a
+                  >
+                </li>
+                <li>
+                  <a href="akl.html"
+                    ><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan
+                    (AKL)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle"
+                role="button"
+                aria-haspopup="true"
+                >Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="berita.html"
+                    ><i class="fa-regular fa-newspaper"></i> Berita &
+                    Informasi</a
+                  >
+                </li>
+                <li>
+                  <a href="prestasi.html"
+                    ><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a
+                  >
+                </li>
+                <li>
+                  <a href="galeri.html"
+                    ><i class="fa-regular fa-images"></i> Galeri Foto</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="publikasi.html">Publikasi</a></li>
+          </ul>
 
-                <!-- Mobile Action Button (Hanya tampil di Drawer Mobile) -->
-                <div class="nav-menu-action">
-                    <button class="btn-hubungi btn-menu-hubungi" type="button">
-                        <i class="fa-solid fa-comments"></i> Hubungi Kami
-                    </button>
-                </div>
-            </nav>
+          <!-- Mobile Action Button (Hanya tampil di Drawer Mobile) -->
+          <div class="nav-menu-action">
+            <button class="btn-hubungi btn-menu-hubungi" type="button">
+              <i class="fa-solid fa-comments"></i> Hubungi Kami
+            </button>
+          </div>
+        </nav>
 
-            <!-- Header Action Button -->
-            <div class="nav-action">
-                <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
-                <button class="mobile-toggle" id="mobileToggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+        <!-- Header Action Button -->
+        <div class="nav-action">
+          <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- 1. HERO SECTION -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge-wrapper">
-                <img src="assets/LOGO_SMK.JPG" alt="Logo SMKS PGRI Rangkasbitung" class="hero-logo-img">
-            </div>
-
-            <h3 class="hero-subtitle">Terwujudnya SMK Yang Berkualitas Serta Lulusan Yang Ruhay</h3>
-            <h1 class="hero-title">SMKS PGRI RANGKASBITUNG</h1>
-
-            <div class="hero-cta-group">
-                <a href="spmb.html" class="btn-cta btn-yellow">Pendaftaran SPMB 2026</a>
-
-                <div class="cta-divider">
-                    <span class="line"></span>
-                    <p class="text">atau</p>
-                    <span class="line"></span>
-                </div>
-
-                <a href="tentang.html" class="btn-cta btn-navy-outline">Jelajahi Profil Sekolah</a>
-            </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge-wrapper">
+          <img
+            src="assets/LOGO_SMK.JPG"
+            alt="Logo SMKS PGRI Rangkasbitung"
+            class="hero-logo-img"
+          />
         </div>
 
-        <!-- Scroll Indicator (Anchored to Hero Bottom) -->
-        <div class="scroll-indicator" id="scrollTrigger">
-            <span class="scroll-text">SCROLL</span>
-            <i class="fa-solid fa-arrow-down scroll-arrow"></i>
+        <h3 class="hero-subtitle">
+          Terwujudnya SMK Yang Berkualitas Serta Lulusan Yang Ruhay
+        </h3>
+        <h1 class="hero-title">SMKS PGRI RANGKASBITUNG</h1>
+
+        <div class="hero-cta-group">
+          <a href="spmb.html" class="btn-cta btn-yellow"
+            >Pendaftaran SPMB 2026</a
+          >
+
+          <div class="cta-divider">
+            <span class="line"></span>
+            <p class="text">atau</p>
+            <span class="line"></span>
+          </div>
+
+          <a href="tentang.html" class="btn-cta btn-navy-outline"
+            >Jelajahi Profil Sekolah</a
+          >
         </div>
+      </div>
+
+      <!-- Scroll Indicator (Anchored to Hero Bottom) -->
+      <div class="scroll-indicator" id="scrollTrigger">
+        <span class="scroll-text">SCROLL</span>
+        <i class="fa-solid fa-arrow-down scroll-arrow"></i>
+      </div>
     </section>
 
-    <!-- STATS COUNTER BAR -->
+    <!-- STATS COUNTER BAR (REFINED MODERN MINIMALIST) -->
+
     <section class="stats-bar-section" id="statsSection">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-icon gold">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Akreditasi B</h3>
-                            <p>Baik Sekali</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-item">
-                        <div class="stat-icon blue">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>100%</h3>
-                            <p>Kelulusan Siswa</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-item">
-                        <div class="stat-icon green">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>150+</h3>
-                            <p>Prestasi Juara</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-item">
-                        <div class="stat-icon purple">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>85%</h3>
-                            <p>Diterima PTN Favorit</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="stats-header-tag">
+          <span class="sub-tag">PENCAPAIAN SEKOLAH</span>
+          <h2>Mutu & Kredibilitas Akademik</h2>
         </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-badge gold">Terakreditasi</span>
+              <i class="fa-solid fa-award stat-icon"></i>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number">B</div>
+              <h3>Peringkat Baik Sekali</h3>
+              <p>
+                Standar nasional pendidikan & kelayakan sarana prasarana
+                sekolah.
+              </p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-badge blue">Kelulusan</span>
+              <i class="fa-solid fa-graduation-cap stat-icon"></i>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number">100%</div>
+              <h3>Tingkat Kelulusan</h3>
+              <p>
+                Komitmen penuh dalam mengantar siswa hingga tuntas menempuh
+                studi.
+              </p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-badge green">Prestasi</span>
+              <i class="fa-solid fa-trophy stat-icon"></i>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number">150+</div>
+              <h3>Juara Kompetisi</h3>
+              <p>
+                Pencapaian siswa di bidang akademik, olahraga, dan seni tingkat
+                daerah hingga nasional.
+              </p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-badge purple">Karier & Kuliah</span>
+              <i class="fa-solid fa-arrow-trend-up stat-icon"></i>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number">85%</div>
+              <h3>Terserap & PTN</h3>
+              <p>
+                Lulusan langsung bekerja di dunia industri atau melanjutkan ke
+                perguruan tinggi favorit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- QUICK PORTAL ACCESS HUB -->
     <section class="quick-hub-section">
-        <div class="container">
-            <div class="section-title-wrapper" style="margin-bottom: 2.5rem;">
-                <div class="accent-line"></div>
-                <h2 class="section-title">
-                    <span class="bold">JELAJAHI</span> <span class="light">Portal Sekolah</span>
-                </h2>
-                <p class="section-subtitle">Akses cepat menuju menu dan layanan informasi utama SMKS PGRI RANGKASBITUNG.
-                </p>
-            </div>
-
-            <div class="grid-4-col">
-                <a href="tentang.html" class="quick-hub-card">
-                    <div>
-                        <div class="hub-icon" style="background: #DBEAFE; color: #1E3A8A;">
-                            <i class="fa-solid fa-school"></i>
-                        </div>
-                        <h4>Profil & Visi Misi</h4>
-                        <p>Ketahui filosofi pendidikan, visi misi unggulan, serta pesan sambutan Kepala Sekolah.</p>
-                    </div>
-                    <span class="hub-link-text">Pelajari Selengkapnya <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-
-                <a href="spmb.html" class="quick-hub-card">
-                    <div>
-                        <div class="hub-icon" style="background: #FEF3C7; color: #D97706;">
-                            <i class="fa-solid fa-user-plus"></i>
-                        </div>
-                        <h4>Penerimaan Siswa</h4>
-                        <p>Informasi gelombang pendaftaran, jalur beasiswa prestasi, serta alur pendaftaran mudah.</p>
-                    </div>
-                    <span class="hub-link-text">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-
-                <a href="tkj.html" class="quick-hub-card">
-                    <div>
-                        <div class="hub-icon" style="background: #D1FAE5; color: #059669;">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <h4>Program Keahlian</h4>
-                        <p>5 Pilihan kejuruan unggulan: TKJ, Manajemen Perkantoran, Asisten Keperawatan, Farmasi Klinis,
-                            dan Akuntansi.</p>
-                    </div>
-                    <span class="hub-link-text">Lihat Program <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-
-                <a href="fasilitas.html" class="quick-hub-card">
-                    <div>
-                        <div class="hub-icon" style="background: #FEE2E2; color: #DC2626;">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-                        <h4>Fasilitas Sekolah</h4>
-                        <p>Laboratorium modern, perpustakaan digital terintegrasi, sarana olahraga, dan WiFi
-                            berkecepatan tinggi.</p>
-                    </div>
-                    <span class="hub-link-text">Eksplor Fasilitas <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-title-wrapper" style="margin-bottom: 2.5rem">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">JELAJAHI</span>
+            <span class="light">Portal Sekolah</span>
+          </h2>
+          <p class="section-subtitle">
+            Akses cepat menuju menu dan layanan informasi utama SMKS PGRI
+            RANGKASBITUNG.
+          </p>
         </div>
+
+        <div class="grid-4-col">
+          <a href="tentang.html" class="quick-hub-card">
+            <div>
+              <div class="hub-icon" style="background: #dbeafe; color: #1e3a8a">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <h4>Profil & Visi Misi</h4>
+              <p>
+                Ketahui filosofi pendidikan, visi misi unggulan, serta pesan
+                sambutan Kepala Sekolah.
+              </p>
+            </div>
+            <span class="hub-link-text"
+              >Pelajari Selengkapnya <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <a href="spmb.html" class="quick-hub-card">
+            <div>
+              <div class="hub-icon" style="background: #fef3c7; color: #d97706">
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+              <h4>Penerimaan Siswa</h4>
+              <p>
+                Informasi gelombang pendaftaran, jalur beasiswa prestasi, serta
+                alur pendaftaran mudah.
+              </p>
+            </div>
+            <span class="hub-link-text"
+              >Daftar Sekarang <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <a href="tkj.html" class="quick-hub-card">
+            <div>
+              <div class="hub-icon" style="background: #d1fae5; color: #059669">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h4>Program Keahlian</h4>
+              <p>
+                5 Pilihan kejuruan unggulan: TKJ, Manajemen Perkantoran, Asisten
+                Keperawatan, Farmasi Klinis, dan Akuntansi.
+              </p>
+            </div>
+            <span class="hub-link-text"
+              >Lihat Program <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <a href="fasilitas.html" class="quick-hub-card">
+            <div>
+              <div class="hub-icon" style="background: #fee2e2; color: #dc2626">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <h4>Fasilitas Sekolah</h4>
+              <p>
+                Laboratorium modern, perpustakaan digital terintegrasi, sarana
+                olahraga, dan WiFi berkecepatan tinggi.
+              </p>
+            </div>
+            <span class="hub-link-text"
+              >Eksplor Fasilitas <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- HIGHLIGHT SECTION: PROFIL & SAMBUTAN -->
-    <section class="section-block" style="background-color: var(--white); padding-top: 4.5rem;">
-        <div class="container">
-            <div class="section-title-wrapper-row">
-                <div>
-                    <h2 class="section-title" style="text-align: left;">
-                        <span class="bold">SAMBUTAN</span> <span class="light">Kepala Sekolah</span>
-                    </h2>
-                    <p class="section-subtitle" style="text-align: left; margin: 0;">Mencetak generasi unggul
-                        berlandaskan iman, ilmu, dan budi pekerti luhur.</p>
-                </div>
-                <a href="tentang.html" class="btn-view-all">Halaman Profil <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="principal-welcome-box" style="margin-top: 0;">
-                <div class="principal-img-col">
-                    <img src="assets/KEPALA_SEKOLAH.JPG" alt="Kepala Sekolah SMKS PGRI RANGKASBITUNG"
-                        class="principal-img">
-                </div>
-                <div class="principal-text-col">
-                    <span class="badge-tag">SAMBUTAN KEPALA SEKOLAH</span>
-                    <h3 style="margin-bottom: 0.25rem;">DINI HIPDIANI, M.Pd.</h3>
-                    <p style="font-weight: 600; color: var(--primary-navy); margin-bottom: 1rem; font-size: 1.05rem;">
-                        Assalamualaikum Warahmatullah Wabarakatuh
-                    </p>
-                    <p>
-                        Alhamdulillahi robbil alamin kami panjatkan kehadlirat Allah SWT, bahwasannya dengan rahmat dan
-                        karunia-Nya lah akhirnya Website sekolah ini dengan alamat <a
-                            href="http://www.smkpgrirangkasbitung.sch.id"
-                            style="color: var(--primary-navy); font-weight: 600; text-decoration: underline;">www.smkpgrirangkasbitung.sch.id</a>
-                        dapat kami perbaharui. Kami mengucapkan selamat datang di Website kami Sekolah Menengah Kejuruan
-                        PGRI Rangkasbitung, yang saya tujukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa
-                        serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil,
-                        aktifitas/kegiatan serta fasilitas sekolah kami.
-                    </p>
-                    <p>
-                        Kami selaku pimpinan sekolah mengucapkan terima kasih kepada tim pembuat Website ini yang telah
-                        berusaha untuk dapat lebih memperkenalkan segala perihal yang dimiliki oleh sekolah. Dan
-                        tentunya Website sekolah kami masih terdapat banyak kekurangan, oleh karena itu kepada seluruh
-                        civitas akademika dan masyarakat umum dapat memberikan saran dan kritik yang membangun demi
-                        kemajuan Website ini lebih lanjut.
-                    </p>
-                    <p>
-                        Saya berharap Website ini dapat dijadikan wahana interaksi yang positif baik antar civitas
-                        akademika maupun masyarakat pada umumnya sehingga dapat menjalin silaturahmi yang erat disegala
-                        unsur. Mari kita bekerja dan berkarya dengan mengharap ridho sang Kuasa dan keikhlasan yang
-                        tulus dijiwa demi anak bangsa.
-                    </p>
-                    <p style="font-weight: 600; color: var(--primary-navy); margin-bottom: 1.5rem;">
-                        Terima kasih semoga Allah ‘Azza Wa Jalla menyertai doa kita semua……amin
-                    </p>
-                    <div class="principal-info">
-                        <strong>DINI HIPDIANI, M.Pd.</strong>
-                        <span>Kepala Sekolah SMKS PGRI RANGKASBITUNG</span>
-                    </div>
-                    <div style="margin-top: 1.25rem;">
-                        <a href="tentang.html" class="btn-job-apply" style="display: inline-block;">Halaman Profil
-                            Lengkap</a>
-                    </div>
-                </div>
-            </div>
+    <section
+      class="section-block"
+      style="background-color: var(--white); padding-top: 4.5rem"
+    >
+      <div class="container">
+        <div class="section-title-wrapper-row">
+          <div>
+            <h2 class="section-title" style="text-align: left">
+              <span class="bold">SAMBUTAN</span>
+              <span class="light">Kepala Sekolah</span>
+            </h2>
+            <p class="section-subtitle" style="text-align: left; margin: 0">
+              Mencetak generasi unggul berlandaskan iman, ilmu, dan budi pekerti
+              luhur.
+            </p>
+          </div>
+          <a href="tentang.html" class="btn-view-all"
+            >Halaman Profil <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
+
+        <div class="principal-welcome-box" style="margin-top: 0">
+          <div class="principal-img-col">
+            <img
+              src="assets/KEPALA_SEKOLAH.JPG"
+              alt="Kepala Sekolah SMKS PGRI RANGKASBITUNG"
+              class="principal-img"
+            />
+          </div>
+          <div class="principal-text-col">
+            <span class="badge-tag">SAMBUTAN KEPALA SEKOLAH</span>
+            <h3 style="margin-bottom: 0.25rem">DINI HIPDIANI, M.Pd.</h3>
+            <p
+              style="
+                font-weight: 600;
+                color: var(--primary-navy);
+                margin-bottom: 1rem;
+                font-size: 1.05rem;
+              "
+            >
+              Assalamualaikum Warahmatullah Wabarakatuh
+            </p>
+            <p>
+              Alhamdulillahi robbil alamin kami panjatkan kehadlirat Allah SWT,
+              bahwasannya dengan rahmat dan karunia-Nya lah akhirnya Website
+              sekolah ini dengan alamat
+              <a
+                href="http://www.smkpgrirangkasbitung.sch.id"
+                style="
+                  color: var(--primary-navy);
+                  font-weight: 600;
+                  text-decoration: underline;
+                "
+                >www.smkpgrirangkasbitung.sch.id</a
+              >
+              dapat kami perbaharui. Kami mengucapkan selamat datang di Website
+              kami Sekolah Menengah Kejuruan PGRI Rangkasbitung, yang saya
+              tujukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa
+              serta khalayak umum guna dapat mengakses seluruh informasi tentang
+              segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.
+            </p>
+            <p>
+              Kami selaku pimpinan sekolah mengucapkan terima kasih kepada tim
+              pembuat Website ini yang telah berusaha untuk dapat lebih
+              memperkenalkan segala perihal yang dimiliki oleh sekolah. Dan
+              tentunya Website sekolah kami masih terdapat banyak kekurangan,
+              oleh karena itu kepada seluruh civitas akademika dan masyarakat
+              umum dapat memberikan saran dan kritik yang membangun demi
+              kemajuan Website ini lebih lanjut.
+            </p>
+            <p>
+              Saya berharap Website ini dapat dijadikan wahana interaksi yang
+              positif baik antar civitas akademika maupun masyarakat pada
+              umumnya sehingga dapat menjalin silaturahmi yang erat disegala
+              unsur. Mari kita bekerja dan berkarya dengan mengharap ridho sang
+              Kuasa dan keikhlasan yang tulus dijiwa demi anak bangsa.
+            </p>
+            <p
+              style="
+                font-weight: 600;
+                color: var(--primary-navy);
+                margin-bottom: 1.5rem;
+              "
+            >
+              Terima kasih semoga Allah ‘Azza Wa Jalla menyertai doa kita
+              semua……amin
+            </p>
+            <div class="principal-info">
+              <strong>DINI HIPDIANI, M.Pd.</strong>
+              <span>Kepala Sekolah SMKS PGRI RANGKASBITUNG</span>
+            </div>
+            <div style="margin-top: 1.25rem">
+              <a
+                href="tentang.html"
+                class="btn-job-apply"
+                style="display: inline-block"
+                >Halaman Profil Lengkap</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- HIGHLIGHT SECTION: PROGRAM UNGGULAN -->
     <section class="section-block program-section">
-        <div class="container">
-            <div class="section-title-wrapper-row">
-                <div>
-                    <h2 class="section-title" style="text-align: left;">
-                        <span class="bold">PROGRAM</span> <span class="light">Pendidikan Unggulan</span>
-                    </h2>
-                    <p class="section-subtitle" style="text-align: left; margin: 0;">Pembinaan komprehensif
-                        mengintegrasikan kecakapan kognitif dan pembentukan karakter.</p>
-                </div>
-                <a href="tkj.html" class="btn-view-all">Jelajahi Jurusan <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="grid-4-col">
-                <div class="program-card">
-                    <div class="program-icon-box navy">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                    <h4>STEM & Sains Riset</h4>
-                    <p>Pembelajaran Sains, Teknologi, Teknik, dan Matematika berbasis proyek terapan & kejuaraan
-                        olimpiade sains.</p>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-icon-box gold">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-                    <h4>Bahasa & Literasi</h4>
-                    <p>Penguatan komunikasi bahasa Indonesia dan bahasa Inggris aktif untuk kesiapan era global dan
-                        studi lanjut.</p>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-icon-box green">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-                    <h4>Karakter & Kepemimpinan</h4>
-                    <p>Pembentukan nilai-nilai etika, integritas, kedisiplinan, serta jiwa kepemimpinan positif dalam
-                        organisasi siswa.</p>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-icon-box red">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h4>Seni & Keolahragaan</h4>
-                    <p>Wadah pengembangan bakat siswa dalam basket, futsal, seni musik, tari, fotografi, dan
-                        jurnalistik.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title-wrapper-row">
+          <div>
+            <h2 class="section-title" style="text-align: left">
+              <span class="bold">PROGRAM</span>
+              <span class="light">Pendidikan Unggulan</span>
+            </h2>
+            <p class="section-subtitle" style="text-align: left; margin: 0">
+              Pembinaan komprehensif mengintegrasikan kecakapan kognitif dan
+              pembentukan karakter.
+            </p>
+          </div>
+          <a href="tkj.html" class="btn-view-all"
+            >Jelajahi Jurusan <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
+
+        <div class="grid-4-col">
+          <div class="program-card">
+            <div class="program-icon-box navy">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <h4>STEM & Sains Riset</h4>
+            <p>
+              Pembelajaran Sains, Teknologi, Teknik, dan Matematika berbasis
+              proyek terapan & kejuaraan olimpiade sains.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-icon-box gold">
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <h4>Bahasa & Literasi</h4>
+            <p>
+              Penguatan komunikasi bahasa Indonesia dan bahasa Inggris aktif
+              untuk kesiapan era global dan studi lanjut.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-icon-box green">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h4>Karakter & Kepemimpinan</h4>
+            <p>
+              Pembentukan nilai-nilai etika, integritas, kedisiplinan, serta
+              jiwa kepemimpinan positif dalam organisasi siswa.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-icon-box red">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h4>Seni & Keolahragaan</h4>
+            <p>
+              Wadah pengembangan bakat siswa dalam basket, futsal, seni musik,
+              tari, fotografi, dan jurnalistik.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SPMB CALLOUT BANNER -->
-    <section style="background: var(--white); padding: 1rem 0;">
-        <div class="container">
-            <div class="spmb-cta-banner">
-                <div class="spmb-banner-text">
-                    <span class="page-badge"
-                        style="background: rgba(245, 158, 11, 0.25); color: #F59E0B; margin-bottom: 12px; border-color: rgba(245, 158, 11, 0.6);">SPMB
-                        TA 2026/2027</span>
-                    <h3>Penerimaan Siswa Baru Telah Dibuka!</h3>
-                    <p>Raih beasiswa potongan uang pangkal hingga 20% bagi pendaftar gelombang awal dan siswa
-                        berprestasi. Kuota terbatas tiap rombongan belajar.</p>
-                </div>
-                <div class="spmb-banner-action">
-                    <a href="spmb.html" class="btn-cta btn-yellow" style="width: auto; padding: 14px 28px;">Info
-                        Pendaftaran & Alur</a>
-                    <button class="btn-cta btn-navy-outline"
-                        style="width: auto; padding: 14px 24px; border-color: var(--white); cursor: pointer;"
-                        onclick="document.getElementById('btnHubungi').click()">Tanya Panitia</button>
-                </div>
-            </div>
+    <section style="background: var(--white); padding: 1rem 0">
+      <div class="container">
+        <div class="spmb-cta-banner">
+          <div class="spmb-banner-text">
+            <span
+              class="page-badge"
+              style="
+                background: rgba(245, 158, 11, 0.25);
+                color: #f59e0b;
+                margin-bottom: 12px;
+                border-color: rgba(245, 158, 11, 0.6);
+              "
+              >SPMB TA 2026/2027</span
+            >
+            <h3>Penerimaan Siswa Baru Telah Dibuka!</h3>
+            <p>
+              Raih beasiswa potongan uang pangkal hingga 20% bagi pendaftar
+              gelombang awal dan siswa berprestasi. Kuota terbatas tiap
+              rombongan belajar.
+            </p>
+          </div>
+          <div class="spmb-banner-action">
+            <a
+              href="spmb.html"
+              class="btn-cta btn-yellow"
+              style="width: auto; padding: 14px 28px"
+              >Info Pendaftaran & Alur</a
+            >
+            <button
+              class="btn-cta btn-navy-outline"
+              style="
+                width: auto;
+                padding: 14px 24px;
+                border-color: var(--white);
+                cursor: pointer;
+              "
+              onclick="document.getElementById('btnHubungi').click()"
+            >
+              Tanya Panitia
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- HIGHLIGHT SECTION: BERITA & PENGUMUMAN -->
     <section class="section-block media-section">
-        <div class="container">
-            <div class="section-title-wrapper-row">
-                <div>
-                    <h2 class="section-title" style="text-align: left;">
-                        <span class="bold">KABAR</span> <span class="light">& Prestasi Terbaru</span>
-                    </h2>
-                    <p class="section-subtitle" style="text-align: left; margin: 0;">Dokumentasi kegiatan dan informasi
-                        resmi dari sekolah.</p>
-                </div>
-                <a href="berita.html" class="btn-view-all">Lihat Semua Berita <i
-                        class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="grid-3-col">
-                <div class="media-card">
-                    <div class="media-date"><i class="fa-regular fa-calendar"></i> 24 September 2026</div>
-                    <h4>Siswa SMKS PGRI RANGKASBITUNG Meraih Juara 1 Olimpiade Sains Nasional</h4>
-                    <p>Prestasi membanggakan kembali diukir oleh tim sains sekolah pada ajang kompetisi tingkat nasional
-                        bidang astronomi dan fisika terapan.</p>
-                    <a href="prestasi.html" class="read-more">Lihat Prestasi <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="media-card">
-                    <div class="media-date"><i class="fa-regular fa-calendar"></i> 18 September 2026</div>
-                    <h4>Pengumuman Pelaksanaan Jam Belajar Semester Ganjil</h4>
-                    <p>Diberitahukan kepada seluruh siswa dan orang tua murid mengenai jadwal terbaru jam masuk sekolah
-                        serta tata tertib kedisiplinan semester ganjil.</p>
-                    <a href="berita.html" class="read-more">Baca Berita <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="media-card">
-                    <div class="media-date"><i class="fa-regular fa-calendar"></i> 10 September 2026</div>
-                    <h4>Dokumentasi Pentas Seni & Gelar Karya Siswa</h4>
-                    <p>Keseruan dan kreativitas para murid ditampilkan secara memukau dalam pagelaran tahunan seni rupa,
-                        teater musikal, dan inovasi karya ilmiah.</p>
-                    <a href="galeri.html" class="read-more">Buka Galeri <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title-wrapper-row">
+          <div>
+            <h2 class="section-title" style="text-align: left">
+              <span class="bold">KABAR</span>
+              <span class="light">& Prestasi Terbaru</span>
+            </h2>
+            <p class="section-subtitle" style="text-align: left; margin: 0">
+              Dokumentasi kegiatan dan informasi resmi dari sekolah.
+            </p>
+          </div>
+          <a href="berita.html" class="btn-view-all"
+            >Lihat Semua Berita <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
+
+        <div class="grid-3-col">
+          <div class="media-card">
+            <div class="media-date">
+              <i class="fa-regular fa-calendar"></i> 24 September 2026
+            </div>
+            <h4>
+              Siswa SMKS PGRI RANGKASBITUNG Meraih Juara 1 Olimpiade Sains
+              Nasional
+            </h4>
+            <p>
+              Prestasi membanggakan kembali diukir oleh tim sains sekolah pada
+              ajang kompetisi tingkat nasional bidang astronomi dan fisika
+              terapan.
+            </p>
+            <a href="prestasi.html" class="read-more"
+              >Lihat Prestasi <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="media-card">
+            <div class="media-date">
+              <i class="fa-regular fa-calendar"></i> 18 September 2026
+            </div>
+            <h4>Pengumuman Pelaksanaan Jam Belajar Semester Ganjil</h4>
+            <p>
+              Diberitahukan kepada seluruh siswa dan orang tua murid mengenai
+              jadwal terbaru jam masuk sekolah serta tata tertib kedisiplinan
+              semester ganjil.
+            </p>
+            <a href="berita.html" class="read-more"
+              >Baca Berita <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="media-card">
+            <div class="media-date">
+              <i class="fa-regular fa-calendar"></i> 10 September 2026
+            </div>
+            <h4>Dokumentasi Pentas Seni & Gelar Karya Siswa</h4>
+            <p>
+              Keseruan dan kreativitas para murid ditampilkan secara memukau
+              dalam pagelaran tahunan seni rupa, teater musikal, dan inovasi
+              karya ilmiah.
+            </p>
+            <a href="galeri.html" class="read-more"
+              >Buka Galeri <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    
-        <!-- LOKASI & KONTAK SEKOLAH (MAPS) -->
+    <!-- LOKASI & KONTAK SEKOLAH (MAPS) -->
     <section class="lokasi-section" id="lokasi">
-        <div class="container">
-            <div class="lokasi-wrapper">
+      <div class="container">
+        <div class="lokasi-wrapper">
+          <!-- Kartu Informasi Kontak -->
+          <div class="lokasi-card">
+            <h3>Informasi Kontak</h3>
 
-                <!-- Kartu Informasi Kontak -->
-                <div class="lokasi-card">
-                    <h3>Informasi Kontak</h3>
-
-                    <div class="lokasi-item">
-                        <h4><i class="fa-solid fa-location-dot"></i>Alamat</h4>
-                        <p>Jl. Dewi Sartika No.46l, Muara Ciujung Tim., Kec. Rangkasbitung, Kabupaten Lebak, Banten
-                            42314</p>
-                    </div>
-
-                    <div class="lokasi-item">
-                        <h4><i class="fa-solid fa-phone"></i>Telepon</h4>
-                        <a href="tel:+62525203022">(0525) 203022</a>
-                    </div>
-
-                    <div class="lokasi-item">
-                        <h4><i class="fa-solid fa-envelope"></i>Email</h4>
-                        <a href="mailto:info@smkpgri-rangkasbitung.sch.id">info@smkpgri-rangkasbitung.sch.id</a>
-                    </div>
-
-                    <div class="lokasi-item">
-                        <h4><i class="fa-solid fa-clock"></i>Jam Operasional</h4>
-                        <div class="lokasi-jam">
-                            <p>Senin – Jumat</p>
-                            <span class="jam-badge">07:00 – 15:30 WIB</span>
-                        </div>
-                    </div>
-
-                    <a class="lokasi-btn" target="_blank" rel="noopener"
-                        href="https://www.google.com/maps/dir/?api=1&destination=SMK+PGRI+Rangkasbitung+Jl.+Dewi+Sartika+Rangkasbitung">
-                        <i class="fa-solid fa-location-arrow"></i> Petunjuk Arah
-                    </a>
-                </div>
-
-                <!-- Google Maps -->
-                <div class="lokasi-map">
-                    <iframe
-                    src="https://maps.google.com/maps?q=SMK%20PGRI%20Rangkasbitung&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                    title="Lokasi SMK PGRI Rangkasbitung" allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
+            <div class="lokasi-item">
+              <h4><i class="fa-solid fa-location-dot"></i>Alamat</h4>
+              <p>
+                Jl. Dewi Sartika No.46l, Muara Ciujung Tim., Kec. Rangkasbitung,
+                Kabupaten Lebak, Banten 42314
+              </p>
             </div>
-        </div>
-    </section>
 
+            <div class="lokasi-item">
+              <h4><i class="fa-solid fa-phone"></i>Telepon</h4>
+              <a href="tel:+62525203022">(0525) 203022</a>
+            </div>
+
+            <div class="lokasi-item">
+              <h4><i class="fa-solid fa-envelope"></i>Email</h4>
+              <a href="mailto:info@smkpgri-rangkasbitung.sch.id"
+                >info@smkpgri-rangkasbitung.sch.id</a
+              >
+            </div>
+
+            <div class="lokasi-item">
+              <h4><i class="fa-solid fa-clock"></i>Jam Operasional</h4>
+              <div class="lokasi-jam">
+                <p>Senin – Jumat</p>
+                <span class="jam-badge">07:00 – 15:30 WIB</span>
+              </div>
+            </div>
+
+            <a
+              class="lokasi-btn"
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com/maps/dir/?api=1&destination=SMK+PGRI+Rangkasbitung+Jl.+Dewi+Sartika+Rangkasbitung"
+            >
+              <i class="fa-solid fa-location-arrow"></i> Petunjuk Arah
+            </a>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="lokasi-map">
+            <iframe
+              src="https://maps.google.com/maps?q=SMK%20PGRI%20Rangkasbitung&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              title="Lokasi SMK PGRI Rangkasbitung"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER LENGKAP -->
     <footer class="footer-block">
-        <div class="container">
-            <div class="grid-3-col footer-grid">
-                <div class="footer-col">
-                    <div class="footer-brand">
-                        <img src="assets/LOGO_SMK.JPG" alt="Logo SMKS PGRI Rangkasbitung" class="footer-logo">
-                        <h5>SMKS PGRI RANGKASBITUNG</h5>
-                    </div>
-                    <p>Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak Pemimpin Masa Depan.</p>
-                    <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Tautan Cepat</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="tentang.html">Profil & Sambutan</a></li>
-                        <li><a href="spmb.html">Informasi SPMB</a></li>
-                        <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
-                        <li><a href="fasilitas.html">Fasilitas Sekolah</a></li>
-                        <li><a href="berita.html">Berita & Informasi</a></li>
-                        <li><a href="prestasi.html">Prestasi Siswa</a></li>
-                        <li><a href="galeri.html">Galeri Foto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Kontak & Alamat</h5>
-                    <p><i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara No. 123, Rangkasbitung</p>
-                    <p><i class="fa-solid fa-phone"></i> (021) 1234 5678</p>
-                    <p><i class="fa-solid fa-envelope"></i> info@smkpgri-rangkasbitung.sch.id</p>
-                </div>
+      <div class="container">
+        <div class="grid-3-col footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img
+                src="assets/LOGO_SMK.JPG"
+                alt="Logo SMKS PGRI Rangkasbitung"
+                class="footer-logo"
+              />
+              <h5>SMKS PGRI RANGKASBITUNG</h5>
             </div>
+            <p>
+              Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak
+              Pemimpin Masa Depan.
+            </p>
+            <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Tautan Cepat</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang.html">Profil & Sambutan</a></li>
+              <li><a href="spmb.html">Informasi SPMB</a></li>
+              <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
+              <li><a href="fasilitas.html">Fasilitas Sekolah</a></li>
+              <li><a href="berita.html">Berita & Informasi</a></li>
+              <li><a href="prestasi.html">Prestasi Siswa</a></li>
+              <li><a href="galeri.html">Galeri Foto</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kontak & Alamat</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara
+              No. 123, Rangkasbitung
+            </p>
+            <p><i class="fa-solid fa-phone"></i> (021) 1234 5678</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              info@smkpgri-rangkasbitung.sch.id
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Video Modal Lightbox -->
     <div class="modal-backdrop" id="videoModal">
-        <div class="modal-content video-modal-content">
-            <button class="modal-close" id="closeVideoModal">&times;</button>
-            <div class="iframe-container">
-                <iframe id="videoIframe" src="" title="Company Profile Sekolah" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+      <div class="modal-content video-modal-content">
+        <button class="modal-close" id="closeVideoModal">&times;</button>
+        <div class="iframe-container">
+          <iframe
+            id="videoIframe"
+            src=""
+            title="Company Profile Sekolah"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          ></iframe>
         </div>
+      </div>
     </div>
 
     <!-- Hubungi Kami Modal -->
     <div class="modal-backdrop" id="contactModal">
-        <div class="modal-content contact-modal-content">
-            <button class="modal-close" id="closeContactModal">&times;</button>
-            <h3>Hubungi Kami</h3>
-            <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
-            <div class="contact-options">
-                <a href="https://wa.me/" class="contact-card wa">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <div>
-                        <strong>WhatsApp Official</strong>
-                        <span>Respon Cepat via Chat</span>
-                    </div>
-                </a>
-                <a href="tel:+622112345678" class="contact-card phone">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <strong>Call Center Sekolah</strong>
-                        <span>(021) 1234 5678</span>
-                    </div>
-                </a>
-                <a href="mailto:info@smanusantara.sch.id" class="contact-card email">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <strong>Email Layanan</strong>
-                        <span>info@smanusantara.sch.id</span>
-                    </div>
-                </a>
+      <div class="modal-content contact-modal-content">
+        <button class="modal-close" id="closeContactModal">&times;</button>
+        <h3>Hubungi Kami</h3>
+        <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+        <div class="contact-options">
+          <a href="https://wa.me/" class="contact-card wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp Official</strong>
+              <span>Respon Cepat via Chat</span>
             </div>
+          </a>
+          <a href="tel:+622112345678" class="contact-card phone">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Call Center Sekolah</strong>
+              <span>(021) 1234 5678</span>
+            </div>
+          </a>
+          <a href="mailto:info@smanusantara.sch.id" class="contact-card email">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email Layanan</strong>
+              <span>info@smanusantara.sch.id</span>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,456 +1,719 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Jurusan Farmasi Klinis & Komunitas SMKS PGRI Rangkasbitung - Keahlian Peracikan Obat, Farmakologi, Simplisia Herbal, dan Administrasi Apotek.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jurusan Farmasi Klinis & Komunitas SMKS PGRI Rangkasbitung - Keahlian Peracikan Obat, Farmakologi, Simplisia Herbal, dan Administrasi Apotek."
+    />
     <title>Farmasi Klinis & Komunitas - SMKS PGRI Rangkasbitung</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG">
+    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Floating Social Media Bar (Left Side) -->
     <aside class="social-sidebar">
-        <a href="https://wa.me/" target="_blank" class="social-icon whatsapp" title="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        class="social-icon whatsapp"
+        title="WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="social-icon instagram"
+        title="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        href="https://youtube.com"
+        target="_blank"
+        class="social-icon youtube"
+        title="YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
     </aside>
 
     <!-- Header / Navbar -->
     <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo-group">
-                <img src="assets/LOGO_SMK.JPG" alt="Logo SMKS PGRI Rangkasbitung" class="school-emblem">
-                <div class="logo-text">
-                    <span class="sub-text">YAYASAN PENDIDIKAN</span>
-                    <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
-                </div>
-            </a>
+      <div class="nav-container">
+        <a href="index.html" class="logo-group">
+          <img
+            src="assets/LOGO_SMK.JPG"
+            alt="Logo SMKS PGRI Rangkasbitung"
+            class="school-emblem"
+          />
+          <div class="logo-text">
+            <span class="sub-text">YAYASAN PENDIDIKAN</span>
+            <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
+          </div>
+        </a>
 
-            <!-- Navigation Links -->
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="tentang.html">Profil & Sambutan</a></li>
-                    <li><a href="spmb.html">SPMB</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle active" role="button"
-                            aria-haspopup="true">Jurusan <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="tkj.html"><i class="fa-solid fa-network-wired"></i> Teknik Komputer & Jaringan
-                                    (TKJ)</a></li>
-                            <li><a href="mplb.html"><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
-                                    (MPLB)</a></li>
-                            <li><a href="askep.html"><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
-                                    (Askep)</a></li>
-                            <li><a href="farmasi.html" style="font-weight: 700; color: var(--primary-navy);"><i
-                                        class="fa-solid fa-prescription-bottle-medical"></i> Farmasi Klinis</a></li>
-                            <li><a href="akl.html"><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan (AKL)</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="fasilitas.html">Fasilitas</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Media <i
-                                class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="berita.html"><i class="fa-regular fa-newspaper"></i> Berita & Informasi</a>
-                            </li>
-                            <li><a href="prestasi.html"><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a></li>
-                            <li><a href="galeri.html"><i class="fa-regular fa-images"></i> Galeri Foto</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="testimoni.html">Testimoni</a></li>
-                    <li><a href="publikasi.html">Publikasi</a></li>
-                </ul>
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Profil & Sambutan</a></li>
+            <li><a href="spmb.html">SPMB</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle active"
+                role="button"
+                aria-haspopup="true"
+                >Jurusan <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="tkj.html"
+                    ><i class="fa-solid fa-network-wired"></i> Teknik Komputer &
+                    Jaringan (TKJ)</a
+                  >
+                </li>
+                <li>
+                  <a href="mplb.html"
+                    ><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                    (MPLB)</a
+                  >
+                </li>
+                <li>
+                  <a href="askep.html"
+                    ><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                    (Askep)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="farmasi.html"
+                    style="font-weight: 700; color: var(--primary-navy)"
+                    ><i class="fa-solid fa-prescription-bottle-medical"></i>
+                    Farmasi Klinis</a
+                  >
+                </li>
+                <li>
+                  <a href="akl.html"
+                    ><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan
+                    (AKL)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle"
+                role="button"
+                aria-haspopup="true"
+                >Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="berita.html"
+                    ><i class="fa-regular fa-newspaper"></i> Berita &
+                    Informasi</a
+                  >
+                </li>
+                <li>
+                  <a href="prestasi.html"
+                    ><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a
+                  >
+                </li>
+                <li>
+                  <a href="galeri.html"
+                    ><i class="fa-regular fa-images"></i> Galeri Foto</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="publikasi.html">Publikasi</a></li>
+          </ul>
 
-                <!-- Mobile Action Button -->
-                <div class="nav-menu-action">
-                    <button class="btn-hubungi btn-menu-hubungi" type="button">
-                        <i class="fa-solid fa-comments"></i> Hubungi Kami
-                    </button>
-                </div>
-            </nav>
+          <!-- Mobile Action Button -->
+          <div class="nav-menu-action">
+            <button class="btn-hubungi btn-menu-hubungi" type="button">
+              <i class="fa-solid fa-comments"></i> Hubungi Kami
+            </button>
+          </div>
+        </nav>
 
-            <!-- Header Action Button -->
-            <div class="nav-action">
-                <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
-                <button class="mobile-toggle" id="mobileToggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+        <!-- Header Action Button -->
+        <div class="nav-action">
+          <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Page Header Banner -->
     <section class="page-header">
-        <div class="container">
-            <span class="page-badge"><i class="fa-solid fa-prescription-bottle-medical"></i> Program Keahlian
-                Kefarmasian</span>
-            <h1 class="page-header-title">Farmasi Klinis & Komunitas</h1>
-            <p class="page-header-desc">Menghasilkan asisten tenaga kefarmasian yang teliti, menguasai teknik formulasi
-                racikan obat, manajemen apotek, serta kepatuhan standar medis nasional.</p>
-            <div class="page-breadcrumb">
-                <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
-                <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-                <span class="current">Jurusan Farmasi</span>
-            </div>
+      <div class="container">
+        <span class="page-badge"
+          ><i class="fa-solid fa-prescription-bottle-medical"></i> Program
+          Keahlian Kefarmasian</span
+        >
+        <h1 class="page-header-title">Farmasi Klinis & Komunitas</h1>
+        <p class="page-header-desc">
+          Menghasilkan asisten tenaga kefarmasian yang teliti, menguasai teknik
+          formulasi racikan obat, manajemen apotek, serta kepatuhan standar
+          medis nasional.
+        </p>
+        <div class="page-breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+          <span class="separator"
+            ><i class="fa-solid fa-chevron-right"></i
+          ></span>
+          <span class="current">Jurusan Farmasi</span>
         </div>
+      </div>
     </section>
 
     <!-- SECTION 1: OVERVIEW JURUSAN -->
-    <section class="section-block" style="padding-top: 4.5rem; padding-bottom: 3.5rem;">
-        <div class="container">
-            <div class="jurusan-overview-grid">
-                <div class="jurusan-img-wrapper">
-                    <img src="assets/farmasi.jpg" alt="Laboratorium Farmasi SMKS PGRI Rangkasbitung">
-                    <div class="jurusan-badge-overlay">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Juara LKS Farmasi Tingkat Provinsi Banten</span>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="accent-line" style="margin-left: 0;"></div>
-                    <span class="card-badge"
-                        style="position: static; display: inline-block; margin-bottom: 12px;">Profil Konsentrasi
-                        Keahlian</span>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.25rem;">
-                        <span class="bold">SAINS KEFARMASIAN</span> <br><span class="light">Presisi & Berstandar
-                            Medis</span>
-                    </h2>
-                    <p style="color: var(--text-dark); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem;">
-                        Jurusan <strong>Farmasi Klinis dan Komunitas</strong> SMKS PGRI Rangkasbitung merupakan salah
-                        satu program unggulan kebanggaan yang telah menorehkan prestasi gemilang, termasuk mewakili
-                        Kabupaten Lebak pada ajang Lomba Kompetensi Siswa (LKS) Tingkat Provinsi Banten.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                        Peserta didik dilatih keterampilan meracik obat resep dokter (pulveres, kapsul, salep, emulsi,
-                        suspensi), perhitungan dosis terapeutik, identifikasi simplisia herbal Nusantara, kimia
-                        analitik, hingga tata kelola sistem inventory apotek secara digital.
-                    </p>
-
-                    <div class="jurusan-quick-stats">
-                        <div class="jurusan-stat-item">
-                            <div class="jurusan-stat-icon" style="background: #EFF6FF; color: var(--accent-blue);">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
-                            <div class="jurusan-stat-info">
-                                <h5>Sertifikasi</h5>
-                                <p>BNSP Asisten Farmasi</p>
-                            </div>
-                        </div>
-
-                        <div class="jurusan-stat-item">
-                            <div class="jurusan-stat-icon" style="background: #FEF3C7; color: var(--accent-gold);">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div class="jurusan-stat-info">
-                                <h5>Masa Pendidikan</h5>
-                                <p>3 Tahun Terakreditasi</p>
-                            </div>
-                        </div>
-
-                        <div class="jurusan-stat-item">
-                            <div class="jurusan-stat-icon" style="background: #ECFDF5; color: var(--accent-green);">
-                                <i class="fa-solid fa-flask-vial"></i>
-                            </div>
-                            <div class="jurusan-stat-info">
-                                <h5>Fasilitas Utama</h5>
-                                <p>Lab Farmasetika & Kimia</p>
-                            </div>
-                        </div>
-
-                        <div class="jurusan-stat-item">
-                            <div class="jurusan-stat-icon" style="background: #FEE2E2; color: var(--accent-red);">
-                                <i class="fa-solid fa-notes-medical"></i>
-                            </div>
-                            <div class="jurusan-stat-info">
-                                <h5>Mitra PKL</h5>
-                                <p>Apotek & Farmasi RSUD</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section
+      class="section-block"
+      style="padding-top: 4.5rem; padding-bottom: 3.5rem"
+    >
+      <div class="container">
+        <div class="jurusan-overview-grid">
+          <div class="jurusan-img-wrapper">
+            <img
+              src="assets/farmasi.jpeg"
+              alt="Laboratorium Farmasi SMKS PGRI Rangkasbitung"
+            />
+            <div class="jurusan-badge-overlay">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Juara LKS Farmasi Tingkat Provinsi Banten</span>
             </div>
+          </div>
+
+          <div>
+            <div class="accent-line" style="margin-left: 0"></div>
+            <span
+              class="card-badge"
+              style="
+                position: static;
+                display: inline-block;
+                margin-bottom: 12px;
+              "
+              >Profil Konsentrasi Keahlian</span
+            >
+            <h2
+              class="section-title"
+              style="text-align: left; margin-bottom: 1.25rem"
+            >
+              <span class="bold">SAINS KEFARMASIAN</span> <br /><span
+                class="light"
+                >Presisi & Berstandar Medis</span
+              >
+            </h2>
+            <p
+              style="
+                color: var(--text-dark);
+                font-size: 1rem;
+                line-height: 1.8;
+                margin-bottom: 1rem;
+              "
+            >
+              Jurusan <strong>Farmasi Klinis dan Komunitas</strong> SMKS PGRI
+              Rangkasbitung merupakan salah satu program unggulan kebanggaan
+              yang telah menorehkan prestasi gemilang, termasuk mewakili
+              Kabupaten Lebak pada ajang Lomba Kompetensi Siswa (LKS) Tingkat
+              Provinsi Banten.
+            </p>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                line-height: 1.8;
+              "
+            >
+              Peserta didik dilatih keterampilan meracik obat resep dokter
+              (pulveres, kapsul, salep, emulsi, suspensi), perhitungan dosis
+              terapeutik, identifikasi simplisia herbal Nusantara, kimia
+              analitik, hingga tata kelola sistem inventory apotek secara
+              digital.
+            </p>
+
+            <div class="jurusan-quick-stats">
+              <div class="jurusan-stat-item">
+                <div
+                  class="jurusan-stat-icon"
+                  style="background: #eff6ff; color: var(--accent-blue)"
+                >
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="jurusan-stat-info">
+                  <h5>Sertifikasi</h5>
+                  <p>BNSP Asisten Farmasi</p>
+                </div>
+              </div>
+
+              <div class="jurusan-stat-item">
+                <div
+                  class="jurusan-stat-icon"
+                  style="background: #fef3c7; color: var(--accent-gold)"
+                >
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="jurusan-stat-info">
+                  <h5>Masa Pendidikan</h5>
+                  <p>3 Tahun Terakreditasi</p>
+                </div>
+              </div>
+
+              <div class="jurusan-stat-item">
+                <div
+                  class="jurusan-stat-icon"
+                  style="background: #ecfdf5; color: var(--accent-green)"
+                >
+                  <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <div class="jurusan-stat-info">
+                  <h5>Fasilitas Utama</h5>
+                  <p>Lab Farmasetika & Kimia</p>
+                </div>
+              </div>
+
+              <div class="jurusan-stat-item">
+                <div
+                  class="jurusan-stat-icon"
+                  style="background: #fee2e2; color: var(--accent-red)"
+                >
+                  <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <div class="jurusan-stat-info">
+                  <h5>Mitra PKL</h5>
+                  <p>Apotek & Farmasi RSUD</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- SECTION 2: KOMPETENSI KEAHLIAN YANG DIPELAJARI -->
-    <section class="section-block" style="background: #F1F5F9; padding-top: 4.5rem; padding-bottom: 4.5rem;">
-        <div class="container">
-            <div class="section-title-wrapper">
-                <div class="accent-line"></div>
-                <h2 class="section-title">
-                    <span class="bold">MATERI</span> <span class="light">& Kompetensi Kefarmasian</span>
-                </h2>
-                <p class="section-subtitle">Kombinasi sains biologi, kimia obat, dan teknik formulasi modern yang
-                    dipelajari siswa.</p>
-            </div>
-
-            <div class="grid-4-col">
-                <div class="competency-card">
-                    <div class="competency-icon" style="background: #EFF6FF; color: #2563EB;">
-                        <i class="fa-solid fa-mortar-pestle"></i>
-                    </div>
-                    <h4>Formulasi Racikan Obat</h4>
-                    <p>Teknik menimbang presisi dengan neraca gram/miligram, penggerusan mortir, pengemasan puyer kertas
-                        perkamen, dan pembuatan sediaan salep/krim.</p>
-                </div>
-
-                <div class="competency-card">
-                    <div class="competency-icon" style="background: #FEF3C7; color: #D97706;">
-                        <i class="fa-solid fa-pills"></i>
-                    </div>
-                    <h4>Farmakologi Terapan</h4>
-                    <p>Mempelajari khasiat obat, penggolongan obat bebas, obat keras (G), narkotika & psikotropika, efek
-                        samping, dan perhitungan dosis maksimal.</p>
-                </div>
-
-                <div class="competency-card">
-                    <div class="competency-icon" style="background: #ECFDF5; color: #059669;">
-                        <i class="fa-solid fa-seedling"></i>
-                    </div>
-                    <h4>Farmakognosi Herbal</h4>
-                    <p>Identifikasi simplisia nabati, uji makroskopis & mikroskopis tanaman obat, serta ekstraksi bahan
-                        alami untuk jamu dan sediaan fitofarmaka.</p>
-                </div>
-
-                <div class="competency-card">
-                    <div class="competency-icon" style="background: #FEE2E2; color: #DC2626;">
-                        <i class="fa-solid fa-cash-register"></i>
-                    </div>
-                    <h4>Manajemen & Pelayanan Apotek</h4>
-                    <p>Skrining kelengkapan resep dokter, penulisan etiket aturan pakai obat, komunikasi KIE (Konseling,
-                        Informasi, Edukasi), dan stock opname apotek.</p>
-                </div>
-            </div>
+    <section
+      class="section-block"
+      style="background: #f1f5f9; padding-top: 4.5rem; padding-bottom: 4.5rem"
+    >
+      <div class="container">
+        <div class="section-title-wrapper">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">MATERI</span>
+            <span class="light">& Kompetensi Kefarmasian</span>
+          </h2>
+          <p class="section-subtitle">
+            Kombinasi sains biologi, kimia obat, dan teknik formulasi modern
+            yang dipelajari siswa.
+          </p>
         </div>
+
+        <div class="grid-4-col">
+          <div class="competency-card">
+            <div
+              class="competency-icon"
+              style="background: #eff6ff; color: #2563eb"
+            >
+              <i class="fa-solid fa-mortar-pestle"></i>
+            </div>
+            <h4>Formulasi Racikan Obat</h4>
+            <p>
+              Teknik menimbang presisi dengan neraca gram/miligram, penggerusan
+              mortir, pengemasan puyer kertas perkamen, dan pembuatan sediaan
+              salep/krim.
+            </p>
+          </div>
+
+          <div class="competency-card">
+            <div
+              class="competency-icon"
+              style="background: #fef3c7; color: #d97706"
+            >
+              <i class="fa-solid fa-pills"></i>
+            </div>
+            <h4>Farmakologi Terapan</h4>
+            <p>
+              Mempelajari khasiat obat, penggolongan obat bebas, obat keras (G),
+              narkotika & psikotropika, efek samping, dan perhitungan dosis
+              maksimal.
+            </p>
+          </div>
+
+          <div class="competency-card">
+            <div
+              class="competency-icon"
+              style="background: #ecfdf5; color: #059669"
+            >
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h4>Farmakognosi Herbal</h4>
+            <p>
+              Identifikasi simplisia nabati, uji makroskopis & mikroskopis
+              tanaman obat, serta ekstraksi bahan alami untuk jamu dan sediaan
+              fitofarmaka.
+            </p>
+          </div>
+
+          <div class="competency-card">
+            <div
+              class="competency-icon"
+              style="background: #fee2e2; color: #dc2626"
+            >
+              <i class="fa-solid fa-cash-register"></i>
+            </div>
+            <h4>Manajemen & Pelayanan Apotek</h4>
+            <p>
+              Skrining kelengkapan resep dokter, penulisan etiket aturan pakai
+              obat, komunikasi KIE (Konseling, Informasi, Edukasi), dan stock
+              opname apotek.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SECTION 3: PROSPEK KARIR LULUSAN -->
-    <section class="section-block" style="padding-top: 4.5rem; padding-bottom: 4.5rem;">
-        <div class="container">
-            <div class="section-title-wrapper">
-                <div class="accent-line"></div>
-                <h2 class="section-title">
-                    <span class="bold">PELUANG KARIR</span> <span class="light">& Masa Depan</span>
-                </h2>
-                <p class="section-subtitle">Industri obat-obatan dan layanan farmasi merupakan sektor esensial yang
-                    tidak pernah surut.</p>
-            </div>
-
-            <div class="career-grid">
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-prescription"></i> Asisten Tenaga Kefarmasian Apotek</h4>
-                    <p>Melayani peracikan resep dokter, penyiapan obat, dan penyerahan obat beserta edukasi aturan minum
-                        kepada pasien di apotek jaringan & mandiri.</p>
-                </div>
-
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-hospital"></i> Instalasi Farmasi Rumah Sakit</h4>
-                    <p>Bekerja dalam unit distribusi obat pasien rawat inap dan rawat jalan di rumah sakit pemerintah
-                        maupun swasta.</p>
-                </div>
-
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-vial-circle-check"></i> Quality Control Industri Farmasi & Kosmetik</h4>
-                    <p>Menjadi analis pengawasan mutu (QC/QA) bahan baku dan produk jadi pada pabrik farmasi, obat
-                        herbal, makanan-minuman, dan kosmetik.</p>
-                </div>
-
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-truck-medical"></i> Staf Pedagang Besar Farmasi (PBF)</h4>
-                    <p>Mengelola pergudangan logistik obat dengan standar Cara Distribusi Obat yang Baik (CDOB) pada
-                        distributor farmasi.</p>
-                </div>
-
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-graduation-cap"></i> Kuliah Jurusan Farmasi / Apoteker</h4>
-                    <p>Melanjutkan studi ke jenjang D3/S1 Farmasi, Profesi Apoteker, Analis Kimia, atau Kedokteran di
-                        berbagai universitas terkemuka.</p>
-                </div>
-
-                <div class="career-card">
-                    <h4><i class="fa-solid fa-store"></i> Wirausaha Herbal & Skincare</h4>
-                    <p>Membuka usaha toko obat berizin, distributor produk kesehatan, atau peracik produk perawatan
-                        herbal alami bersertifikat BPOM.</p>
-                </div>
-            </div>
+    <section
+      class="section-block"
+      style="padding-top: 4.5rem; padding-bottom: 4.5rem"
+    >
+      <div class="container">
+        <div class="section-title-wrapper">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">PELUANG KARIR</span>
+            <span class="light">& Masa Depan</span>
+          </h2>
+          <p class="section-subtitle">
+            Industri obat-obatan dan layanan farmasi merupakan sektor esensial
+            yang tidak pernah surut.
+          </p>
         </div>
+
+        <div class="career-grid">
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-prescription"></i> Asisten Tenaga
+              Kefarmasian Apotek
+            </h4>
+            <p>
+              Melayani peracikan resep dokter, penyiapan obat, dan penyerahan
+              obat beserta edukasi aturan minum kepada pasien di apotek jaringan
+              & mandiri.
+            </p>
+          </div>
+
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-hospital"></i> Instalasi Farmasi Rumah Sakit
+            </h4>
+            <p>
+              Bekerja dalam unit distribusi obat pasien rawat inap dan rawat
+              jalan di rumah sakit pemerintah maupun swasta.
+            </p>
+          </div>
+
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-vial-circle-check"></i> Quality Control
+              Industri Farmasi & Kosmetik
+            </h4>
+            <p>
+              Menjadi analis pengawasan mutu (QC/QA) bahan baku dan produk jadi
+              pada pabrik farmasi, obat herbal, makanan-minuman, dan kosmetik.
+            </p>
+          </div>
+
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-truck-medical"></i> Staf Pedagang Besar
+              Farmasi (PBF)
+            </h4>
+            <p>
+              Mengelola pergudangan logistik obat dengan standar Cara Distribusi
+              Obat yang Baik (CDOB) pada distributor farmasi.
+            </p>
+          </div>
+
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-graduation-cap"></i> Kuliah Jurusan Farmasi
+              / Apoteker
+            </h4>
+            <p>
+              Melanjutkan studi ke jenjang D3/S1 Farmasi, Profesi Apoteker,
+              Analis Kimia, atau Kedokteran di berbagai universitas terkemuka.
+            </p>
+          </div>
+
+          <div class="career-card">
+            <h4>
+              <i class="fa-solid fa-store"></i> Wirausaha Herbal & Skincare
+            </h4>
+            <p>
+              Membuka usaha toko obat berizin, distributor produk kesehatan,
+              atau peracik produk perawatan herbal alami bersertifikat BPOM.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SECTION 4: JELAJAHI JURUSAN LAINNYA -->
-    <section class="section-block"
-        style="background: #F8FAFC; padding-top: 3.5rem; padding-bottom: 4.5rem; border-top: 1px solid #E2E8F0;">
-        <div class="container">
-            <div class="section-title-wrapper">
-                <div class="accent-line"></div>
-                <h2 class="section-title">
-                    <span class="bold">JURUSAN LAINNYA</span> <span class="light">di SMKS PGRI</span>
-                </h2>
-                <p class="section-subtitle">Temukan keahlian kejuruan lainnya yang sesuai dengan minat dan passion Anda.
-                </p>
-            </div>
-
-            <div class="other-jurusan-grid">
-                <a href="tkj.html" class="other-jurusan-card">
-                    <img src="assets/Lab-kom.JPG" alt="Jurusan TKJ" class="other-jurusan-img">
-                    <div class="other-jurusan-body">
-                        <h5>Teknik Komputer & Jaringan (TKJ)</h5>
-                        <p>Keahlian infrastruktur jaringan komputer, instalasi server Linux & Windows, fiber optic, dan
-                            cyber security.</p>
-                        <span class="other-jurusan-link">Lihat Jurusan <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="mplb.html" class="other-jurusan-card">
-                    <img src="assets/mplb.jpg" alt="Jurusan MPLB" class="other-jurusan-img">
-                    <div class="other-jurusan-body">
-                        <h5>Manajemen Perkantoran (MPLB)</h5>
-                        <p>Keahlian tata kelola perkantoran modern, korespondensi, kearsipan digital, dan layanan bisnis
-                            prima.</p>
-                        <span class="other-jurusan-link">Lihat Jurusan <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="askep.html" class="other-jurusan-card">
-                    <img src="assets/askep.jpg" alt="Jurusan Askep" class="other-jurusan-img">
-                    <div class="other-jurusan-body">
-                        <h5>Asisten Keperawatan (Askep)</h5>
-                        <p>Kompetensi dasar asuhan medis, perawatan lansia/pasien, serta pelayanan prima klinik & rumah
-                            sakit.</p>
-                        <span class="other-jurusan-link">Lihat Jurusan <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="akl.html" class="other-jurusan-card">
-                    <img src="assets/akl.jpg" alt="Jurusan AKL" class="other-jurusan-img">
-                    <div class="other-jurusan-body">
-                        <h5>Akuntansi & Keuangan (AKL)</h5>
-                        <p>Pembukuan akuntansi digital, perpajakan, audit laporan keuangan, dan perbankan modern.</p>
-                        <span class="other-jurusan-link">Lihat Jurusan <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
+    <section
+      class="section-block"
+      style="
+        background: #f8fafc;
+        padding-top: 3.5rem;
+        padding-bottom: 4.5rem;
+        border-top: 1px solid #e2e8f0;
+      "
+    >
+      <div class="container">
+        <div class="section-title-wrapper">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">JURUSAN LAINNYA</span>
+            <span class="light">di SMKS PGRI</span>
+          </h2>
+          <p class="section-subtitle">
+            Temukan keahlian kejuruan lainnya yang sesuai dengan minat dan
+            passion Anda.
+          </p>
         </div>
+
+        <div class="other-jurusan-grid">
+          <a href="tkj.html" class="other-jurusan-card">
+            <img
+              src="assets/Lab-kom.JPG"
+              alt="Jurusan TKJ"
+              class="other-jurusan-img"
+            />
+            <div class="other-jurusan-body">
+              <h5>Teknik Komputer & Jaringan (TKJ)</h5>
+              <p>
+                Keahlian infrastruktur jaringan komputer, instalasi server Linux
+                & Windows, fiber optic, dan cyber security.
+              </p>
+              <span class="other-jurusan-link"
+                >Lihat Jurusan <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+
+          <a href="mplb.html" class="other-jurusan-card">
+            <img
+              src="assets/mplb.jpg"
+              alt="Jurusan MPLB"
+              class="other-jurusan-img"
+            />
+            <div class="other-jurusan-body">
+              <h5>Manajemen Perkantoran (MPLB)</h5>
+              <p>
+                Keahlian tata kelola perkantoran modern, korespondensi,
+                kearsipan digital, dan layanan bisnis prima.
+              </p>
+              <span class="other-jurusan-link"
+                >Lihat Jurusan <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+
+          <a href="askep.html" class="other-jurusan-card">
+            <img
+              src="assets/askep.jpg"
+              alt="Jurusan Askep"
+              class="other-jurusan-img"
+            />
+            <div class="other-jurusan-body">
+              <h5>Asisten Keperawatan (Askep)</h5>
+              <p>
+                Kompetensi dasar asuhan medis, perawatan lansia/pasien, serta
+                pelayanan prima klinik & rumah sakit.
+              </p>
+              <span class="other-jurusan-link"
+                >Lihat Jurusan <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+
+          <a href="akl.html" class="other-jurusan-card">
+            <img
+              src="assets/akl.jpg"
+              alt="Jurusan AKL"
+              class="other-jurusan-img"
+            />
+            <div class="other-jurusan-body">
+              <h5>Akuntansi & Keuangan (AKL)</h5>
+              <p>
+                Pembukuan akuntansi digital, perpajakan, audit laporan keuangan,
+                dan perbankan modern.
+              </p>
+              <span class="other-jurusan-link"
+                >Lihat Jurusan <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- SPMB CTA BANNER -->
-    <section style="background: var(--white); padding: 1rem 0 3rem 0;">
-        <div class="container">
-            <div class="spmb-cta-banner">
-                <div class="spmb-banner-text">
-                    <span class="page-badge"
-                        style="background: rgba(245, 158, 11, 0.25); color: #F59E0B; margin-bottom: 12px; border-color: rgba(245, 158, 11, 0.6);">SPMB
-                        TA 2026/2027</span>
-                    <h3>Ingin Menguasai Ilmu Farmasi & Meracik Obat?</h3>
-                    <p>Bergabunglah bersama Jurusan Farmasi Berprestasi SMKS PGRI Rangkasbitung. Raih masa depan cerah
-                        di dunia kesehatan.</p>
-                </div>
-                <div class="spmb-banner-action">
-                    <a href="spmb.html" class="btn-cta btn-yellow" style="width: auto; padding: 14px 28px;">Daftar
-                        Sekarang</a>
-                    <button class="btn-cta btn-navy-outline"
-                        style="width: auto; padding: 14px 24px; border-color: var(--white); cursor: pointer;"
-                        onclick="document.getElementById('btnHubungi').click()">Konsultasi Jurusan</button>
-                </div>
-            </div>
+    <section style="background: var(--white); padding: 1rem 0 3rem 0">
+      <div class="container">
+        <div class="spmb-cta-banner">
+          <div class="spmb-banner-text">
+            <span
+              class="page-badge"
+              style="
+                background: rgba(245, 158, 11, 0.25);
+                color: #f59e0b;
+                margin-bottom: 12px;
+                border-color: rgba(245, 158, 11, 0.6);
+              "
+              >SPMB TA 2026/2027</span
+            >
+            <h3>Ingin Menguasai Ilmu Farmasi & Meracik Obat?</h3>
+            <p>
+              Bergabunglah bersama Jurusan Farmasi Berprestasi SMKS PGRI
+              Rangkasbitung. Raih masa depan cerah di dunia kesehatan.
+            </p>
+          </div>
+          <div class="spmb-banner-action">
+            <a
+              href="spmb.html"
+              class="btn-cta btn-yellow"
+              style="width: auto; padding: 14px 28px"
+              >Daftar Sekarang</a
+            >
+            <button
+              class="btn-cta btn-navy-outline"
+              style="
+                width: auto;
+                padding: 14px 24px;
+                border-color: var(--white);
+                cursor: pointer;
+              "
+              onclick="document.getElementById('btnHubungi').click()"
+            >
+              Konsultasi Jurusan
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer-block">
-        <div class="container">
-            <div class="grid-3-col footer-grid">
-                <div class="footer-col">
-                    <div class="footer-brand">
-                        <img src="assets/LOGO_SMK.JPG" alt="Logo SMKS PGRI Rangkasbitung" class="footer-logo">
-                        <h5>SMKS PGRI RANGKASBITUNG</h5>
-                    </div>
-                    <p>Lembaga Pendidikan Kejuruan Berkualitas & Terpercaya untuk Mencetak Generasi Siap Kerja dan
-                        Berkarakter.</p>
-                    <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Program Keahlian</h5>
-                    <ul class="footer-links">
-                        <li><a href="tkj.html">Teknik Komputer & Jaringan (TKJ)</a></li>
-                        <li><a href="mplb.html">Manajemen Perkantoran (MPLB)</a></li>
-                        <li><a href="askep.html">Asisten Keperawatan (Askep)</a></li>
-                        <li><a href="farmasi.html">Farmasi Klinis & Komunitas</a></li>
-                        <li><a href="akl.html">Akuntansi Keuangan Lembaga (AKL)</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Kontak & Alamat</h5>
-                    <p><i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara No. 123, Rangkasbitung, Lebak,
-                        Banten</p>
-                    <p><i class="fa-solid fa-phone"></i> (0252) 1234 5678</p>
-                    <p><i class="fa-solid fa-envelope"></i> info@smkpgrirangkasbitung.sch.id</p>
-                </div>
+      <div class="container">
+        <div class="grid-3-col footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img
+                src="assets/LOGO_SMK.JPG"
+                alt="Logo SMKS PGRI Rangkasbitung"
+                class="footer-logo"
+              />
+              <h5>SMKS PGRI RANGKASBITUNG</h5>
             </div>
+            <p>
+              Lembaga Pendidikan Kejuruan Berkualitas & Terpercaya untuk
+              Mencetak Generasi Siap Kerja dan Berkarakter.
+            </p>
+            <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Program Keahlian</h5>
+            <ul class="footer-links">
+              <li><a href="tkj.html">Teknik Komputer & Jaringan (TKJ)</a></li>
+              <li><a href="mplb.html">Manajemen Perkantoran (MPLB)</a></li>
+              <li><a href="askep.html">Asisten Keperawatan (Askep)</a></li>
+              <li><a href="farmasi.html">Farmasi Klinis & Komunitas</a></li>
+              <li><a href="akl.html">Akuntansi Keuangan Lembaga (AKL)</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kontak & Alamat</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara
+              No. 123, Rangkasbitung, Lebak, Banten
+            </p>
+            <p><i class="fa-solid fa-phone"></i> (0252) 1234 5678</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              info@smkpgrirangkasbitung.sch.id
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Hubungi Kami Modal -->
     <div class="modal-backdrop" id="contactModal">
-        <div class="modal-content contact-modal-content">
-            <button class="modal-close" id="closeContactModal">&times;</button>
-            <h3>Hubungi Kami</h3>
-            <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
-            <div class="contact-options">
-                <a href="https://wa.me/" class="contact-card wa">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <div>
-                        <strong>WhatsApp Official</strong>
-                        <span>Respon Cepat via Chat</span>
-                    </div>
-                </a>
-                <a href="tel:+6225212345678" class="contact-card phone">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <strong>Call Center Sekolah</strong>
-                        <span>(0252) 1234 5678</span>
-                    </div>
-                </a>
-                <a href="mailto:info@smkpgrirangkasbitung.sch.id" class="contact-card email">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <strong>Email Layanan</strong>
-                        <span>info@smkpgrirangkasbitung.sch.id</span>
-                    </div>
-                </a>
+      <div class="modal-content contact-modal-content">
+        <button class="modal-close" id="closeContactModal">&times;</button>
+        <h3>Hubungi Kami</h3>
+        <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+        <div class="contact-options">
+          <a href="https://wa.me/" class="contact-card wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp Official</strong>
+              <span>Respon Cepat via Chat</span>
             </div>
+          </a>
+          <a href="tel:+6225212345678" class="contact-card phone">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Call Center Sekolah</strong>
+              <span>(0252) 1234 5678</span>
+            </div>
+          </a>
+          <a
+            href="mailto:info@smkpgrirangkasbitung.sch.id"
+            class="contact-card email"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email Layanan</strong>
+              <span>info@smkpgrirangkasbitung.sch.id</span>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

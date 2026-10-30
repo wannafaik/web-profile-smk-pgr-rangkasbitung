@@ -338,7 +338,24 @@ body {
     transition: all 0.3s ease;
     font-family: inherit;
 }
+.btn-lihat {
+    background-color: var(--primary-navy);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
 
+.btn-lihat:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+}
 .btn-hubungi:hover {
     background-color: var(--primary-dark);
     transform: translateY(-1px);
@@ -556,89 +573,135 @@ body {
     }
 }
 
-/* ==========================================================================
-   Home Portal Stats Counter Bar
-   ========================================================================== */
+/* ==========================================
+   REFINED STATS / ACCREDITATION & ACHIEVEMENTS
+   ========================================== */
 .stats-bar-section {
-    background: #F1F5F9;
-    padding: 3rem 0;
-    position: relative;
-    z-index: 10;
-    border-bottom: 1px solid #E2E8F0;
+    padding: 4.5rem 0;
+    padding-bottom: 0rem;
+    background-color: #f8fafc; /* Latar abu-abu sangat muda untuk memberi kontras */
 }
 
-.stats-container {
-    background: var(--white);
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid #E2E8F0;
-    padding: 2.2rem 2.5rem;
+.stats-header-tag {
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
+.stats-header-tag .sub-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+    background: #dbeafe;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.stats-header-tag h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+/* Grid Layout */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    align-items: center;
 }
 
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 0 1rem;
-    border-right: 1px solid #E2E8F0;
-}
-
-.stat-item:last-child {
-    border-right: none;
-}
-
-.stat-icon {
-    width: 52px;
-    height: 52px;
+/* Kartu Individual */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
+}
+
+/* Header di dalam kartu */
+.stat-card-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    flex-shrink: 0;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
 }
 
-.stat-icon.gold {
-    background: #FEF3C7;
-    color: #D97706;
-}
-
-.stat-icon.blue {
-    background: #DBEAFE;
-    color: #1E3A8A;
-}
-
-.stat-icon.green {
-    background: #D1FAE5;
-    color: #059669;
-}
-
-.stat-icon.purple {
-    background: #EDE9FE;
-    color: #7C3AED;
-}
-
-.stat-content h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-navy);
-    line-height: 1.1;
-    margin-bottom: 2px;
-}
-
-.stat-content p {
-    font-size: 0.82rem;
+.stat-badge {
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--text-muted);
+    padding: 3px 8px;
+    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+}
+
+.stat-badge.gold { background: #fef3c7; color: #b45309; }
+.stat-badge.blue { background: #dbeafe; color: #1d4ed8; }
+.stat-badge.green { background: #d1fae5; color: #047857; }
+.stat-badge.purple { background: #ede9fe; color: #6d28d9; }
+
+.stat-card-header .stat-icon {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    color: #1e3a8a;
+}
+
+/* Bagian Konten Kartu */
+.stat-body .stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #14337a;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.stat-body h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+}
+
+.stat-body p {
+    font-size: 0.825rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Home Section View All Header Link */
