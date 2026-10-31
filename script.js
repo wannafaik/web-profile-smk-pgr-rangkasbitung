@@ -27,10 +27,61 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-list a, .dropdown-menu a");
   const dropdowns = document.querySelectorAll(".dropdown");
 
+  // Create or get nav-overlay backdrop
+  let navOverlay = document.querySelector(".nav-overlay");
+  if (!navOverlay) {
+    navOverlay = document.createElement("div");
+    navOverlay.className = "nav-overlay";
+    document.body.appendChild(navOverlay);
+  }
+
+  let savedScrollY = 0;
+  let isNavDrawerOpen = false;
+
+  const lockBodyScroll = () => {
+    if (isNavDrawerOpen) return;
+    isNavDrawerOpen = true;
+    savedScrollY =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    document.documentElement.classList.add("no-scroll");
+    document.body.classList.add("no-scroll");
+    document.body.style.top = `-${savedScrollY}px`;
+  };
+
+  const unlockBodyScroll = () => {
+    if (!isNavDrawerOpen) return;
+    isNavDrawerOpen = false;
+    document.documentElement.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
+    const top = document.body.style.top;
+    document.body.style.top = "";
+    if (top) {
+      const scrollPos = parseInt(top || "0", 10) * -1;
+      window.scrollTo(0, scrollPos);
+    }
+  };
+
+  const openNavDrawer = () => {
+    if (navMenu) navMenu.classList.add("active");
+    if (navOverlay) navOverlay.classList.add("active");
+    lockBodyScroll();
+    if (mobileToggle) {
+      const icon = mobileToggle.querySelector("i");
+      if (icon) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      }
+    }
+  };
+
   const closeNavDrawer = () => {
     if (navMenu && navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
-      document.body.classList.remove("no-scroll");
+      if (navOverlay) navOverlay.classList.remove("active");
+      unlockBodyScroll();
       if (mobileToggle) {
         const icon = mobileToggle.querySelector("i");
         if (icon) {
@@ -41,22 +92,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  if (navOverlay) {
+    navOverlay.addEventListener("click", closeNavDrawer);
+  }
+
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle("active");
-      const isOpen = navMenu.classList.contains("active");
-      document.body.classList.toggle("no-scroll", isOpen);
-
-      const icon = mobileToggle.querySelector("i");
-      if (icon) {
-        if (isOpen) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark");
-        } else {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        }
+      e.preventDefault();
+      if (navMenu.classList.contains("active")) {
+        closeNavDrawer();
+      } else {
+        openNavDrawer();
       }
     });
 
@@ -152,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
               if (index === 1) {
                 animateNumber(numberEl, 100, 2000, "%");
               } else if (index === 2) {
-                animateNumber(numberEl, 150, 2000, "+");
+                animateNumber(numberEl, 50, 2000, "+");
               } else if (index === 3) {
                 animateNumber(numberEl, 85, 2000, "%");
               }

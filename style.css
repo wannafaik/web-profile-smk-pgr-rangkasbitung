@@ -180,7 +180,7 @@ body {
     width: 100%;
     background-color: var(--white);
     box-shadow: var(--shadow-sm);
-    z-index: 999;
+    z-index: 1001;
     transition: all 0.3s ease;
 }
 
@@ -2668,9 +2668,44 @@ body {
    Responsive Design & Media Queries (Tablet & Handphone)
    ========================================================================== */
 
+
+/* Mobile Navigation Backdrop Overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    touch-action: none;
+    pointer-events: none;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 /* Utility untuk lock scroll ketika menu drawer terbuka */
+html.no-scroll {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
 body.no-scroll {
-    overflow: hidden;
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
 }
 
 /* 1. Large Screen / Laptop Kecil (max-width: 1200px) */
@@ -2740,17 +2775,19 @@ body.no-scroll {
     .nav-menu {
         position: fixed;
         top: var(--navbar-height, 62px);
+        bottom: 0;
         left: -100%;
         width: 320px;
         max-width: 85vw;
-        height: calc(100vh - var(--navbar-height, 62px));
-        height: calc(100svh - var(--navbar-height, 62px));
+        height: auto;
+        height: calc(100dvh - var(--navbar-height, 62px));
         background: #ffffff;
         flex-direction: column;
         padding: 1rem 1.25rem 2.5rem;
         transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 10px 0 35px rgba(0, 0, 0, 0.15);
         overflow-y: auto;
+        overscroll-behavior-y: contain;
         -webkit-overflow-scrolling: touch;
         z-index: 1000;
         align-items: stretch;
