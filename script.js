@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (statsSection) {
     function animateNumber(element, target, duration = 2000, suffix = "") {
       let startTime = null;
-      let startValue = 0;
+      let startValue = 1;
 
       function update(currentTime) {
         if (!startTime) startTime = currentTime;
@@ -136,45 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(update);
     }
 
-    function animateAccreditation(element, finalValue = "B", duration = 3000) {
-      const letters = [
-        "A",
-        "C",
-        "D",
-        "A",
-        "B",
-        "B",
-        "A",
-        "C",
-        "D",
-        "A",
-        "B",
-        "B",
-      ];
-      let startTime = null;
-      let lastUpdateTime = 0;
-      const intervalDelay = 120;
-
-      function update(currentTime) {
-        if (!startTime) startTime = currentTime;
-        let elapsed = currentTime - startTime;
-        let progress = Math.min(elapsed / duration, 1);
-
-        if (progress < 1) {
-          if (currentTime - lastUpdateTime > intervalDelay) {
-            let randomLetter =
-              letters[Math.floor(Math.random() * letters.length)];
-            element.textContent = randomLetter;
-            lastUpdateTime = currentTime;
-          }
-          requestAnimationFrame(update);
-        } else {
-          element.textContent = finalValue;
-        }
-      }
-      requestAnimationFrame(update);
-    }
-
     let hasAnimated = false;
 
     const observer = new IntersectionObserver(
@@ -188,9 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const numberEl = card.querySelector(".stat-number");
               if (!numberEl) return;
 
-              if (index === 0) {
-                animateAccreditation(numberEl, "B", 1800);
-              } else if (index === 1) {
+              if (index === 1) {
                 animateNumber(numberEl, 100, 2000, "%");
               } else if (index === 2) {
                 animateNumber(numberEl, 150, 2000, "+");
@@ -207,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(statsSection);
   }
 
-  // --- TAMBAHKAN FUNGSI INI DI SINI AGAR BISA DIPAKAI OLEH PRESTASI.HTML ---
+  // Fungsi animasi angka berurutan dari 1 sampai nilai akhir (digunakan di banner prestasi)
   function animateRandomNumbers(
     element,
     finalValue,
@@ -215,20 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
     suffix = "",
   ) {
     let startTime = null;
-    let lastUpdateTime = 0;
-    const intervalDelay = 90; // Kecepatan ganti angka acak
+    const startValue = 1;
 
     function update(currentTime) {
       if (!startTime) startTime = currentTime;
-      let elapsed = currentTime - startTime;
-      let progress = Math.min(elapsed / duration, 1);
+      let progress = Math.min((currentTime - startTime) / duration, 1);
+      let easeProgress = 1 - Math.pow(1 - progress, 3);
+      let current = Math.floor(
+        easeProgress * (finalValue - startValue) + startValue,
+      );
+
+      element.textContent = current + suffix;
 
       if (progress < 1) {
-        if (currentTime - lastUpdateTime > intervalDelay) {
-          let randomNum = Math.floor(Math.random() * finalValue) + 1;
-          element.textContent = randomNum + suffix;
-          lastUpdateTime = currentTime;
-        }
         requestAnimationFrame(update);
       } else {
         element.textContent = finalValue + suffix;
