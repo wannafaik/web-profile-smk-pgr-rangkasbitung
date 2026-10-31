@@ -3841,3 +3841,246 @@ body.no-scroll {
         min-height: 340px;
     }
 }
+
+/* =========================================
+   EKSTRAKURIKULER PAGE STYLES (MODERN CARD NO-IMAGE)
+   ========================================= */
+.ekskul-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.ekskul-card {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.ekskul-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 43, 73, 0.12);
+    border-color: rgba(0, 43, 73, 0.3);
+}
+
+/* Header Banner without Image */
+.ekskul-header-banner {
+    position: relative;
+    padding: 1.75rem 1.5rem 1.25rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+/* Background watermark icon */
+.ekskul-watermark {
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    font-size: 5.5rem;
+    opacity: 0.06;
+    pointer-events: none;
+    transform: rotate(-10deg);
+}
+
+.ekskul-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.ekskul-card:hover .ekskul-icon-box {
+    transform: scale(1.1) rotate(4deg);
+}
+
+/* Color Themes for Categories */
+.theme-bela-negara .ekskul-header-banner {
+    background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+}
+.theme-bela-negara .ekskul-icon-box {
+    background: #DC2626;
+    color: #FFFFFF;
+}
+
+.theme-olahraga .ekskul-header-banner {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+}
+.theme-olahraga .ekskul-icon-box {
+    background: #0284C7;
+    color: #FFFFFF;
+}
+
+.theme-sosial-alam .ekskul-header-banner {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+}
+.theme-sosial-alam .ekskul-icon-box {
+    background: #059669;
+    color: #FFFFFF;
+}
+
+.theme-seni-budaya .ekskul-header-banner {
+    background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+}
+.theme-seni-budaya .ekskul-icon-box {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.theme-agama-bahasa .ekskul-header-banner {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+}
+.theme-agama-bahasa .ekskul-icon-box {
+    background: #D97706;
+    color: #FFFFFF;
+}
+
+.ekskul-category-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.theme-bela-negara .ekskul-category-badge { color: #DC2626; border-color: rgba(220, 38, 38, 0.2); }
+.theme-olahraga .ekskul-category-badge { color: #0284C7; border-color: rgba(2, 132, 199, 0.2); }
+.theme-sosial-alam .ekskul-category-badge { color: #059669; border-color: rgba(5, 150, 105, 0.2); }
+.theme-seni-budaya .ekskul-category-badge { color: #7C3AED; border-color: rgba(124, 58, 237, 0.2); }
+.theme-agama-bahasa .ekskul-category-badge { color: #D97706; border-color: rgba(217, 119, 6, 0.2); }
+
+.ekskul-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ekskul-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+}
+
+.ekskul-tagline {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: #64748B;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ekskul-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.ekskul-meta {
+    border-top: 1px dashed #E2E8F0;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.ekskul-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ekskul-meta-item i {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--primary-navy);
+    flex-shrink: 0;
+}
+
+/* Benefit Cards */
+.benefit-card {
+    background: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-navy);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.benefit-card h4 {
+    font-size: 1.15rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.benefit-card p {
+    font-size: 0.9rem;
+    color: #64748B;
+    line-height: 1.55;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .ekskul-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .ekskul-grid {
+        grid-template-columns: 1fr;
+    }
+}
