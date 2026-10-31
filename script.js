@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : url + (url.includes("?") ? "&autoplay=1" : "?autoplay=1");
     }
     const regExp =
-      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|shorts\/|watch\?v=|\&v=)([^#\&\?]*).*/;
     const match = url.match(regExp);
     if (match && match[2] && match[2].length === 11) {
       return `https://www.youtube.com/embed/${match[2]}?autoplay=1&rel=0`;
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return url;
   }
 
-  const defaultProfileVideoUrl = "https://www.youtube.com/watch?v=dnzXTbfvBUE";
+  const defaultProfileVideoUrl = "https://www.youtube.com/watch?v=pJr1MqxACHE";
 
   const openVideoModal = () => {
     const rawUrl =
