@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Galeri Dokumentasi Kegiatan Siswa dan Kampus SMKS PGRI Rangkasbitung - Momen Pembelajaran, Upacara, Olahraga, dan Karakter."
+    />
+    <title>Galeri Foto Kegiatan - SMKS PGRI Rangkasbitung</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Floating Social Media Bar (Left Side) -->
+    <aside class="social-sidebar">
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        class="social-icon whatsapp"
+        title="WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="social-icon instagram"
+        title="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        href="https://youtube.com"
+        target="_blank"
+        class="social-icon youtube"
+        title="YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </aside>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-group">
+          <img
+            src="assets/LOGO_SMK.JPG"
+            alt="Logo SMKS PGRI Rangkasbitung"
+            class="school-emblem"
+          />
+          <div class="logo-text">
+            <span class="sub-text">YAYASAN PENDIDIKAN</span>
+            <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Profil & Sambutan</a></li>
+            <li><a href="spmb.html">SPMB</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle"
+                role="button"
+                aria-haspopup="true"
+                >Jurusan <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="tkj.html"
+                    ><i class="fa-solid fa-network-wired"></i> Teknik Komputer &
+                    Jaringan (TKJ)</a
+                  >
+                </li>
+                <li>
+                  <a href="mplb.html"
+                    ><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                    (MPLB)</a
+                  >
+                </li>
+                <li>
+                  <a href="askep.html"
+                    ><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                    (Askep)</a
+                  >
+                </li>
+                <li>
+                  <a href="farmasi.html"
+                    ><i class="fa-solid fa-prescription-bottle-medical"></i>
+                    Farmasi Klinis</a
+                  >
+                </li>
+                <li>
+                  <a href="akl.html"
+                    ><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan
+                    (AKL)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle active"
+                role="button"
+                aria-haspopup="true"
+                >Informasi <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="berita.html"
+                    ><i class="fa-regular fa-newspaper"></i> Berita</a
+                  >
+                </li>
+                <li>
+                  <a href="prestasi.html"
+                    ><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="galeri.html"
+                    style="font-weight: 700; color: var(--primary-navy)"
+                    ><i class="fa-regular fa-images"></i> Galeri Foto</a
+                  >
+                </li>
+              
+                <li>
+                  <a href="ekskul.html"><i class="fa-solid fa-people-group"></i> Ekstrakurikuler</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="publikasi.html">Publikasi</a></li>
+          </ul>
+
+          <!-- Mobile Action Button -->
+          <div class="nav-menu-action">
+            <button class="btn-hubungi btn-menu-hubungi" type="button">
+              <i class="fa-solid fa-comments"></i> Hubungi Kami
+            </button>
+          </div>
+        </nav>
+
+        <!-- Header Action Button -->
+        <div class="nav-action">
+          <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="page-header">
+      <div class="container">
+        <span class="page-badge"
+          ><i class="fa-regular fa-images"></i> Momen & Dokumentasi</span
+        >
+        <h1 class="page-header-title">Galeri Foto Kegiatan</h1>
+        <p class="page-header-desc">
+          Rekam jejak visual aktivitas pembelajaran, pembinaan kedisiplinan,
+          keagamaan, serta momen kebersamaan di SMKS PGRI Rangkasbitung.
+        </p>
+        <div class="page-breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+          <span class="separator"
+            ><i class="fa-solid fa-chevron-right"></i
+          ></span>
+          <span class="current">Galeri Foto</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-block" style="padding-top: 4rem">
+      <div class="container">
+        <!-- Galeri Photo Grid -->
+        <div class="galeri-photo-grid" id="galeriContainer">
+          <!-- Foto 1 -->
+          <div
+            class="galeri-item"
+            data-category="upacara"
+            onclick="
+              openLightbox(
+                'assets/UPACARA_PRAMUKA.JPG',
+                'Upacara Pramuka & Pembinaan Kedisiplinan',
+                'Pendidikan kepanduan untuk menanamkan jiwa kepemimpinan dan kemandirian.',
+              )
+            "
+          >
+            <div class="galeri-item-thumb">
+              <img src="assets/UPACARA_PRAMUKA.JPG" alt="Upacara Pramuka" />
+              <div class="galeri-item-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </div>
+            </div>
+            <div class="galeri-item-info">
+              <span class="galeri-item-tag"
+                ><i class="fa-solid fa-campground"></i> Pramuka</span
+              >
+              <h4 class="galeri-item-title">Upacara Pramuka & Kedisiplinan</h4>
+            </div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div
+            class="galeri-item"
+            data-category="olahraga"
+            onclick="
+              openLightbox(
+                'assets/OLAHRAGA.JPG',
+                'Senam Pagi Rutin Seluruh Warga Sekolah',
+                'Membiasakan pola hidup bugar dan sehat sebelum memulai kegiatan belajar mengajar.',
+              )
+            "
+          >
+            <div class="galeri-item-thumb">
+              <img src="assets/OLAHRAGA.JPG" alt="Senam Pagi" />
+              <div class="galeri-item-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </div>
+            </div>
+            <div class="galeri-item-info">
+              <span class="galeri-item-tag"
+                ><i class="fa-solid fa-heart-pulse"></i> Kesehatan</span
+              >
+              <h4 class="galeri-item-title">Senam Pagi Kebugaran</h4>
+            </div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div
+            class="galeri-item"
+            data-category="keagamaan"
+            onclick="
+              openLightbox(
+                'assets/KEGIATAN_SOLAT.JPG',
+                'Ibadah Sholat Berjamaah di Lapangan',
+                'Penguatan nilai spiritualitas dan karakter religius (RUHAY) seluruh siswa.',
+              )
+            "
+          >
+            <div class="galeri-item-thumb">
+              <img src="assets/KEGIATAN_SOLAT.JPG" alt="Solat Berjamaah" />
+              <div class="galeri-item-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </div>
+            </div>
+            <div class="galeri-item-info">
+              <span class="galeri-item-tag"
+                ><i class="fa-solid fa-hands-praying"></i> Religius</span
+              >
+              <h4 class="galeri-item-title">Sholat Berjamaah Bersama</h4>
+            </div>
+          </div>
+
+          <!-- Foto 4 -->
+          <div
+            class="galeri-item"
+            data-category="upacara"
+            onclick="
+              openLightbox(
+                'assets/UPACARA_BENDERA_1.JPG',
+                'Upacara Bendera Hari Senin',
+                'Menumbuhkan rasa nasionalisme, patriotisme, dan rasa cinta tanah air.',
+              )
+            "
+          >
+            <div class="galeri-item-thumb">
+              <img src="assets/UPACARA_BENDERA_1.JPG" alt="Upacara Bendera" />
+              <div class="galeri-item-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </div>
+            </div>
+            <div class="galeri-item-info">
+              <span class="galeri-item-tag"
+                ><i class="fa-solid fa-flag"></i> Nasionalisme</span
+              >
+              <h4 class="galeri-item-title">Upacara Bendera Hari Senin</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigasi Pintas ke Berita & Prestasi -->
+        <div
+          style="
+            margin-top: 4.5rem;
+            text-align: center;
+            background: #f1f5f9;
+            border-radius: 16px;
+            padding: 2.5rem 1.5rem;
+            border: 1px solid #e2e8f0;
+          "
+        >
+          <h3
+            style="
+              font-size: 1.4rem;
+              color: var(--primary-navy);
+              font-weight: 800;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Ikuti Kabar & Prestasi Lainnya
+          </h3>
+          <p
+            style="
+              color: var(--text-muted);
+              font-size: 0.95rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Baca pengumuman agenda akademik atau lihat daftar piala yang diraih
+            siswa.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 14px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a
+              href="berita.html"
+              class="btn-lihat"
+              style="
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <i class="fa-regular fa-newspaper"></i> Baca Berita Terkini
+            </a>
+            <a
+              href="prestasi.html"
+              class="btn-lihat"
+              style="
+                background: #0f172a;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <i class="fa-solid fa-trophy"></i> Lihat Prestasi Siswa
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal Full Screen Preview -->
+    <div class="photo-lightbox" id="photoLightbox">
+      <div class="lightbox-content">
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          onclick="closeLightbox()"
+        >
+          &times;
+        </button>
+        <img src="" alt="Preview Foto" class="lightbox-img" id="lightboxImg" />
+        <div class="lightbox-footer">
+          <div>
+            <h4 id="lightboxTitle">Judul Kegiatan</h4>
+            <p id="lightboxDesc">Deskripsi ringkas kegiatan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-block">
+      <div class="container">
+        <div class="grid-3-col footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img
+                src="assets/LOGO_SMK.JPG"
+                alt="Logo SMKS PGRI Rangkasbitung"
+                class="footer-logo"
+              />
+              <h5>SMKS PGRI RANGKASBITUNG</h5>
+            </div>
+            <p>
+              Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak
+              Pemimpin Masa Depan.
+            </p>
+            <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Kanal Media Sekolah</h5>
+            <ul class="footer-links">
+              <li><a href="berita.html">Berita</a></li>
+              <li><a href="prestasi.html">Prestasi Siswa</a></li>
+              <li><a href="galeri.html">Galeri Foto</a></li>
+              <li><a href="spmb.html">Informasi SPMB</a></li>
+              <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
+              <li><a href="ekskul.html">Ekstrakurikuler</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kontak & Alamat</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara
+              No. 123, Rangkasbitung, Lebak, Banten
+            </p>
+            <p><i class="fa-solid fa-phone"></i> (0252) 1234 5678</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              info@smkpgrirangkasbitung.sch.id
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Hubungi Kami Modal -->
+    <div class="modal-backdrop" id="contactModal">
+      <div class="modal-content contact-modal-content">
+        <button class="modal-close" id="closeContactModal">&times;</button>
+        <h3>Hubungi Kami</h3>
+        <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+        <div class="contact-options">
+          <a href="https://wa.me/" class="contact-card wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp Official</strong>
+              <span>Respon Cepat via Chat</span>
+            </div>
+          </a>
+          <a href="tel:+6225212345678" class="contact-card phone">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Call Center Sekolah</strong>
+              <span>(0252) 1234 5678</span>
+            </div>
+          </a>
+          <a
+            href="mailto:info@smkpgrirangkasbitung.sch.id"
+            class="contact-card email"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email Layanan</strong>
+              <span>info@smkpgrirangkasbitung.sch.id</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Lightbox Functions
+      const lightbox = document.getElementById("photoLightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxTitle = document.getElementById("lightboxTitle");
+      const lightboxDesc = document.getElementById("lightboxDesc");
+
+      function openLightbox(src, title, desc) {
+        lightboxImg.src = src;
+        lightboxTitle.textContent = title;
+        lightboxDesc.textContent = desc;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>

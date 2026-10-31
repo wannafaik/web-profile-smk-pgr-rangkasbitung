@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="12 Pilihan Ekstrakurikuler SMKS PGRI Rangkasbitung - Wadah pengembangan minat, bakat, karakter, kepemimpinan, olahraga, seni, dan kepedulian sosial."
+    />
+    <title>Ekstrakurikuler - SMKS PGRI Rangkasbitung</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/LOGO_SMK.JPG" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Floating Social Media Bar (Left Side) -->
+    <aside class="social-sidebar">
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        class="social-icon whatsapp"
+        title="WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="social-icon instagram"
+        title="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        href="https://youtube.com"
+        target="_blank"
+        class="social-icon youtube"
+        title="YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </aside>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-group">
+          <img
+            src="assets/LOGO_SMK.JPG"
+            alt="Logo SMKS PGRI Rangkasbitung"
+            class="school-emblem"
+          />
+          <div class="logo-text">
+            <span class="sub-text">YAYASAN PENDIDIKAN</span>
+            <span class="main-text">SMKS PGRI RANGKASBITUNG</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Profil & Sambutan</a></li>
+            <li><a href="spmb.html">SPMB</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle"
+                role="button"
+                aria-haspopup="true"
+                >Jurusan <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="tkj.html"
+                    ><i class="fa-solid fa-network-wired"></i> Teknik Komputer &
+                    Jaringan (TKJ)</a
+                  >
+                </li>
+                <li>
+                  <a href="mplb.html"
+                    ><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                    (MPLB)</a
+                  >
+                </li>
+                <li>
+                  <a href="askep.html"
+                    ><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                    (Askep)</a
+                  >
+                </li>
+                <li>
+                  <a href="farmasi.html"
+                    ><i class="fa-solid fa-prescription-bottle-medical"></i>
+                    Farmasi Klinis</a
+                  >
+                </li>
+                <li>
+                  <a href="akl.html"
+                    ><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan
+                    (AKL)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li class="dropdown">
+              <a
+                href="javascript:void(0)"
+                class="dropdown-toggle active"
+                role="button"
+                aria-haspopup="true"
+                >Informasi <i class="fa-solid fa-chevron-down dropdown-arrow"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="berita.html"
+                    ><i class="fa-regular fa-newspaper"></i> Berita</a
+                  >
+                </li>
+                <li>
+                  <a href="prestasi.html"
+                    ><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a
+                  >
+                </li>
+                <li>
+                  <a href="galeri.html"
+                    ><i class="fa-regular fa-images"></i> Galeri Foto</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ekskul.html"
+                    style="font-weight: 700; color: var(--primary-navy)"
+                    ><i class="fa-solid fa-people-group"></i> Ekstrakurikuler</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="publikasi.html">Publikasi</a></li>
+          </ul>
+
+          <!-- Mobile Action Button -->
+          <div class="nav-menu-action">
+            <button class="btn-hubungi btn-menu-hubungi" type="button">
+              <i class="fa-solid fa-comments"></i> Hubungi Kami
+            </button>
+          </div>
+        </nav>
+
+        <!-- Header Action Button -->
+        <div class="nav-action">
+          <button class="btn-hubungi" id="btnHubungi">Hubungi Kami</button>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="page-header">
+      <div class="container">
+        <span class="page-badge"
+          ><i class="fa-solid fa-people-group"></i> Kesiswaan & Pengembangan Diri</span
+        >
+        <h1 class="page-header-title">Ekstrakurikuler Sekolah</h1>
+        <p class="page-header-desc">
+          Wadah ekspresi, eksplorasi minat, dan pembinaan karakter generasi muda SMKS PGRI Rangkasbitung untuk mengukir prestasi gemilang serta memperluas pengalaman kesiswaan.
+        </p>
+        <div class="page-breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+          <span class="separator"
+            ><i class="fa-solid fa-chevron-right"></i
+          ></span>
+          <a href="javascript:void(0)">Informasi</a>
+          <span class="separator"
+            ><i class="fa-solid fa-chevron-right"></i
+          ></span>
+          <span class="current">Ekstrakurikuler</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Ekstrakurikuler Cards -->
+    <section class="section-block" style="padding-top: 4rem">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">12 PILIHAN</span> <span class="light">Ekstrakurikuler</span>
+          </h2>
+          <p class="section-subtitle">
+            Temukan bidang yang paling cocok dengan minat dan potensimu untuk berkembang secara maksimal.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-shapes"></i> Semua Ekskul (12)
+          </button>
+          <button class="filter-btn" data-filter="bela-negara">
+            <i class="fa-solid fa-shield-halved"></i> Kedisiplinan & Bela Negara
+          </button>
+          <button class="filter-btn" data-filter="olahraga">
+            <i class="fa-solid fa-dumbbell"></i> Olahraga & Bela Diri
+          </button>
+          <button class="filter-btn" data-filter="seni-budaya">
+            <i class="fa-solid fa-masks-theater"></i> Seni & Musik
+          </button>
+          <button class="filter-btn" data-filter="sosial-alam">
+            <i class="fa-solid fa-hand-holding-heart"></i> Kemanusiaan & Alam
+          </button>
+          <button class="filter-btn" data-filter="agama-bahasa">
+            <i class="fa-solid fa-book-open-reader"></i> Keagamaan & Bahasa
+          </button>
+        </div>
+
+        <!-- Ekstrakurikuler Cards Grid (Modern No-Image Presentation) -->
+        <div class="ekskul-grid">
+          <!-- 1. PRAMUKA -->
+          <div class="ekskul-card theme-bela-negara" data-category="bela-negara">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-campground ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-campground"></i>
+              </div>
+              <span class="ekskul-category-badge">Bela Negara</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Pramuka</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Satyaku Kudarmakan, Darmaku Kubaktikan
+              </div>
+              <p class="ekskul-desc">
+                Membina kemandirian, kedisiplinan, kecintaan alam, tali temali, morse, serta survival kepramukaan guna mencetak calon pemimpin berkarakter Pancasila.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Jumat, 15.00 - 17.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Lapangan Utama Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. PKS -->
+          <div class="ekskul-card theme-bela-negara" data-category="bela-negara">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-user-shield ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <span class="ekskul-category-badge">Kedisiplinan</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">PKS (Patroli Keamanan Sekolah)</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Pelopor Keselamatan & Ketertiban
+              </div>
+              <p class="ekskul-desc">
+                Membina ketertiban lingkungan sekolah, pengetahuan tata tertib lalu lintas, patroli kedisiplinan siswa, dan pelatihan penanganan situasi darurat.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Sabtu, 08.00 - 10.30 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Pos Keamanan & Gerbang Utama</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. PASKIBRA -->
+          <div class="ekskul-card theme-bela-negara" data-category="bela-negara">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-flag ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-flag"></i>
+              </div>
+              <span class="ekskul-category-badge">Bela Negara</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Paskibra</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Tegas, Tangguh, dan Berintegritas
+              </div>
+              <p class="ekskul-desc">
+                Menempa fisik dan mental melalui formasi baris-berbaris (PBB) presisi, etika seremonial pengibaran bendera, dan persiapan lomba LBB tingkat regional.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Sabtu, 08.00 - 11.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Lapangan Upacara Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. PMR -->
+          <div class="ekskul-card theme-sosial-alam" data-category="sosial-alam">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-kit-medical ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-kit-medical"></i>
+              </div>
+              <span class="ekskul-category-badge">Kemanusiaan</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">PMR (Palang Merah Remaja)</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Siamo Tutti Fratelli
+              </div>
+              <p class="ekskul-desc">
+                Pelatihan pertolongan pertama pada kecelakaan (PPGD), kesiapsiagaan darurat medis, donor darah, tandu darurat, dan aksi sosial kemanusiaan.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Kamis, 15.30 - 17.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ruang UKS & Area Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. SISPALA -->
+          <div class="ekskul-card theme-sosial-alam" data-category="sosial-alam">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-mountain-sun ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-mountain-sun"></i>
+              </div>
+              <span class="ekskul-category-badge">Pencinta Alam</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Sispala (Siswa Pecinta Alam)</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Lestari Alamku, Terjaga Bumiku
+              </div>
+              <p class="ekskul-desc">
+                Edukasi konservasi lingkungan hidup, navigasi darat, jungle survival, pendakian gunung, aksi bersih alam, serta penanaman bibit pohon penghijauan.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Sabtu / Minggu (Berkala)</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ruang Komunitas & Alam Terbuka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. ROHIS -->
+          <div class="ekskul-card theme-agama-bahasa" data-category="agama-bahasa">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-mosque ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-mosque"></i>
+              </div>
+              <span class="ekskul-category-badge">Kerohanian</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Rohis (Rohani Islam)</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Membina Akhlak, Meraih Rida Ilahi
+              </div>
+              <p class="ekskul-desc">
+                Pendalaman kajian keislaman tematik, tahsin & tahfidz Al-Qur'an, kepengurusan musala, keputrian, serta peringatan hari besar Islam (PHBI).
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Jumat, 13.00 - 14.30 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Musala Al-Ikhlas Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. DRUM BAND -->
+          <div class="ekskul-card theme-seni-budaya" data-category="seni-budaya">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-drum ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-drum"></i>
+              </div>
+              <span class="ekskul-category-badge">Musik & Parade</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Drum Band</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Harmoni Irama, Semangat Juang
+              </div>
+              <p class="ekskul-desc">
+                Mengasah keahlian instrumen perkusi (snare, bass drum, bellyra), brass, dan colorguard untuk parade karnaval, seremonial resmi, dan festival musik.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Rabu & Sabtu, 15.30 - 17.30 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Halaman Luar & Lapangan Terbuka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. PADUAN SUARA -->
+          <div class="ekskul-card theme-seni-budaya" data-category="seni-budaya">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-microphone-lines ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <span class="ekskul-category-badge">Seni Vokal</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Paduan Suara</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Satu Suara Dalam Sejuta Keindahan
+              </div>
+              <p class="ekskul-desc">
+                Olah vokal terpadu (sopran, alto, tenor, bass), teknik pernapasan diafragma, serta harmonisasi lagu-lagu nasional, daerah, dan paduan suara kontemporer.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Rabu, 15.30 - 17.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ruangan Auditorium Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. FUTSAL -->
+          <div class="ekskul-card theme-olahraga" data-category="olahraga">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-futbol ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-futbol"></i>
+              </div>
+              <span class="ekskul-category-badge">Olahraga</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Futsal</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Sportivitas Tinggi, Kerja Sama Juara
+              </div>
+              <p class="ekskul-desc">
+                Fokus pembentukan fisik atletis, taktik tanding kompetitif, dribbling, shooting akurat, serta persiapan tim menuju turnamen pelajar antar-sekolah.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Selasa & Kamis, 16.00 - 18.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Lapangan Futsal Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. KARATE -->
+          <div class="ekskul-card theme-olahraga" data-category="olahraga">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-hand-fist ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-hand-fist"></i>
+              </div>
+              <span class="ekskul-category-badge">Bela Diri</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Karate</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Mental Baja, Rendah Hati & Berani
+              </div>
+              <p class="ekskul-desc">
+                Pembinaan seni bela diri karate melalui penguasaan teknik dasar (Kihon), jurus peragaan (Kata), tanding (Kumite), serta kedisiplinan mental pantang menyerah.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Senin & Kamis, 16.00 - 17.30 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ruang Aula / Area Olahraga</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. ENGLISH CLUB -->
+          <div class="ekskul-card theme-agama-bahasa" data-category="agama-bahasa">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-comments ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <span class="ekskul-category-badge">Bahasa & Literasi</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">English Club</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Speak Up, Conquer The Future
+              </div>
+              <p class="ekskul-desc">
+                Meningkatkan kepercayaan diri berbicara bahasa Inggris aktif melalui sesi percakapan santai, debat bahasa Inggris, speech contest, dan story telling.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Selasa, 15.30 - 17.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Perpustakaan / Lab Bahasa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. SENI TARI -->
+          <div class="ekskul-card theme-seni-budaya" data-category="seni-budaya">
+            <div class="ekskul-header-banner">
+              <i class="fa-solid fa-fan ekskul-watermark"></i>
+              <div class="ekskul-icon-box">
+                <i class="fa-solid fa-fan"></i>
+              </div>
+              <span class="ekskul-category-badge">Seni & Budaya</span>
+            </div>
+            <div class="ekskul-body">
+              <h3 class="ekskul-title">Seni Tari</h3>
+              <div class="ekskul-tagline">
+                <i class="fa-solid fa-quote-left"></i> Menari Menjaga Warisan Tradisi
+              </div>
+              <p class="ekskul-desc">
+                Eksplorasi keluwesan gerak tari tradisional Nusantara (tari Jaipong, Rampak Bedug) dan tari kreasi modern untuk mengisi pentas seni dan festival kebudayaan.
+              </p>
+              <div class="ekskul-meta">
+                <div class="ekskul-meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>Kamis, 15.30 - 17.00 WIB</span>
+                </div>
+                <div class="ekskul-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ruangan Auditorium Sekolah</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION MANFAAT BERGABUNG EKSKUL -->
+    <section class="section-block" style="background: #F8FAFC; padding-top: 4rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <div class="accent-line"></div>
+          <h2 class="section-title">
+            <span class="bold">NILAI LEBIH</span> <span class="light">Mengikuti Ekskul</span>
+          </h2>
+          <p class="section-subtitle">
+            Bukan sekadar kegiatan sepulang sekolah, ekstrakurikuler membentuk modal karakter masa depanmu.
+          </p>
+        </div>
+
+        <div class="grid-4-col">
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #FEF3C7; color: #D97706;">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h4>Sertifikat Prestasi</h4>
+            <p>Poin portofolio resmi bernilai tinggi untuk beasiswa, perguruan tinggi, maupun seleksi kerja.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #E0F2FE; color: #0284C7;">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h4>Kepemimpinan & Relasi</h4>
+            <p>Memperluas jejaring teman antar-jurusan dan melatih kemampuan komunikasi serta manajerial organisasi.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #D1FAE5; color: #059669;">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h4>Peluang Kompetisi</h4>
+            <p>Didukung penuh oleh sekolah untuk berkompetisi di tingkat kabupaten, provinsi, hingga tingkat nasional.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #E0E7FF; color: #4F46E5;">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h4>Keseimbangan Karakter</h4>
+            <p>Menjaga keseimbangan antara keunggulan akademis kejuruan dengan kesehatan fisik dan mental yang bugar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER DAFTAR EKSKUL / SPMB -->
+    <section style="background: var(--white); padding: 3rem 0;">
+      <div class="container">
+        <div class="spmb-cta-banner">
+          <div class="spmb-banner-text">
+            <span
+              class="page-badge"
+              style="
+                background: rgba(245, 158, 11, 0.25);
+                color: #f59e0b;
+                margin-bottom: 12px;
+                border-color: rgba(245, 158, 11, 0.6);
+              "
+              >Bergabung Bersama Kami</span
+            >
+            <h3>Ingin Mengembangkan Minat & Bakatmu?</h3>
+            <p>
+              Daftarkan dirimu menjadi bagian dari keluarga besar SMKS PGRI Rangkasbitung dan raih beragam prestasi impianmu!
+            </p>
+          </div>
+          <div class="spmb-banner-btn-group">
+            <a href="spmb.html" class="btn-banner-primary"
+              ><i class="fa-solid fa-user-plus"></i> Daftar SPMB Sekarang</a
+            >
+            <button class="btn-banner-secondary btn-hubungi" type="button">
+              <i class="fa-solid fa-comments"></i> Tanya Pembina
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-block">
+      <div class="container">
+        <div class="grid-3-col footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img
+                src="assets/LOGO_SMK.JPG"
+                alt="Logo SMKS PGRI Rangkasbitung"
+                class="footer-logo"
+              />
+              <h5>SMKS PGRI RANGKASBITUNG</h5>
+            </div>
+            <p>
+              Lembaga Pendidikan Berkualitas & Terpercaya untuk Mencetak Pemimpin
+              Masa Depan.
+            </p>
+            <p>&copy; 2026 SMKS PGRI RANGKASBITUNG. All Rights Reserved.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Tautan Cepat</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang.html">Profil & Sambutan</a></li>
+              <li><a href="spmb.html">Informasi SPMB</a></li>
+              <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
+              <li><a href="fasilitas.html">Fasilitas Sekolah</a></li>
+              <li><a href="berita.html">Berita</a></li>
+              <li><a href="prestasi.html">Prestasi Siswa</a></li>
+              <li><a href="galeri.html">Galeri Foto</a></li>
+              <li><a href="ekskul.html">Ekstrakurikuler</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kontak & Alamat</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Jl. Pendidikan Nusantara
+              No. 123, Rangkasbitung, Lebak, Banten
+            </p>
+            <p><i class="fa-solid fa-phone"></i> (0252) 1234 5678</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              info@smkpgrirangkasbitung.sch.id
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Hubungi Kami Modal -->
+    <div class="modal-backdrop" id="contactModal">
+      <div class="modal-content contact-modal-content">
+        <button class="modal-close" id="closeContactModal">&times;</button>
+        <h3>Hubungi Kami</h3>
+        <p>Silakan pilih jalur komunikasi layanan informasi sekolah:</p>
+        <div class="contact-options">
+          <a href="https://wa.me/" class="contact-card wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp Official</strong>
+              <span>Respon Cepat via Chat</span>
+            </div>
+          </a>
+          <a href="tel:+6225212345678" class="contact-card phone">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Call Center Sekolah</strong>
+              <span>(0252) 1234 5678</span>
+            </div>
+          </a>
+          <a
+            href="mailto:info@smkpgrirangkasbitung.sch.id"
+            class="contact-card email"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email Layanan</strong>
+              <span>info@smkpgrirangkasbitung.sch.id</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Filter Ekstrakurikuler
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.getAttribute("data-filter");
+          document.querySelectorAll(".ekskul-card").forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+

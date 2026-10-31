@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Publikasi & Dokumen Resmi SMKS PGRI Rangkasbitung - Unduh Brosur SPMB, Panduan Akademik, Kalender Pendidikan, dan Buletin">
+    <meta name="description"
+        content="Publikasi & Dokumen Resmi SMKS PGRI Rangkasbitung - Unduh Brosur SPMB, Panduan Akademik, Kalender Pendidikan, dan Buletin">
     <title>Publikasi & Dokumen - SMKS PGRI Rangkasbitung</title>
 
     <!-- Google Fonts -->
@@ -34,14 +35,8 @@
         <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
         <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
             <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://tiktok.com" target="_blank" class="social-icon tiktok" title="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
         </a>
     </aside>
 
@@ -62,21 +57,47 @@
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="tentang.html">Profil & Sambutan</a></li>
                     <li><a href="spmb.html">SPMB</a></li>
-                    <li><a href="program.html">Program</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Jurusan
+                            <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tkj.html"><i class="fa-solid fa-network-wired"></i> Teknik Komputer & Jaringan
+                                    (TKJ)</a></li>
+                            <li><a href="mplb.html"><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                                    (MPLB)</a></li>
+                            <li><a href="askep.html"><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                                    (Askep)</a></li>
+                            <li><a href="farmasi.html"><i class="fa-solid fa-prescription-bottle-medical"></i> Farmasi
+                                    Klinis</a></li>
+                            <li><a href="akl.html"><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan (AKL)</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="fasilitas.html">Fasilitas</a></li>
                     <li class="dropdown">
-                        <a href="media.html" class="dropdown-toggle">Media <i
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Informasi <i
                                 class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="media.html#berita">Berita & Kegiatan</a></li>
-                            <li><a href="media.html#galeri">Galeri Foto</a></li>
-                            <li><a href="media.html#pengumuman">Pengumuman</a></li>
-                        </ul>
+                            <li><a href="berita.html"><i class="fa-regular fa-newspaper"></i> Berita</a>
+                            </li>
+                            <li><a href="prestasi.html"><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a></li>
+                            <li><a href="galeri.html"><i class="fa-regular fa-images"></i> Galeri Foto</a></li>
+                        
+                <li>
+                  <a href="ekskul.html"><i class="fa-solid fa-people-group"></i> Ekstrakurikuler</a>
+                </li>
+              </ul>
                     </li>
                     <li><a href="testimoni.html">Testimoni</a></li>
                     <li><a href="publikasi.html" class="active">Publikasi</a></li>
-                    <li><a href="karir.html">Karir</a></li>
                 </ul>
+
+                <!-- Mobile Action Button (Hanya tampil di Drawer Mobile) -->
+                <div class="nav-menu-action">
+                    <button class="btn-hubungi btn-menu-hubungi" type="button">
+                        <i class="fa-solid fa-comments"></i> Hubungi Kami
+                    </button>
+                </div>
             </nav>
 
             <!-- Header Action Button -->
@@ -94,7 +115,8 @@
         <div class="container">
             <span class="page-badge"><i class="fa-solid fa-file-arrow-down"></i> Pusat Unduhan</span>
             <h1 class="page-header-title">Publikasi & Dokumen Resmi</h1>
-            <p class="page-header-desc">Akses dan unduh berbagai dokumen penting, petunjuk teknis pendaftaran, jadwal akademik, serta buletin sekolah.</p>
+            <p class="page-header-desc">Akses dan unduh berbagai dokumen penting, petunjuk teknis pendaftaran, jadwal
+                akademik, serta buletin sekolah.</p>
             <div class="page-breadcrumb">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
                 <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
@@ -121,7 +143,8 @@
                         <h5>Brosur Digital SPMB TA 2026/2027</h5>
                         <p>Unduh informasi lengkap mengenai rincian biaya, kurikulum, dan fasilitas pendidikan.</p>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Mengunduh Brosur Digital SPMB...')"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                    <a href="#" class="btn-download" onclick="alert('Mengunduh Brosur Digital SPMB...')"><i
+                            class="fa-solid fa-download"></i> Unduh PDF</a>
                 </div>
 
                 <div class="download-box">
@@ -130,16 +153,19 @@
                         <h5>Buletin Sekolah Edisi Terbaru</h5>
                         <p>Kumpulan artikel karya siswa, rekam jejak prestasi, dan rangkuman kegiatan rutin bulanan.</p>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Mengunduh Buletin Sekolah Edisi Terbaru...')"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                    <a href="#" class="btn-download" onclick="alert('Mengunduh Buletin Sekolah Edisi Terbaru...')"><i
+                            class="fa-solid fa-download"></i> Unduh PDF</a>
                 </div>
 
                 <div class="download-box">
                     <i class="fa-solid fa-calendar-days pdf-icon"></i>
                     <div>
                         <h5>Kalender Akademik TA 2026/2027</h5>
-                        <p>Jadwal perkiraan ujian tengah semester, ujian akhir, hari libur nasional, dan agenda sekolah.</p>
+                        <p>Jadwal perkiraan ujian tengah semester, ujian akhir, hari libur nasional, dan agenda sekolah.
+                        </p>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Mengunduh Kalender Akademik...')"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                    <a href="#" class="btn-download" onclick="alert('Mengunduh Kalender Akademik...')"><i
+                            class="fa-solid fa-download"></i> Unduh PDF</a>
                 </div>
 
                 <div class="download-box">
@@ -148,7 +174,8 @@
                         <h5>Buku Panduan Tata Tertib Siswa</h5>
                         <p>Pedoman etika, hak, kewajiban, serta aturan kedisiplinan dan seragam sekolah.</p>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Mengunduh Buku Panduan Tata Tertib...')"><i class="fa-solid fa-download"></i> Unduh PDF</a>
+                    <a href="#" class="btn-download" onclick="alert('Mengunduh Buku Panduan Tata Tertib...')"><i
+                            class="fa-solid fa-download"></i> Unduh PDF</a>
                 </div>
             </div>
         </div>
@@ -172,11 +199,13 @@
                         <li><a href="index.html">Beranda</a></li>
                         <li><a href="tentang.html">Profil & Sambutan</a></li>
                         <li><a href="spmb.html">Informasi SPMB</a></li>
-                        <li><a href="program.html">Program Unggulan</a></li>
-                        <li><a href="fasilitas.html">Fasilitas Kampus</a></li>
-                        <li><a href="media.html">Media & Berita</a></li>
-                        <li><a href="karir.html">Karir</a></li>
-                    </ul>
+                        <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
+                        <li><a href="fasilitas.html">Fasilitas Sekolah</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="prestasi.html">Prestasi Siswa</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                      <li><a href="ekskul.html">Ekstrakurikuler</a></li>
+            </ul>
                 </div>
                 <div class="footer-col">
                     <h5>Kontak & Alamat</h5>

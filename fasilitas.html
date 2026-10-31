@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fasilitas Kampus SMKS PGRI Rangkasbitung - Laboratorium Sains & STEM, Perpustakaan Modern, Lapangan Olahraga, dan Ruang Kelas Digital">
-    <title>Fasilitas Kampus - SMKS PGRI Rangkasbitung</title>
+    <meta name="description"
+        content="Fasilitas Sekolah SMKS PGRI Rangkasbitung - Laboratorium Sains & STEM, Perpustakaan Modern, Lapangan Olahraga, dan Ruang Kelas Digital">
+    <title>Fasilitas Sekolah - SMKS PGRI Rangkasbitung</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,14 +35,8 @@
         <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
         <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube">
             <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://tiktok.com" target="_blank" class="social-icon tiktok" title="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
         </a>
     </aside>
 
@@ -62,21 +57,47 @@
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="tentang.html">Profil & Sambutan</a></li>
                     <li><a href="spmb.html">SPMB</a></li>
-                    <li><a href="program.html">Program</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Jurusan
+                            <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tkj.html"><i class="fa-solid fa-network-wired"></i> Teknik Komputer & Jaringan
+                                    (TKJ)</a></li>
+                            <li><a href="mplb.html"><i class="fa-solid fa-briefcase"></i> Manajemen Perkantoran
+                                    (MPLB)</a></li>
+                            <li><a href="askep.html"><i class="fa-solid fa-user-nurse"></i> Asisten Keperawatan
+                                    (Askep)</a></li>
+                            <li><a href="farmasi.html"><i class="fa-solid fa-prescription-bottle-medical"></i> Farmasi
+                                    Klinis</a></li>
+                            <li><a href="akl.html"><i class="fa-solid fa-calculator"></i> Akuntansi & Keuangan (AKL)</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="fasilitas.html" class="active">Fasilitas</a></li>
                     <li class="dropdown">
-                        <a href="media.html" class="dropdown-toggle">Media <i
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">Informasi <i
                                 class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="media.html#berita">Berita & Kegiatan</a></li>
-                            <li><a href="media.html#galeri">Galeri Foto</a></li>
-                            <li><a href="media.html#pengumuman">Pengumuman</a></li>
-                        </ul>
+                            <li><a href="berita.html"><i class="fa-regular fa-newspaper"></i> Berita</a>
+                            </li>
+                            <li><a href="prestasi.html"><i class="fa-solid fa-trophy"></i> Prestasi Siswa</a></li>
+                            <li><a href="galeri.html"><i class="fa-regular fa-images"></i> Galeri Foto</a></li>
+                        
+                <li>
+                  <a href="ekskul.html"><i class="fa-solid fa-people-group"></i> Ekstrakurikuler</a>
+                </li>
+              </ul>
                     </li>
                     <li><a href="testimoni.html">Testimoni</a></li>
                     <li><a href="publikasi.html">Publikasi</a></li>
-                    <li><a href="karir.html">Karir</a></li>
                 </ul>
+
+                <!-- Mobile Action Button (Hanya tampil di Drawer Mobile) -->
+                <div class="nav-menu-action">
+                    <button class="btn-hubungi btn-menu-hubungi" type="button">
+                        <i class="fa-solid fa-comments"></i> Hubungi Kami
+                    </button>
+                </div>
             </nav>
 
             <!-- Header Action Button -->
@@ -93,8 +114,9 @@
     <section class="page-header">
         <div class="container">
             <span class="page-badge"><i class="fa-solid fa-building-columns"></i> Sarana & Prasarana</span>
-            <h1 class="page-header-title">Fasilitas Kampus Modern</h1>
-            <p class="page-header-desc">Didukung sarana prasarana mutakhir berstandar nasional untuk mendukung kenyamanan dan keberhasilan proses pembelajaran.</p>
+            <h1 class="page-header-title">Fasilitas Sekolah Modern</h1>
+            <p class="page-header-desc">Didukung sarana prasarana mutakhir berstandar nasional untuk mendukung
+                kenyamanan dan keberhasilan proses pembelajaran.</p>
             <div class="page-breadcrumb">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
                 <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
@@ -103,7 +125,7 @@
         </div>
     </section>
 
-    <!-- SECTION FASILITAS KAMPUS -->
+    <!-- SECTION FASILITAS SEKOLAH -->
     <section class="section-block fasilitas-section" id="fasilitas">
         <div class="container">
             <div class="section-title-wrapper">
@@ -111,31 +133,32 @@
                 <h2 class="section-title">
                     <span class="bold">FASILITAS</span> <span class="light">Unggulan</span>
                 </h2>
-                <p class="section-subtitle">Sarana modern pendukung kegiatan belajar mengajar teoritis maupun praktikum.</p>
+                <p class="section-subtitle">Sarana modern pendukung kegiatan belajar mengajar teoritis maupun praktikum.
+                </p>
             </div>
 
             <div class="grid-3-col">
                 <div class="facility-card">
-                    <img src="assets/school_lab.jpg" alt="Laboratorium Komputer & STEM" class="facility-img">
+                    <img src="assets/Lab-kom.JPG" alt="Laboratorium Komputer" class="facility-img">
                     <div class="facility-body">
-                        <h5>Laboratorium Komputer & STEM</h5>
-                        <p>Perangkat komputer spesifikasi tinggi, jaringan internet cepat, dan alat sains modern untuk riset.</p>
+                        <h5>Laboratorium Komputer</h5>
+                        <p>Perangkat komputer spesifikasi tinggi, jaringan internet cepat.</p>
                     </div>
                 </div>
 
                 <div class="facility-card">
-                    <img src="assets/campus_hero.jpg" alt="Perpustakaan Digital" class="facility-img">
+                    <img src="assets/Perpustakaan.JPG" alt="Perpustakaan" class="facility-img">
                     <div class="facility-body">
-                        <h5>Perpustakaan & Media Center</h5>
-                        <p>Koleksi ribuan buku fisik dan e-book pendukung riset serta area baca yang nyaman dan hening.</p>
+                        <h5>Perpustakaan</h5>
+                        <p>Koleksi ribuan buku fisik serta area baca yang nyaman dan hening.</p>
                     </div>
                 </div>
 
                 <div class="facility-card">
-                    <img src="assets/hero_bg.jpg" alt="Lapangan Olahraga & Hall Indoor" class="facility-img">
+                    <img src="assets/Lapangan-olahraga.JPG" alt="Lapangan Olahraga" class="facility-img">
                     <div class="facility-body">
-                        <h5>Lapangan Olahraga & Hall Indoor</h5>
-                        <p>Lapangan basket, futsal, badminton, dan ruang aula serbaguna berkapasitas besar ber-AC.</p>
+                        <h5>Lapangan Olahraga</h5>
+                        <p>Lapangan basket, futsal, voly.</p>
                     </div>
                 </div>
             </div>
@@ -146,28 +169,39 @@
                     Fasilitas Pendukung Lainnya
                 </h3>
                 <div class="grid-4-col">
-                    <div style="background: var(--white); border-radius: 12px; padding: 1.5rem; border: 1px solid #E2E8F0; text-align: center;">
-                        <i class="fa-solid fa-mosque" style="font-size: 2.2rem; color: #10B981; margin-bottom: 12px; display: inline-block;"></i>
-                        <h4 style="color: var(--primary-navy); font-size: 1.05rem; margin-bottom: 6px;">Masjid Kampus</h4>
-                        <p style="font-size: 0.85rem; color: #64748B;">Tempat ibadah yang representatif, bersih, dan menampung seluruh jamaah sekolah.</p>
+                    <div class="support-facility-card">
+                        <div class="support-facility-icon" style="background: #FEF3C7; color: #D97706;">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h4>Business Center</h4>
+                        <p>Pusat inkubasi bisnis dan unit wirausaha siswa untuk pembelajaran transaksi serta manajemen
+                            ritel nyata.</p>
                     </div>
 
-                    <div style="background: var(--white); border-radius: 12px; padding: 1.5rem; border: 1px solid #E2E8F0; text-align: center;">
-                        <i class="fa-solid fa-utensils" style="font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 12px; display: inline-block;"></i>
-                        <h4 style="color: var(--primary-navy); font-size: 1.05rem; margin-bottom: 6px;">Kantin Higienis</h4>
-                        <p style="font-size: 0.85rem; color: #64748B;">Menyediakan menu makanan bergizi sehat dengan standar kebersihan teruji berkala.</p>
+                    <div class="support-facility-card">
+                        <div class="support-facility-icon" style="background: #E0F2FE; color: #0284C7;">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h4>Ruangan Ber-AC</h4>
+                        <p>Ruang kelas berpendingin udara yang sejuk dan bersih demi kenyamanan konsentrasi belajar
+                            mengajar.</p>
                     </div>
 
-                    <div style="background: var(--white); border-radius: 12px; padding: 1.5rem; border: 1px solid #E2E8F0; text-align: center;">
-                        <i class="fa-solid fa-heart-pulse" style="font-size: 2.2rem; color: var(--accent-red); margin-bottom: 12px; display: inline-block;"></i>
-                        <h4 style="color: var(--primary-navy); font-size: 1.05rem; margin-bottom: 6px;">UKS & Tenaga Medis</h4>
-                        <p style="font-size: 0.85rem; color: #64748B;">Ruang pertolongan pertama lengkap dengan tenaga medis siaga selama jam sekolah.</p>
+                    <div class="support-facility-card">
+                        <div class="support-facility-icon" style="background: #D1FAE5; color: #059669;">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </div>
+                        <h4>Ruangan Auditorium</h4>
+                        <p>Ruang pertemuan representatif berkapasitas besar untuk kegiatan seminar, pelatihan, dan acara sekolah.</p>
                     </div>
 
-                    <div style="background: var(--white); border-radius: 12px; padding: 1.5rem; border: 1px solid #E2E8F0; text-align: center;">
-                        <i class="fa-solid fa-wifi" style="font-size: 2.2rem; color: var(--accent-blue); margin-bottom: 12px; display: inline-block;"></i>
-                        <h4 style="color: var(--primary-navy); font-size: 1.05rem; margin-bottom: 6px;">WiFi 6 Super Cepat</h4>
-                        <p style="font-size: 0.85rem; color: #64748B;">Koneksi internet serat optik berkecepatan tinggi terproteksi di seluruh area kampus.</p>
+                    <div class="support-facility-card">
+                        <div class="support-facility-icon" style="background: #E0E7FF; color: #4F46E5;">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h4>Akses WiFi</h4>
+                        <p>Jaringan internet nirkabel berkecepatan tinggi terhubung stabil di seluruh penjuru lingkungan
+                            sekolah.</p>
                     </div>
                 </div>
             </div>
@@ -192,11 +226,13 @@
                         <li><a href="index.html">Beranda</a></li>
                         <li><a href="tentang.html">Profil & Sambutan</a></li>
                         <li><a href="spmb.html">Informasi SPMB</a></li>
-                        <li><a href="program.html">Program Unggulan</a></li>
-                        <li><a href="fasilitas.html">Fasilitas Kampus</a></li>
-                        <li><a href="media.html">Media & Berita</a></li>
-                        <li><a href="karir.html">Karir</a></li>
-                    </ul>
+                        <li><a href="tkj.html">Program Keahlian (Jurusan)</a></li>
+                        <li><a href="fasilitas.html">Fasilitas Sekolah</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="prestasi.html">Prestasi Siswa</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                      <li><a href="ekskul.html">Ekstrakurikuler</a></li>
+            </ul>
                 </div>
                 <div class="footer-col">
                     <h5>Kontak & Alamat</h5>
