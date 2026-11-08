@@ -113,10 +113,9 @@
     <!-- Page Header Banner -->
     <section class="page-header">
         <div class="container">
-            <span class="page-badge"><i class="fa-solid fa-comments"></i> Kisah Sukses</span>
-            <h1 class="page-header-title">Kata Mereka Tentang Kami</h1>
-            <p class="page-header-desc">Kesan, pengalaman nyata, dan rasa bangga dari orang tua murid serta alumni yang
-                telah menapaki masa depan gemilang.</p>
+            <span class="page-badge"><i class="fa-solid fa-chart-column"></i> Tracer Study & Testimoni</span>
+            <h1 class="page-header-title">Profil Lulusan & Testimoni Alumni</h1>
+            <p class="page-header-desc">Data penelusuran keterserapan tamatan (BMW: Bekerja, Melanjutkan, Wirausaha) serta pengalaman nyata dan kisah sukses keluarga besar SMKS PGRI Rangkasbitung.</p>
             <div class="page-breadcrumb">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
                 <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
@@ -125,7 +124,87 @@
         </div>
     </section>
 
-    <!-- SECTION TESTIMONI -->
+        <!-- SECTION PERSENTASE BMW (TRACER STUDY) -->
+    <section class="section-block" id="bmwSection" style="padding-top: 4rem; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <div class="accent-line"></div>
+                <h2 class="section-title">
+                    <span class="bold">PERSENTASE</span> <span class="light">BMW ALUMNI</span>
+                </h2>
+                <p class="section-subtitle">Data penelusuran lulusan (Tracer Study): Bekerja, Melanjutkan Studi, dan Wirausaha.</p>
+            </div>
+
+            <!-- Year Switcher Buttons -->
+            <div class="bmw-year-switcher">
+                <button class="bmw-year-btn active" data-year="2025/2026" type="button">
+                    <i class="fa-solid fa-calendar-check"></i> Lulusan 2025/2026
+                </button>
+                <button class="bmw-year-btn" data-year="2024/2025" type="button">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Lulusan 2024/2025
+                </button>
+            </div>
+
+            <!-- Graphic Card Box (Persentase BMW) -->
+            <div class="bmw-chart-card">
+                <div class="bmw-chart-header">
+                    <h3 class="bmw-chart-title">Persentase BMW</h3>
+                    <p class="bmw-chart-subtitle">Bekerja, Melanjutkan, dan Wirausaha</p>
+                </div>
+
+                <div class="bmw-chart-wrapper">
+                    <!-- Y Axis Labels -->
+                    <div class="bmw-y-axis" id="bmwYAxis"></div>
+
+                    <!-- Plot Area with Grid Lines & Bars -->
+                    <div class="bmw-plot-area" id="bmwPlotArea">
+                        <div class="bmw-grid-lines" id="bmwGridLines"></div>
+                        <div class="bmw-bars-container" id="bmwBarsContainer"></div>
+                        <!-- Tooltip -->
+                        <div class="bmw-tooltip" id="bmwTooltip"></div>
+                    </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="bmw-legend">
+                    <div class="bmw-legend-item" data-key="B">
+                        <span class="bmw-legend-color" style="background:#38a3dc;"></span>
+                        <span>Bekerja</span>
+                    </div>
+                    <div class="bmw-legend-item" data-key="W">
+                        <span class="bmw-legend-color" style="background:#f15c25;"></span>
+                        <span>Wirausaha</span>
+                    </div>
+                    <div class="bmw-legend-item" data-key="M">
+                        <span class="bmw-legend-color" style="background:#e52d3d;"></span>
+                        <span>Melanjutkan Studi</span>
+                    </div>
+                    <div class="bmw-legend-item" data-key="R">
+                        <span class="bmw-legend-color" style="background:#8b3ab0;"></span>
+                        <span>Mengurus Rumah Tangga</span>
+                    </div>
+                    <div class="bmw-legend-item" data-key="P">
+                        <span class="bmw-legend-color" style="background:#88a529;"></span>
+                        <span>Pengangguran</span>
+                    </div>
+                    <div class="bmw-legend-item" data-key="L">
+                        <span class="bmw-legend-color" style="background:#45a2dc;"></span>
+                        <span>Lainnya</span>
+                    </div>
+                </div>
+
+                <!-- Caption at bottom -->
+                <div class="bmw-caption-wrapper">
+                    <span class="bmw-caption" id="bmwCaption">Profil alumni lulusan 2025/2026</span>
+                </div>
+            </div>
+
+            <!-- Quick Summary Stats Grid -->
+            <div class="bmw-summary-grid" id="bmwSummaryGrid"></div>
+        </div>
+    </section>
+
+<!-- SECTION TESTIMONI -->
     <section class="section-block testimoni-section" id="testimoni">
         <div class="container">
             <div class="section-title-wrapper">
@@ -279,6 +358,200 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+    <!-- BMW Tracer Study Chart Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bmwData = {
+                '2025/2026': {
+                    caption: 'Profil alumni lulusan 2025/2026',
+                    maxVal: 200,
+                    ticks: [200, 150, 100, 50, 0],
+                    items: [
+                        { key: 'B', label: 'Bekerja', value: 161, color: '#38A3DC' },
+                        { key: 'W', label: 'Wirausaha', value: 24, color: '#F15C25' },
+                        { key: 'M', label: 'Melanjutkan Studi', value: 34, color: '#E52D3D' },
+                        { key: 'R', label: 'Mengurus Rumah Tangga', value: 3, color: '#8B3AB0' },
+                        { key: 'P', label: 'Pengangguran', value: 1, color: '#88A529' },
+                        { key: 'L', label: 'Lainnya', value: 4, color: '#45A2DC' }
+                    ],
+                    summary: {
+                        total: 227,
+                        bmwCount: 219,
+                        bmwPercent: '96.5%',
+                        bekerja: 161,
+                        wirausaha: 24
+                    }
+                },
+                '2024/2025': {
+                    caption: 'PROFIL LULUSAN ALUMNI 2024/2025',
+                    maxVal: 120,
+                    ticks: [120, 100, 80, 60, 40, 20, 0],
+                    items: [
+                        { key: 'B', label: 'Bekerja', value: 119, color: '#38A3DC' },
+                        { key: 'W', label: 'Wirausaha', value: 22, color: '#F15C25' },
+                        { key: 'M', label: 'Melanjutkan Studi', value: 17, color: '#E52D3D' },
+                        { key: 'R', label: 'Mengurus Rumah Tangga', value: 2, color: '#8B3AB0' },
+                        { key: 'P', label: 'Pengangguran', value: 5, color: '#88A529' },
+                        { key: 'L', label: 'Lainnya', value: 53, color: '#45A2DC' }
+                    ],
+                    summary: {
+                        total: 218,
+                        bmwCount: 158,
+                        bmwPercent: '72.5%',
+                        bekerja: 119,
+                        wirausaha: 22
+                    }
+                }
+            };
+
+            const yAxisEl = document.getElementById('bmwYAxis');
+            const gridLinesEl = document.getElementById('bmwGridLines');
+            const barsContainerEl = document.getElementById('bmwBarsContainer');
+            const captionEl = document.getElementById('bmwCaption');
+            const summaryGridEl = document.getElementById('bmwSummaryGrid');
+            const tooltipEl = document.getElementById('bmwTooltip');
+            const yearBtns = document.querySelectorAll('.bmw-year-btn');
+
+            let currentYear = '2025/2026';
+
+            function renderChart(year) {
+                const data = bmwData[year];
+                if (!data) return;
+
+                // 1. Render Caption
+                if (captionEl) {
+                    captionEl.textContent = data.caption;
+                }
+
+                // 2. Render Y Axis
+                if (yAxisEl) {
+                    yAxisEl.innerHTML = data.ticks.map(tick => '<span>' + tick + '</span>').join('');
+                }
+
+                // 3. Render Grid Lines
+                if (gridLinesEl) {
+                    gridLinesEl.innerHTML = data.ticks.map(() => '<div class="bmw-grid-line"></div>').join('');
+                }
+
+                // 4. Render Bars
+                if (barsContainerEl) {
+                    barsContainerEl.innerHTML = data.items.map(item => {
+                        const heightPercent = Math.max((item.value / data.maxVal) * 100, 2);
+                        const percentOfTotal = ((item.value / data.summary.total) * 100).toFixed(1);
+                        return `
+                            <div class="bmw-bar-col" data-key="${item.key}">
+                                <span class="bmw-bar-val" style="color: ${item.color};">${item.value}</span>
+                                <div class="bmw-bar" 
+                                     style="height: 0%; background-color: ${item.color};" 
+                                     data-height="${heightPercent}%"
+                                     data-label="${item.label}"
+                                     data-value="${item.value}"
+                                     data-percent="${percentOfTotal}%"></div>
+                                <span class="bmw-bar-label">${item.key}</span>
+                            </div>
+                        `;
+                    }).join('');
+
+                    // Trigger height transition
+                    setTimeout(() => {
+                        barsContainerEl.querySelectorAll('.bmw-bar').forEach(bar => {
+                            bar.style.height = bar.getAttribute('data-height');
+                        });
+                    }, 50);
+
+                    // Add Tooltip Events
+                    barsContainerEl.querySelectorAll('.bmw-bar').forEach(bar => {
+                        bar.addEventListener('mouseenter', (e) => {
+                            const label = bar.getAttribute('data-label');
+                            const val = bar.getAttribute('data-value');
+                            const pct = bar.getAttribute('data-percent');
+                            if (tooltipEl) {
+                                tooltipEl.innerHTML = '<strong>' + label + '</strong>: ' + val + ' orang (' + pct + ')';
+                                tooltipEl.classList.add('active');
+                                const rect = bar.getBoundingClientRect();
+                                const plotRect = barsContainerEl.getBoundingClientRect();
+                                tooltipEl.style.left = (rect.left - plotRect.left + rect.width / 2) + 'px';
+                                tooltipEl.style.top = (rect.top - plotRect.top) + 'px';
+                            }
+                        });
+
+                        bar.addEventListener('mouseleave', () => {
+                            if (tooltipEl) tooltipEl.classList.remove('active');
+                        });
+                    });
+                }
+
+                // 5. Render Summary Cards
+                if (summaryGridEl) {
+                    summaryGridEl.innerHTML = `
+                        <div class="bmw-summary-card">
+                            <div class="bmw-summary-icon" style="background:#EFF6FF; color:#1E3A8A;">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="bmw-summary-val">${data.summary.total}</div>
+                            <div class="bmw-summary-label">Total Alumni Terdata</div>
+                        </div>
+                        <div class="bmw-summary-card">
+                            <div class="bmw-summary-icon" style="background:#ECFDF5; color:#059669;">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div class="bmw-summary-val">${data.summary.bmwPercent}</div>
+                            <div class="bmw-summary-label">Keterserapan BMW</div>
+                        </div>
+                        <div class="bmw-summary-card">
+                            <div class="bmw-summary-icon" style="background:#E0F2FE; color:#0284C7;">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="bmw-summary-val">${data.summary.bekerja}</div>
+                            <div class="bmw-summary-label">Bekerja di DUDI</div>
+                        </div>
+                        <div class="bmw-summary-card">
+                            <div class="bmw-summary-icon" style="background:#FEF3C7; color:#D97706;">
+                                <i class="fa-solid fa-shop"></i>
+                            </div>
+                            <div class="bmw-summary-val">${data.summary.wirausaha}</div>
+                            <div class="bmw-summary-label">Wirausaha Mandiri</div>
+                        </div>
+                    `;
+                }
+            }
+
+            // Legend item hover to highlight bar
+            document.querySelectorAll('.bmw-legend-item').forEach(leg => {
+                leg.addEventListener('mouseenter', () => {
+                    const key = leg.getAttribute('data-key');
+                    const barCol = document.querySelector(`.bmw-bar-col[data-key="${key}"]`);
+                    if (barCol) {
+                        barCol.querySelector('.bmw-bar').style.filter = 'brightness(1.2)';
+                        barCol.querySelector('.bmw-bar').style.transform = 'scaleX(1.15)';
+                    }
+                });
+                leg.addEventListener('mouseleave', () => {
+                    const key = leg.getAttribute('data-key');
+                    const barCol = document.querySelector(`.bmw-bar-col[data-key="${key}"]`);
+                    if (barCol) {
+                        barCol.querySelector('.bmw-bar').style.filter = '';
+                        barCol.querySelector('.bmw-bar').style.transform = '';
+                    }
+                });
+            });
+
+            // Year Switcher Handler
+            yearBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    yearBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentYear = btn.getAttribute('data-year');
+                    renderChart(currentYear);
+                });
+            });
+
+            // Initial render
+            renderChart(currentYear);
+        });
+    </script>
+
 </body>
 
 </html>
